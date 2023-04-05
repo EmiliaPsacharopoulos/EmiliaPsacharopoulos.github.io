@@ -65,7 +65,9 @@
 										<li><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-373/">EECS 373</a>: Introduction to Embedded System Design</li>
 										<li><a href="https://web.eecs.umich.edu/~justincj/teaching/eecs442/WI2021/syllabus.html">EECS 442</a>: Computer Vision</li>
 										<li><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-461/">EECS 461</a>: Embedded Control Systems</li>
+										<li><a href="https://web.eecs.umich.edu/~kuipers/teaching/eecs467-F19.html">EECS 467</a>: Autonomous Robotics</li>
 										<li><a href="https://bulletin.engin.umich.edu/courses/techcomm/">TCHNCLCM 300</a>: Technical Communication for Electrical and Computer Science</li>
+										<li><a href="https://bulletin.engin.umich.edu/courses/techcomm/">TCHNCLCM 496</a>: Advanced Technical Communication for Electrical Engineering and Computer Engineering</li>
 									</ul>
 								</p>
 				
@@ -76,12 +78,34 @@
 										<li><a href="https://lsa.umich.edu/math/undergraduates/undergraduate-math-courses/200-level-math-courses.html">MATH 214</a>: Applied Linear Algebra</li>
 										<li><a href="https://lsa.umich.edu/math/undergraduates/undergraduate-math-courses/200-level-math-courses.html">MATH 215</a>: Multivariable and Vector Calculus</li>
 										<li><a href="https://lsa.umich.edu/math/undergraduates/undergraduate-math-courses/200-level-math-courses.html">MATH 216</a>: Differential Equations</li>
+										<li><a href="https://lsa.umich.edu/math/undergraduates/undergraduate-math-courses/300-level-math-courses.html">MATH 351</a>: Principles of Analysis</li>
 										<li><a href="https://lsa.umich.edu/math/undergraduates/undergraduate-math-courses/400-level-courses.html">MATH 462</a>: Mathematical Modeling</li>
 									</ul>
 								</p>
 							</DIV>
 
 						</section>
+
+
+						<section class="wrapper style4 container">
+
+							<!-- Content -->
+								<div class="content">
+									<section>
+										<h2><b>"Autonomous Rocket League" Embedded System Design &#8226; Fall 2022</b></h2>
+                                        <p>
+											I worked on a 4-person student project team in EECS 373: Introduction to Embedded System Design to create a human vs. robot version of the popular car-soccer video game Rocket League in real life. I led our team in developing code in C for the following embedded system components: a magnetometer, timers for gameplay functionalities, Playstation 2 controller SPI communication protocol, and a USB to Serial adapter. Additionally, I took initiative in creating a Python computer vision script to detect AprilTags and specific colors, and provided support to my team members’ main sections of the project. My technical communication contributions span writing a milestone report and producing the project poster. Lastly, my work in researching and developing a functioning autonomous Rocket League algorithm is included in one of the attached videos below; this <a href="https://drive.google.com/file/d/1ccbxXeAYz1VGMU2p8o07yJ-QRexAc7cq/view?usp=sharing">video</a> provides a project summary. 
+										</p>
+										<table> 
+											<tr> 
+												<td><img src="images/Poster_Rough_Draft.pptx.png" style="max-width:600px;width:100%" ></td>
+											</tr> 
+										</table> 
+									</section>
+								</div>
+
+						</section>
+
 
 						<section class="wrapper style4 container">
 
@@ -91,9 +115,9 @@
 										<h2><b>Adaptive Cruise Control Embedded System &#8226; Winter 2022</b></h2>
                                         <p> For our final project in EECS 461: Embedded Control Systems, we were tasked with building an Adaptive Cruise Control (ACC) car system on Simulink with auto-steering and an automatic cycling between these three modes:<br>
 											<ul>
-												<li>Manual: the speed and path of the car are controlled using a potentiometer on the control board and the haptic wheel respectively. </li>
-												<li>Velocity: specifies the car’s traveling velocity using dip switches on the microcontroller.</li>
-												<li>Position: This occurs when there is a lead car within a certain preset distance of our car and traveling slower than our car, causing our car to match the speed of the lead car.</li>
+												<li><b>Manual:</b> the speed and path of the car are controlled using a potentiometer on the control board and the haptic wheel respectively. </li>
+												<li><b>Velocity:</b> specifies the car’s traveling velocity using dip switches on the microcontroller.</li>
+												<li><b>Position:</b> this occurs when there is a lead car within a certain preset distance of our car and traveling slower than our car, causing our car to match the speed of the lead car.</li>
 											</ul>
 											Our system was entirely built on Simulink using overhead scaffolding built by the course instructors. We built the Simulink model into C code that could be run in an NXP workspace and then implemented on a Driving Simulator provided by the course. The hardware connections to the computer entailed an S32K144 microcontroller, a motherboard with a potentiometer and dip switches, and a haptic wheel. We produced C code that reads and writes to registers on the aforementioned hardware to develop various haptic capabilities throughout the semester. The ACC final project built upon concepts and work that we previously completed while designing our own flow logic, controllers, and vehicle dynamics to follow complex systems of differential equations. 
 										</p>
