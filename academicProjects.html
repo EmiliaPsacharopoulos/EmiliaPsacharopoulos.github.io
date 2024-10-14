@@ -17,12 +17,12 @@
 
 			<!-- Header -->
 			<header id="header">
-				<h1 id="logo"><a href="index.html">EMILIA PSACHAROPOULOS</a></h1>
+				<h1 id="logo"><a href="index.html">emilia psacharopoulos</a></h1>
 				<nav id="nav">
 					<ul>
-						<li class="current"><a href="index.html">About Me</a></li>
-						<li class="current"><a href="workExperience.html">Work Experience</a></li>
+						<li class="current"><a href="index.html">Work Experience</a></li>
 						<li class="current"><a href="academicProjects.html">Academic Projects</a></li>
+						<li class="current"><a href="aboutMe.html">About Me</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -98,8 +98,10 @@
 										<table> 
 											<tr> 
 												<iframe width="560" height="315" src="https://www.youtube.com/embed/qFqYIITFqd0?si=hdwI-rVQdYdWpBuQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-												<td><img src="images/eecs467.jpg" style="max-width:600px;width:100%" ></td>
 											</tr> 
+											<tr>
+												<td><img src="images/eecs467.jpg" style="max-width:600px;width:100%" ></td>
+											</tr>
 										</table> 
 									</section>
 								</div>
@@ -118,7 +120,11 @@
 										<table> 
 											<tr>
 												<td><img src="images/slam.png" style="max-width:600px;width:100%" ></td>
+											</tr>
+											<tr>
 												<td><img src="images/mbots.png" style="max-width:600px;width:100%" ></td>
+											</tr>
+											<tr>
 												<td><img src="images/slam_2.jpg" style="max-width:600px;width:50%" ></td>
 											</tr> 
 										</table> 
@@ -140,7 +146,7 @@
 											<tr> 
 												<iframe width="560" height="315" src="https://www.youtube.com/embed/ynsI1RB5d14" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 												<iframe width="560" height="315" src="https://www.youtube.com/embed/HcMNyMvgoTM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-												<td><img src="images/Poster_Rough_Draft.pptx.png" style="max-width:600px;width:100%" ></td>
+												<td><img src="images/EECS373_Poster.pptx.png" style="max-width:600px;width:100%" ></td>
 											</tr> 
 										</table> 
 									</section>
@@ -180,12 +186,8 @@
 											</ul>
 											Our system was entirely constructed in Simulink, utilizing scaffolding provided by the course instructors. We converted the Simulink model into C code that could be run in an NXP workspace and implemented it on a driving simulator supplied by the course. The hardware setup included an S32K144 microcontroller, a motherboard with a potentiometer and dip switches, and a haptic wheel. Throughout the semester, we produced C code to read from and write to registers on this hardware, developing various haptic capabilities. The ACC project built upon concepts from previous assignments, where we designed flow logic, controllers, and vehicle dynamics to model complex systems of differential equations.
 										</p>
-										<table> 
-											<tr> 
-												<td><img src="images/eecs461sim.jpg" style="max-width:600px;width:100%" ></td>
-												<td><img src="images/eecs461microprocessor.jpg" style="max-width:600px;width:40%" ></td> 
-											</tr> 
-										</table> 
+										<img src="images/eecs461sim.jpg" style="max-width:600px;width:100%" >
+										<img src="images/eecs461microprocessor.jpg" style="max-width:244px;width:40%" >
 									</section>
 								</div>
 
@@ -209,7 +211,7 @@
 											</ol>
 											I led the design and implementation of our Character Classification subsystem using the scikit-learn library in Python and our LaTeX Document Formatting subsection in MATLAB. Additionally, I took the lead in creating our entire program plan, which included defining subsystem responsibilities and deadlines, and documented the majority of our project's content on <a href="https://github.com/EmiliaPsacharopoulos/HandwritingToLatex">GitHub</a> and our <a href="https://sites.google.com/umich.edu/eecs-351-handwriting-to-latex/home?authuser=0">website</a>. 
 										</p>
-										<img src="images/EECS351.jpg" alt="" style="max-width:800px;width:100%"/>
+										<img src="images/EECS351.jpg" alt="" style="width:100%"/>
 									</section>
 								</div>
 
@@ -223,7 +225,7 @@
 									<section>
 										<h2><b>Probabilistic Roadmap Path Planning Study &#8226; Winter 2022 </b></h2> 
 										<p>In MATH 462: Mathematical Modeling, my project partner and I chose to investigate the efficiency of an autonomous bicycle robotic model in Simulink. We conducted an in-depth analysis of the existing model's control system, vehicle dynamics, and the robustness of the Probabilistic Roadmap path planning algorithm. Additionally, we extended our study by developing our own model of vehicle dynamics using continuous time integration and compared it with the discrete time integration technique employed in the original model. This <a href="MATH_pathPlanningProject.pdf">research paper</a> details our findings.</p>
-											<img src="images/pathPlanning.jpg" alt="" style="max-width:600px;width:100%"/>
+											<img src="images/pathPlanning.jpg" alt="" style="width:100%"/>
 									</section>
 								</div>
 
@@ -254,7 +256,7 @@
 											<h2><b>AM Superheterodyne Radio Receiver &#8226; Winter 2021</b></h2>
 										</header>
 										<p>In EECS 216: Introduction to Signals and Systems, I built the back end of a functioning superheterodyne AM radio using resistors, capacitors, op-amps, diodes, and an audio speaker. This involved constructing a bandpass filter to allow only a specific range of frequencies, an envelope detector to demodulate the signal, and an output amplifier to boost the audio signal, all connected in series to the speaker. I tested my radio by tuning the local oscillator frequency to isolate individual broadcast stations.</p>
-										<img src="images/EECS216.jpg" alt="" style="max-width:600px;width:100%"/>
+										<img src="images/EECS216.jpg" alt="" style="width:100%"/>
 									</section>
 								</div>
 
