@@ -9,23 +9,14 @@
 		<title>Emilia Psacharopoulos - Academic Projects</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="left-sidebar is-preload">
 		<div id="page-wrapper">
 
 			<!-- Header -->
-			<header id="header">
-				<h1 id="logo"><a href="index.html">EMILIA PSACHAROPOULOS</a></h1>
-				<nav id="nav">
-					<ul>
-						<li class="current"><a href="index.html">Work Experience</a></li>
-						<li class="current"><a href="academicProjects.html">Academic Projects</a></li>
-						<li class="current"><a href="aboutMe.html">About Me</a></li>
-					</ul>
-				</nav>
-			</header>
+			<div id="header-placeholder"></div>
 
 
 			<!-- Main -->
@@ -88,14 +79,14 @@
 									<section>
 										<h2><b>Multi-Agent Path Planning and Collision Avoidance Algorithm &#8226; Winter 2023</b></h2>
                                         <p>
-											I selected EECS 467: Autonomous Robots for my degree's Major Design Experience (MDE) to culminate my studies at Michigan. My team and I designed and successfully demonstrated a multi-agent path planning and collision avoidance algorithm. While designing the algorithm, we opted to build upon the Conflict-Based Search (CBS) algorithm due to its completeness and optimality. I collaborated with a teammate to set up the TCP server and clients, and together we designed and implemented path-following logic that translated a 2D array of the robot's path into linear and angular velocities. Additionally, my teammate and I configured a PID controller for each M-Bot to ensure smooth operation during real-world testing.  I developed the testing suite for our real-world simulations by creating testing scenarios, designing the simulation field, and constructing the testing matrix. Ultimately, we conducted six trials with Michigan's M-Bots to evaluate the system's performance across varying levels of map complexity. For more information, please refer to our team’s <a href="https://github.com/EmiliaPsacharopoulos/multi-agent-collision-avoidance">GitHub</a> and final project video attached below for more information.
+											I selected EECS 467: Autonomous Robots for my degree's Major Design Experience (MDE) to culminate my studies at Michigan. My team and I designed and successfully demonstrated a multi-agent path planning and collision avoidance algorithm. While designing the algorithm, we opted to build upon the Conflict-Based Search (CBS) algorithm due to its completeness and optimality. I collaborated with a teammate to set up the TCP server and clients, and together we designed and implemented path-following logic that translated a 2D array of the robot's path into linear and angular velocities. Additionally, my teammate and I configured a PID controller for each M-Bot to ensure smooth operation during real-world testing.  I developed the testing suite for our real-world simulations by creating testing scenarios, designing the simulation field, and constructing the testing matrix. Ultimately, we conducted six trials with Michigan's M-Bots to evaluate the system's performance across varying levels of map complexity. For more information, please refer to our team’s <a href="https://github.com/EmiliaPsach/multi-agent-collision-avoidance">GitHub</a> and final project video attached below for more information.
 										</p>
 										<table> 
 											<tr> 
 												<iframe width="560" height="315" src="https://www.youtube.com/embed/qFqYIITFqd0?si=hdwI-rVQdYdWpBuQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 											</tr> 
 											<tr>
-												<td><img src="images/eecs467.jpg" style="max-width:600px;width:100%" ></td>
+												<td><img src="../assets/images/eecs467.jpg" style="max-width:600px;width:100%" ></td>
 											</tr>
 										</table> 
 									</section>
@@ -114,13 +105,13 @@
 										</p>
 										<table> 
 											<tr>
-												<td><img src="images/slam.png" style="max-width:600px;width:100%" ></td>
+												<td><img src="../assets/images/slam.png" style="max-width:600px;width:100%" ></td>
 											</tr>
 											<tr>
-												<td><img src="images/mbots.png" style="max-width:600px;width:100%" ></td>
+												<td><img src="../assets/images/mbots.png" style="max-width:600px;width:100%" ></td>
 											</tr>
 											<tr>
-												<td><img src="images/slam_2.jpg" style="max-width:600px;width:50%" ></td>
+												<td><img src="../assets/images/slam_2.jpg" style="max-width:600px;width:50%" ></td>
 											</tr> 
 										</table> 
 									</section>
@@ -141,7 +132,7 @@
 											<tr> 
 												<iframe width="560" height="315" src="https://www.youtube.com/embed/ynsI1RB5d14" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 												<iframe width="560" height="315" src="https://www.youtube.com/embed/HcMNyMvgoTM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-												<td><img src="images/EECS373_Poster.pptx.png" style="max-width:600px;width:100%" ></td>
+												<td><img src="../assets/images/EECS373_Poster.pptx.png" style="max-width:600px;width:100%" ></td>
 											</tr> 
 										</table> 
 									</section>
@@ -159,7 +150,7 @@
 										</p>
 										<table> 
 											<tr> 
-												<td><img src="images/eecs_442.png" style="max-width:600px;width:100%" ></td>
+												<td><img src="../assets/images/eecs_442.png" style="max-width:600px;width:100%" ></td>
 											</tr> 
 										</table> 
 									</section>
@@ -181,8 +172,8 @@
 											</ul>
 											Our system was entirely constructed in Simulink, utilizing scaffolding provided by the course instructors. We converted the Simulink model into C code that could be run in an NXP workspace and implemented it on a driving simulator supplied by the course. The hardware setup included an S32K144 microcontroller, a motherboard with a potentiometer and dip switches, and a haptic wheel. Throughout the semester, we produced C code to read from and write to registers on this hardware, developing various haptic capabilities. The ACC project built upon concepts from previous assignments, where we designed flow logic, controllers, and vehicle dynamics to model complex systems of differential equations.
 										</p>
-										<img src="images/eecs461sim.jpg" style="max-width:600px;width:100%" >
-										<img src="images/eecs461microprocessor.jpg" style="max-width:244px;width:40%" >
+										<img src="../assets/images/eecs461sim.jpg" style="max-width:600px;width:100%" >
+										<img src="../assets/images/eecs461microprocessor.jpg" style="max-width:244px;width:40%" >
 									</section>
 								</div>
 
@@ -204,9 +195,9 @@
 												<li>Classifying each individual character.</li>
 												<li>Outputting the classified characters to a LaTeX document.</li>
 											</ol>
-											I led the design and implementation of our Character Classification subsystem using the scikit-learn library in Python and our LaTeX Document Formatting subsection in MATLAB. Additionally, I took the lead in creating our entire program plan, which included defining subsystem responsibilities and deadlines, and documented the majority of our project's content on <a href="https://github.com/EmiliaPsacharopoulos/HandwritingToLatex">GitHub</a> and our <a href="https://sites.google.com/umich.edu/eecs-351-handwriting-to-latex/home?authuser=0">website</a>. 
+											I led the design and implementation of our Character Classification subsystem using the scikit-learn library in Python and our LaTeX Document Formatting subsection in MATLAB. Additionally, I took the lead in creating our entire program plan, which included defining subsystem responsibilities and deadlines, and documented the majority of our project's content on <a href="https://github.com/EmiliaPsach/HandwritingToLatex">GitHub</a> and our <a href="https://sites.google.com/umich.edu/eecs-351-handwriting-to-latex/home?authuser=0">website</a>. 
 										</p>
-										<img src="images/EECS351.jpg" alt="" style="width:100%"/>
+										<img src="../assets/images/EECS351.jpg" alt="" style="width:100%"/>
 									</section>
 								</div>
 
@@ -220,7 +211,7 @@
 									<section>
 										<h2><b>Probabilistic Roadmap Path Planning Study &#8226; Winter 2022 </b></h2> 
 										<p>In MATH 462: Mathematical Modeling, my project partner and I chose to investigate the efficiency of an autonomous bicycle robotic model in Simulink. We conducted an in-depth analysis of the existing model's control system, vehicle dynamics, and the robustness of the Probabilistic Roadmap path planning algorithm. Additionally, we extended our study by developing our own model of vehicle dynamics using continuous time integration and compared it with the discrete time integration technique employed in the original model. This <a href="MATH_pathPlanningProject.pdf">research paper</a> details our findings.</p>
-											<img src="images/pathPlanning.jpg" alt="" style="width:100%"/>
+											<img src="../assets/images/pathPlanning.jpg" alt="" style="width:100%"/>
 									</section>
 								</div>
 
@@ -251,7 +242,7 @@
 											<h2><b>AM Superheterodyne Radio Receiver &#8226; Winter 2021</b></h2>
 										</header>
 										<p>In EECS 216: Introduction to Signals and Systems, I built the back end of a functioning superheterodyne AM radio using resistors, capacitors, op-amps, diodes, and an audio speaker. This involved constructing a bandpass filter to allow only a specific range of frequencies, an envelope detector to demodulate the signal, and an output amplifier to boost the audio signal, all connected in series to the speaker. I tested my radio by tuning the local oscillator frequency to isolate individual broadcast stations.</p>
-										<img src="images/EECS216.jpg" alt="" style="width:100%"/>
+										<img src="../assets/images/EECS216.jpg" alt="" style="width:100%"/>
 									</section>
 								</div>
 
@@ -260,31 +251,25 @@
 				</article>
 
 			<!-- Footer -->
-            <footer id="footer">
-
-                <ul class="icons">
-                    <li><a href="https://www.linkedin.com/in/emilia-psacharopoulos/" class="icon brands circle fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                    <li><a href="https://github.com/EmiliaPsacharopoulos" class="icon brands circle fa-github"><span class="label">Github</span></a></li>
-                </ul>
-
-                <ul class="copyright">
-                    <li>&copy; Emilia Psacharopoulos</li><li>Email: emiliap@umich.edu</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-                </ul>
-
-            </footer>
+            <div id="footer-placeholder"></div>
 
 		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollgress.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.dropotron.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/jquery.scrollgress.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+			<script src="../assets/js/include.js"></script>
+			<script>
+				loadHTML("header-placeholder", "header.html");
+				loadHTML("footer-placeholder", "footer.html");
+			</script>
 
 	</body>
 </html>
