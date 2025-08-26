@@ -1,13 +1,26 @@
-<script>
-  loadHTML("header-placeholder", "components/header.html");
-  loadHTML("footer-placeholder", "components/footer.html");
-</script>
-
+<!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.dropotron.min.js"></script>
 <script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/jquery.scrollgress.min.js"></script>
 <script src="assets/js/jquery.scrollex.min.js"></script>
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+<!-- Don't load main.js here - we'll initialize it manually -->
+<!-- <script src="assets/js/main.js"></script> -->
+
+<script src="assets/js/loadhtml.js"></script>
+<script>
+  // Load components first
+  Promise.all([
+    loadHTML("header-placeholder", "components/header.html"),
+    loadHTML("footer-placeholder", "components/footer.html")
+  ]).then(() => {
+    console.log("All HTML components loaded");
+    // Initialize main.js functionality after components are loaded
+    initializeMainJS();
+  }).catch(err => {
+    console.error("Failed to load components:", err);
+  });
+</script>
