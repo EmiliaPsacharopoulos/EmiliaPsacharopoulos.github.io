@@ -2771,9 +2771,20 @@ input, select, textarea {
 
 /* Narrower */
 
-	#navPanel, #navButton {
-		display: none;
-	}
+@media screen and (max-width: 736px) {
+    #header nav {
+        display: none; /* hide the desktop nav */
+    }
+
+    #navButton {
+        display: block; /* show the hamburger */
+    }
+
+    #navPanel {
+        display: block; /* show the mobile nav panel */
+    }
+}
+
 
 	@media screen and (max-width: 840px) {
 
