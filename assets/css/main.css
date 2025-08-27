@@ -2427,6 +2427,16 @@ input, select, textarea {
 					border: solid 1px;
 				}
 
+/* Mobile Navigation - Hidden by default */
+
+	#navButton {
+		display: none;
+	}
+
+	#navPanel {
+		display: none;
+	}
+
 /* Dropotron */
 
 	.dropotron {
