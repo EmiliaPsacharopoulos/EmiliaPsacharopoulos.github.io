@@ -48,7 +48,7 @@
 					<br />
 					to provide business insights for Boeing's
 					<br />
-					next generation of sustainable commercial aircraft.
+					next generation of sustainable aircraft.
 					</p>
 					<br />
 				</div>
@@ -57,6 +57,42 @@
 
 			<!-- Main -->
 			<article id="main">
+
+						<section class="wrapper style4 container">
+
+							<!-- Content -->
+								<div class="content">
+									<section>
+										<h2><b>Aurora Flight Sciences</b></h2> 
+										<h3><b>Autonomy Engineer &#8226; April 2024 - Present</b></h3>
+										<h4><u>Business Insights Generation (>1 year, Current)</u></h4>
+										<p><b>Program Description:</b>
+										This is an Aurora-led program that aims to provide business insights to inform Boeing’s technology selection for its next-generation sustainable aircraft. The program is delivering:
+										<ol>
+											<li>
+												an interactive data analysis and visualization dashboard (<b>frontend</b>), and 
+											</li>
+											<li>
+												a CP-SAT modeling framework to predict optimal aircraft technology selections  (<b>backend</b>).
+											</li>
+										</ol></p>
+										<p><b>Initial Foundation Work:</b>
+										I began my work on this program by producing its first comprehensive 30-page documentation suite detailing the math and architecture of the CP-SAT optimizer framework, then refactored the entire codebase to improve code clarity and usability. Building on this foundation, I developed within the program's existing Python-based stack (using Dash for frontend and Python backend) to create visualization charting and mapping tools that processed 2GB of data stored in .zip, .csv, and .parquet files.</p>
+										<p><b>Strategic Architecture Transformation:</b>
+										Recognizing that the original design would not scale for internal deployment, I made the strategic decision to completely transform the application's technology stack. I migrated all data to a custom-designed ORM-PostgreSQL database, creating the table structures and schema myself, then prototyped a React TypeScript frontend connected to a Python FastAPI backend. This V2 application replicated most V1 functionality including data selection via AG-Grid, mapping of routes/airports/infrastructure, and interactive charts (histograms, scatterplots, etc.), though the decision-making modeling interface remains in development. While I attempted internal deployment to VMware Tanzu and Azure, funding constraints and administrative resistance limited progress, though I gained valuable experience in designing applications for scalable deployment.</p>
+										<p><b>Technical Leadership and Model Enhancement:</b>
+										As the lead full-stack developer with control over merge request reviews, I ensure code quality while directing the application's development. I collaborated with a teammate to extend the decision-making framework by creating a time-dependent model for a specific energy carrier that remembers past decisions in future years, allowing solutions to persist across time periods. I then leveraged this enhanced model to create and present case studies to 25 engineers (many at senior level) at a Boeing sustainability workshop in Seattle, demonstrating how the model's enhanced decision-making capabilities enable extraction of valuable insights for predicting key investments. Additionally, I created a separate presentation analyzing the economics of an existing Boeing aircraft, explaining its market value and current operational patterns across global markets.</p>
+										<h4><u>Backend Modeling (3 months)</u></h4>
+										<p>I worked as a backend modeling developer on Boeing's <a href="https://cascade.boeing.com/">Cascade Climate Impact Model</a>, focusing on enhancing code quality, maintainability, and performance for the backend library distributed to hundreds of users. My most significant contribution was winning first place in a team hackathon by dramatically optimizing the Non-CO2 module's runtime from nearly 18 minutes to 4.3 seconds—a 99.6% performance improvement achieved through efficient algorithm design and code refactoring. This critical optimization unblocked the module for customer deployment.</p>
+										<h4><u>Software Services (1 month)</u></h4>
+										<p>I designed and prototyped a service to monitor inter-agent communication for Aurora's internal autonomy framework. The solution implemented a distributed network of C++ DDS subscribers that consume and log messages at 1 Hz into a SQL database while exposing a REST API for the Python frontend, enhancing backend performance and data handling capabilities.</p>
+										<h3><b>Associate Autonomy Engineer &#8226; August 2023 - April 2024</b></h3>
+										<h4><u>DoD Autonomy Architecture</u></h4>
+										<p>I earned a promotion within a year at Aurora after leading key contributions to a high-visibility Department of Defense autonomy architecture program. I collaborated with a cross-functional 8-person team to design Level 1 compliance requirements and develop a scalable Command and Control authority model for autonomous distributed systems. To improve program documentation accessibility, I taught myself HTML and CSS to create a static site hosting our complete decision-justification documentation, then created Jira tickets and delegated tasking to 4 team members for about a month. Following the program, I prototyped a low-latency C++ library framework to validate the authority model, identifying scalability constraints to inform future development.</p>
+									</section>
+								</div>
+
+						</section>
 
 						<section class="wrapper style4 container">
 
