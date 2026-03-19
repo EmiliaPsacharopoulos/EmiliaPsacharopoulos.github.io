@@ -7,11 +7,11 @@ Load this file when making design, layout, or content-structure decisions.
 ## Personal Brand
 
 **Identity statement:**
-Software engineer with a background in mathematical modeling and decision-support systems, with
-experience owning and shipping full-stack production features at an early-stage startup. Motivated
-by building systems that model, optimize, or simulate real-world problems at scale. Naturally
-curious — drawn to understanding how and why things work, not just making them work. Prioritizes
-being straightforward, low-friction, and easy to work with.
+Software engineer with a background in optimization modeling and autonomous systems, with
+experience owning and shipping full-stack production features end-to-end. Motivated by building
+systems that optimize or simulate real-world problems at scale. Naturally curious — drawn to
+understanding how and why things work, not just making them work. Prioritizes being
+straightforward, low-friction, and easy to work with.
 
 **Aesthetic label:** Computational Minimalism / Analytical Creative Engineer — a hybrid between
 researcher, engineer, and creative technologist.
@@ -33,6 +33,6 @@ researcher, engineer, and creative technologist.
 ## Visual Identity
 
 - Technical and mathematical visuals (grids, geometry, generative patterns) are welcome as
-  background texture or decoration — they reinforce the mathematical modeling brand pillar.
+  background texture or decoration — they reinforce the optimization modeling and autonomous systems brand pillar.
 - The site should feel like it belongs to an engineer who thinks visually, not a designer who
   codes. Precision and restraint over decoration.

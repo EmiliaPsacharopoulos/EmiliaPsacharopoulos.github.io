@@ -2,6 +2,7 @@
 
 @.claude/writing-style.md
 @.claude/content-philosophy.md
+@.claude/content-reviewer.md — **only invoke when explicitly asked for a content review**
 
 ---
 
