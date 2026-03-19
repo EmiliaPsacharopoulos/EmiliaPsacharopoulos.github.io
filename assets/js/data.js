@@ -305,7 +305,6 @@ const data = {
     }
   },
   expMeta: {
-    e0: { jobTitle: 'Director of Music & Guitar Tutor', company: 'Seven Mile', location: 'Detroit, MI', dates: 'Sep 2019 — May 2023', tagline: '', website: 'https://www.umsevenmile.org/' },
     e1: { jobTitle: 'Engineering Intern', company: 'The George Washington University', location: 'Ashburn, VA', dates: 'June 2018 — August 2018', tagline: 'Lab assistant.', website: 'https://www.gwu.edu/' },
     e2: { jobTitle: 'Engineering Technician Intern', company: 'NAVSEA', location: 'Washington Navy Yard, DC (Remote)', dates: 'May 2020 — January 2021', tagline: 'Technical documentation assistant.', website: 'https://www.navsea.navy.mil/' },
     e3: { jobTitle: 'Robotics Research Engineering Intern', company: 'University of Michigan Robotics Institute', location: 'Ann Arbor, MI', dates: 'May 2021 — December 2021', tagline: 'Open-source robotics developer.', website: 'https://robotics.umich.edu/' },
@@ -471,6 +470,11 @@ const data = {
       `,
       tags: ['Research', 'Materials Science', 'Mechanical Engineering']
     },
+  },
+  eduMeta: {
+    e0: { jobTitle: 'Director of Music & Guitar Tutor', company: 'Seven Mile', location: 'Detroit, MI', dates: 'Sep 2019 — May 2023', tagline: '', website: 'https://www.umsevenmile.org/' }
+  },
+  edu: {
     e0: {
       htmlShort: `
         <ul style="font-size:0.9rem;line-height:1.8;color:var(--muted);padding-left:1.2rem">

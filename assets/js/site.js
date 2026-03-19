@@ -35,26 +35,30 @@ document.querySelectorAll('a,button,.project-card,.exp-row,.mde-card,.edu-activi
 
 
 /* ── URL deep-linking ── */
-const sectionBase = { exp: '/experience', proj: '/projects' };
-const typeToUrl = { exp: 'experience', proj: 'project' };
-const urlToType = { experience: 'exp', project: 'proj' };
+const sectionBase = { exp: '/experience', proj: '/projects', edu: '/education' };
+const typeToUrl = { exp: 'experience', proj: 'project', edu: 'education' };
+const urlToType = { experience: 'exp', project: 'proj', education: 'edu' };
 
 function slugify(str) {
   return str.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 }
 
 // Build slug ↔ id lookup maps
-const slugToId = { proj: {}, exp: {} };
+const slugToId = { proj: {}, exp: {}, edu: {} };
 Object.entries(data.proj).forEach(([id, item]) => {
   slugToId.proj[slugify(item.title)] = id;
 });
 Object.entries(data.expMeta).forEach(([id, meta]) => {
   slugToId.exp[slugify(meta.company)] = id;
 });
+Object.entries(data.eduMeta).forEach(([id, meta]) => {
+  slugToId.edu[slugify(meta.company)] = id;
+});
 
 function idToSlug(type, id) {
   if (type === 'proj') return slugify(data.proj[id].title);
   if (type === 'exp') return slugify(data.expMeta[id].company);
+  if (type === 'edu') return slugify(data.eduMeta[id].company);
   return id;
 }
 
@@ -306,7 +310,7 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDi
   const id = slugToId[type] && slugToId[type][slug];
   if (id && data[type] && data[type][id]) {
     // Scroll background to the relevant section before opening modal
-    const sectionId = type === 'exp' ? 'experience' : type === 'proj' ? 'projects' : null;
+    const sectionId = type === 'exp' ? 'experience' : type === 'proj' ? 'projects' : type === 'edu' ? 'education' : null;
     if (sectionId) {
       const sectionEl = document.getElementById(sectionId);
       if (sectionEl) {
