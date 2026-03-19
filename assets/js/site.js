@@ -523,7 +523,64 @@ const data = {
   }
 };
 
-function openModal(type, id) {
+/* ── URL deep-linking ── */
+const sectionBase = { exp: '#experience', proj: '#projects' };
+const typeToUrl = { exp: 'experience', proj: 'project' };
+const urlToType = { experience: 'exp', project: 'proj' };
+
+function slugify(str) {
+  return str.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+
+// Build slug ↔ id lookup maps
+const slugToId = { proj: {}, exp: {} };
+Object.entries(data.proj).forEach(([id, item]) => {
+  slugToId.proj[slugify(item.title)] = id;
+});
+Object.entries(data.expMeta).forEach(([id, meta]) => {
+  slugToId.exp[slugify(meta.company)] = id;
+});
+
+function idToSlug(type, id) {
+  if (type === 'proj') return slugify(data.proj[id].title);
+  if (type === 'exp') return slugify(data.expMeta[id].company);
+  return id;
+}
+
+function setModalHash(type, id, view, replace) {
+  const slug = idToSlug(type, id);
+  const urlType = typeToUrl[type] || type;
+  const hash = (view && view !== 'short') ? `#${urlType}/${slug}/${view}` : `#${urlType}/${slug}`;
+  if (replace) {
+    history.replaceState({ modal: { type, id, view } }, '', hash);
+  } else {
+    // Ensure back button returns to the correct section, not wherever the user was
+    const base = sectionBase[type];
+    if (base) history.replaceState(null, '', base);
+    history.pushState({ modal: { type, id, view } }, '', hash);
+  }
+}
+
+function clearModalHash() {
+  history.pushState(null, '', window.location.pathname + window.location.search);
+}
+
+window.addEventListener('popstate', e => {
+  const modalEl = document.getElementById('modal');
+  if (e.state && e.state.modal) {
+    const { type, id, view } = e.state.modal;
+    openModal(type, id, view || 'short', true);
+  } else if (modalEl && modalEl.classList.contains('open')) {
+    modalEl.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+});
+
+function openModal(type, id, view, fromHash) {
+  view = view || 'short';
+  fromHash = fromHash || false;
+  const isLong = view === 'long';
+
   const item = data[type][id];
   const meta = data[type + 'Meta'] ? data[type + 'Meta'][id] : null;
   const body = document.getElementById('modal-body-content');
@@ -532,17 +589,13 @@ function openModal(type, id) {
 
   if (meta) {
     // Experience modal with metadata header
-    // Extract images and videos from HTML
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = item.html || '';
     const images = tempDiv.querySelectorAll('img, iframe');
     const mediaHTML = Array.from(images).map(el => el.outerHTML).join('');
-
-    // Remove images/videos from content
     images.forEach(img => img.remove());
     const htmlWithoutMedia = tempDiv.innerHTML;
 
-    // Do the same for htmlShort if it exists
     let htmlShortWithoutMedia = '';
     if (item.htmlShort) {
       const tempDiv2 = document.createElement('div');
@@ -554,11 +607,11 @@ function openModal(type, id) {
 
     const toggleHTML = item.htmlShort ? `
       <div class="exp-modal-toggle">
-        <button class="exp-modal-toggle-btn exp-modal-toggle-short active" data-format="short">highlights</button>
-        <button class="exp-modal-toggle-btn exp-modal-toggle-long" data-format="long">in depth</button>
+        <button class="exp-modal-toggle-btn exp-modal-toggle-short${isLong ? '' : ' active'}" data-format="short">highlights</button>
+        <button class="exp-modal-toggle-btn exp-modal-toggle-long${isLong ? ' active' : ''}" data-format="long">in depth</button>
       </div>
-      <div class="exp-modal-content exp-modal-short" style="display:block;">${htmlShortWithoutMedia}</div>
-      <div class="exp-modal-content exp-modal-long" style="display:none;">${htmlWithoutMedia}${mediaHTML ? `<div class="exp-modal-media">${mediaHTML}</div>` : ''}</div>
+      <div class="exp-modal-content exp-modal-short" style="display:${isLong ? 'none' : 'block'};">${htmlShortWithoutMedia}</div>
+      <div class="exp-modal-content exp-modal-long" style="display:${isLong ? 'block' : 'none'};">${htmlWithoutMedia}${mediaHTML ? `<div class="exp-modal-media">${mediaHTML}</div>` : ''}</div>
     ` : `
       <div class="exp-modal-content">${htmlWithoutMedia}${mediaHTML ? `<div class="exp-modal-media">${mediaHTML}</div>` : ''}</div>
     `;
@@ -572,25 +625,21 @@ function openModal(type, id) {
     document.getElementById('modal-header-dates').textContent = meta.dates ? `📅 ${meta.dates}` : '';
     document.getElementById('modal-header-links').innerHTML = meta.location ? `<span class="modal-dates">📍 ${meta.location}</span>` : '';
 
-    // Add toggle listeners
     setTimeout(() => {
       const shortBtn = document.querySelector('.exp-modal-toggle-short');
       const longBtn = document.querySelector('.exp-modal-toggle-long');
       const shortContent = document.querySelector('.exp-modal-short');
       const longContent = document.querySelector('.exp-modal-long');
-
       if (shortBtn && longBtn) {
         shortBtn.addEventListener('click', () => {
-          shortBtn.classList.add('active');
-          longBtn.classList.remove('active');
-          shortContent.style.display = 'block';
-          longContent.style.display = 'none';
+          shortBtn.classList.add('active'); longBtn.classList.remove('active');
+          shortContent.style.display = 'block'; longContent.style.display = 'none';
+          setModalHash(type, id, 'short', true);
         });
         longBtn.addEventListener('click', () => {
-          longBtn.classList.add('active');
-          shortBtn.classList.remove('active');
-          shortContent.style.display = 'none';
-          longContent.style.display = 'block';
+          longBtn.classList.add('active'); shortBtn.classList.remove('active');
+          shortContent.style.display = 'none'; longContent.style.display = 'block';
+          setModalHash(type, id, 'long', true);
         });
       }
     }, 0);
@@ -639,11 +688,11 @@ function openModal(type, id) {
       if (item.htmlShort) {
         content = `
           <div class="exp-modal-toggle">
-            <button class="exp-modal-toggle-btn exp-modal-toggle-short active">highlights</button>
-            <button class="exp-modal-toggle-btn exp-modal-toggle-long">in depth</button>
+            <button class="exp-modal-toggle-btn exp-modal-toggle-short${isLong ? '' : ' active'}">highlights</button>
+            <button class="exp-modal-toggle-btn exp-modal-toggle-long${isLong ? ' active' : ''}">in depth</button>
           </div>
-          <div class="exp-modal-content exp-modal-short" style="display:block;">${item.htmlShort}</div>
-          <div class="exp-modal-content exp-modal-long" style="display:none;"><div class="modal-proj-text">${cleanTextHTML}</div>${mediaSection}</div>
+          <div class="exp-modal-content exp-modal-short" style="display:${isLong ? 'none' : 'block'};">${item.htmlShort}</div>
+          <div class="exp-modal-content exp-modal-long" style="display:${isLong ? 'block' : 'none'};"><div class="modal-proj-text">${cleanTextHTML}</div>${mediaSection}</div>
           <div class="modal-tags">${item.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
         `;
       } else {
@@ -652,14 +701,7 @@ function openModal(type, id) {
     } else {
       content = `<div class="modal-proj-text"><p>${item.desc || ''}</p></div><div class="modal-tags">${item.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>`;
     }
-  }
 
-  body.innerHTML = content;
-  document.getElementById('modal').classList.add('open');
-  document.body.style.overflow = 'hidden';
-
-  // Initialize project toggle if present (project modals)
-  if (!meta) {
     setTimeout(() => {
       const shortBtn = document.querySelector('.exp-modal-toggle-short');
       const longBtn = document.querySelector('.exp-modal-toggle-long');
@@ -669,14 +711,22 @@ function openModal(type, id) {
         shortBtn.addEventListener('click', () => {
           shortBtn.classList.add('active'); longBtn.classList.remove('active');
           shortContent.style.display = 'block'; longContent.style.display = 'none';
+          setModalHash(type, id, 'short', true);
         });
         longBtn.addEventListener('click', () => {
           longBtn.classList.add('active'); shortBtn.classList.remove('active');
           shortContent.style.display = 'none'; longContent.style.display = 'block';
+          setModalHash(type, id, 'long', true);
         });
       }
     }, 0);
   }
+
+  body.innerHTML = content;
+  document.getElementById('modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+
+  if (!fromHash) setModalHash(type, id, view);
 
   // Initialize carousel if present
   setTimeout(() => {
@@ -687,34 +737,50 @@ function openModal(type, id) {
       const prevBtn = carousel.querySelector('.modal-carousel-prev');
       const nextBtn = carousel.querySelector('.modal-carousel-next');
       let idx = 0;
-
       function showItem(n) {
         items[idx].style.display = 'none';
         idx = (n + items.length) % items.length;
         items[idx].style.display = 'block';
         if (counter) counter.textContent = `${idx + 1} / ${items.length}`;
       }
-
       if (prevBtn) prevBtn.addEventListener('click', () => showItem(idx - 1));
       if (nextBtn) nextBtn.addEventListener('click', () => showItem(idx + 1));
     }
   }, 0);
 
-  // Scroll modal to top
   const modalEl = document.getElementById('modal');
-  if (modalEl) {
-    setTimeout(() => { modalEl.scrollTop = 0; }, 0);
-  }
+  if (modalEl) setTimeout(() => { modalEl.scrollTop = 0; }, 0);
 }
 
 function closeModal(e) { if (e.target.id === 'modal') closeModalDirect(); }
 function closeModalDirect() {
-  const modalEl = document.getElementById('modal');
-  modalEl.classList.remove('open');
+  document.getElementById('modal').classList.remove('open');
   document.body.style.overflow = '';
+  clearModalHash();
 }
 
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDirect(); });
+
+// Open modal from URL hash (handles both initial load and same-page hash navigation)
+function openModalFromHash(hash) {
+  hash = (hash || window.location.hash).slice(1);
+  if (!hash) return;
+  const [urlType, slug, view] = hash.split('/');
+  const type = urlToType[urlType] || urlType;
+  const id = slugToId[type] && slugToId[type][slug];
+  if (id && data[type] && data[type][id]) {
+    openModal(type, id, view || 'short', true);
+  }
+}
+
+// On initial load (script is at bottom of body so DOM is ready)
+openModalFromHash();
+
+// On same-page hash navigation (e.g. user types URL in address bar while already on the page)
+window.addEventListener('hashchange', e => {
+  const hash = new URL(e.newURL).hash;
+  openModalFromHash(hash);
+});
 
 /* ── Populate project cards ── */
 document.querySelectorAll('[data-proj]').forEach(el => {
