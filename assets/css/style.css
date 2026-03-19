@@ -309,6 +309,8 @@ h2 {
   font-size: 0.9rem; line-height: 1.8; color: var(--muted);
 }
 .edu-summary strong { color: var(--ink); font-weight: 500; }
+.edu-summary a { color: var(--teal); text-decoration: none; border-bottom: 1px solid rgba(13,115,119,0.3); }
+.edu-summary a:hover { border-color: var(--teal); }
 
 .edu-personal-photo {
   flex-shrink: 0;
