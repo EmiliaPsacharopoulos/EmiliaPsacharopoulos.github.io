@@ -296,13 +296,16 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDi
   const [urlType, slug, view] = parts;
   const type = urlToType[urlType] || urlType;
 
-  // Section-root path (e.g. /experience or /projects with no slug) — scroll to section
+  const sectionMap = { experience: 'experience', projects: 'projects', skills: 'skills', education: 'education' };
+
+  // Section-root path (e.g. /experience with no slug) — scroll to section or redirect if unknown
   if (urlType && !slug) {
-    const sectionMap = { experience: 'experience', projects: 'projects', skills: 'skills', education: 'education' };
     const sectionId = sectionMap[urlType];
     if (sectionId) {
       const el = document.getElementById(sectionId);
       if (el) el.scrollIntoView();
+    } else {
+      history.replaceState(null, '', '/');
     }
     return;
   }
@@ -323,6 +326,9 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDi
     }
     }
     openModal(type, id, view || 'short', true);
+  } else if (urlType) {
+    // Unrecognised path — redirect to base
+    history.replaceState(null, '', '/');
   }
 })();
 
