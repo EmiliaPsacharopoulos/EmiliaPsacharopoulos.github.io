@@ -136,6 +136,7 @@ For each skills section issue, state: **Where** (category name), **What** (the p
 
 ## Hard Constraints
 
+- **Flag any paragraph that uses an em dash (—) more than once.** At most one em dash per paragraph is allowed. Flag every violation, stating the exact paragraph location.
 - **Do not rewrite anything.**
 - **Do not suggest replacement copy.**
 - **Do not use the word "consider" or the phrase "you might want to."** State the problem. State why it matters. Stop there.
