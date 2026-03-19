@@ -303,7 +303,13 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDi
     const sectionId = sectionMap[urlType];
     if (sectionId) {
       const el = document.getElementById(sectionId);
-      if (el) el.scrollIntoView();
+      if (el) {
+        document.fonts.ready.then(() => {
+          const navOffset = document.querySelector('nav')?.offsetHeight || 0;
+          const target = el.querySelector('.section-header') || el;
+          window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - navOffset });
+        });
+      }
     } else {
       history.replaceState(null, '', '/');
     }
