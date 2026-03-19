@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Teal rounded background -->
+  <rect width="64" height="64" rx="12" ry="12" fill="#0d7377"/>
+
+  <!-- White E text -->
+  <text x="32" y="32" font-family="Georgia, 'DM Serif Display', serif" font-size="52" font-weight="400" fill="#faf8f2" text-anchor="middle" dominant-baseline="central">E</text>
+</svg>

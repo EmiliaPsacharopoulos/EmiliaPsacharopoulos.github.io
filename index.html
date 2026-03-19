@@ -1,169 +1,458 @@
-<!DOCTYPE HTML>
-<!--
-	Twenty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Emilia Psacharopoulos - Work Experience</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-			html, body {
-				overflow: auto; /* Ensure scrolling is enabled */
-				height: auto; /* Allow the height to expand */
-				margin: 0; /* Remove default margin */
-			}
-			#page-wrapper {
-				min-height: 100vh; /* Ensure it takes at least the full viewport height */
-				display: flex;
-				flex-direction: column; /* Stack header, main, and footer */
-			}
-			/* Add any additional styles needed */
-		</style>
-	</head>
-	<body class="no-sidebar is-preload">
-		<div id="page-wrapper">
+---
+layout: default
+title: Emilia Psacharopoulos
+---
 
-			<!-- Header -->
-			<div id="header-placeholder"></div>
+<div class="page">
 
-			<!-- Banner -->
-			<section id="banner">
+  <!-- ── SELF ── -->
+  <section class="self">
+    <div class="self-content">
+      <div class="self-tagline">Software Engineer & Mathematical Modeler</div>
+      <h1>Emilia<br><em>Psacharopoulos</em></h1>
+      <p class="self-desc">
+        Software engineer with a background in mathematical modeling and decision-support systems, with experience owning and shipping full-stack production features at an early-stage startup. Motivated by building systems that model, optimize, or simulate real-world problems at scale.
+      </p>
+      <div class="self-social">
+        <a href="https://www.linkedin.com/in/emilia-psacharopoulos/" target="_blank" class="self-social-link" style="--bg:#e8f0fb;--c:#4a7fc4" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="3"/><line x1="8" y1="11" x2="8" y2="17"/><line x1="8" y1="7" x2="8" y2="8.5"/><path d="M12 17v-4.5a2.5 2.5 0 0 1 5 0V17"/><line x1="12" y1="11" x2="12" y2="17"/></svg>
+        </a>
+        <a href="https://github.com/EmiliaPsach" target="_blank" class="self-social-link" style="--bg:#f5f5f0;--c:#333" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+		<a href="https://www.youtube.com/@emiliapsacharopoulos9908" target="_blank" class="self-social-link" style="--bg:#fef0f0;--c:#c4302b" aria-label="YouTube">
+			<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M22 7.2c0-1.2-.9-2.2-2-2.2H4c-1.1 0-2 .9-2 2.2v9.6c0 1.2.9 2.2 2 2.2h16c1.1 0 2-.9 2-2.2V7.2z"/>
+				<polygon points="10,8 16,12 10,16 10,8"/>
+			</svg>
+		</a>
+        <a href="mailto:emiliapsach@gmail.com" class="self-social-link" style="--bg:#fef3f0;--c:#c43e28" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+        </a>
+      </div>
+      <div class="self-cta">
+        <a href="assets/pdfs/emilia_psacharopoulos_resume_march2026.pdf" target="_blank" class="btn-primary">My Resume</a>
+        <a href="/about" class="btn-outline">About Me</a>
+      </div>
+    </div>
+    <div class="self-photo">
+      <img src="assets/images/self_photo.png" alt="Portrait">
+    </div>
+  </section>
 
-				<!--
-					".inner" is set up as an inline-block so it automatically expands
-					in both directions to fit whatever's inside it. This means it won't
-					automatically wrap lines, so be sure to use line breaks where
-					appropriate (<br />).
-				-->
-				<div class="inner">
-					<p><h1>Hi, I'm Emilia.</h1>
-					I am an Autonomy Engineer at Aurora Flight Sciences
-					<br />
-					currently developing an optimization model
-					<br />
-					to provide business insights for Boeing's
-					<br />
-					next generation of sustainable aircraft.
-					</p>
-					<br />
-				</div>
+  <!-- ── EXPERIENCE ── -->
+  <section id="experience">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2>Experience</h2>
+    </div>
+    <div class="exp-timeline">
 
-			</section>
+      <div class="exp-row" onclick="openModal('exp','e7')">
+        <div class="exp-node"></div>
+        <a href="https://www.getbasis.ai/" target="_blank" class="exp-logo" onclick="event.stopPropagation();"><img src="assets/images/basis_logo.png" alt="Basis AI"></a>
+        <span class="exp-date" data-meta="e7"></span>
+        <h3 data-meta="e7"></h3>
+        <span class="exp-company" data-meta="e7"></span>
+        <p data-meta="e7"></p>
+        <div class="exp-arrow">→ view experience</div>
+      </div>
 
-			<!-- Main -->
-			<article id="main">
+      <div class="exp-row" onclick="openModal('exp','e5')">
+        <div class="exp-node"></div>
+        <a href="https://www.aurora.aero/" target="_blank" class="exp-logo" onclick="event.stopPropagation();"><img src="assets/images/aurora_logo.png" alt="Aurora Flight Sciences"></a>
+        <span class="exp-date" data-meta="e5"></span>
+        <h3 data-meta="e5"></h3>
+        <span class="exp-company" data-meta="e5"></span>
+        <p data-meta="e5"></p>
+        <div class="exp-arrow">→ view experience</div>
+      </div>
 
-						<section class="wrapper style4 container">
+      <div class="exp-row" onclick="openModal('exp','e4')">
+        <div class="exp-node"></div>
+        <a href="https://www.analog.com/en/index.html" target="_blank" class="exp-logo" onclick="event.stopPropagation();"><img src="assets/images/ADI_logo.png" alt="Analog Devices"></a>
+        <span class="exp-date" data-meta="e4"></span>
+        <h3 data-meta="e4"></h3>
+        <span class="exp-company" data-meta="e4"></span>
+        <p data-meta="e4"></p>
+        <div class="exp-arrow">→ view experience</div>
+      </div>
 
-							<!-- Content -->
-								<div class="content">
-									<section>
-										<h2><b>Aurora Flight Sciences</b></h2> 
-										<h3><b>Autonomy Engineer &#8226; April 2024 - Present</b></h3>
-										<h4><u>Business Insights Generation (>1 year, Current)</u></h4>
-										<p><b>Program Description:</b>
-										This is an Aurora-led program that aims to provide business insights to inform Boeing’s technology selection for its next-generation sustainable aircraft. The program is delivering:
-										<ol>
-											<li>
-												an interactive data analysis and visualization dashboard (<b>frontend</b>), and 
-											</li>
-											<li>
-												a CP-SAT modeling framework to predict optimal aircraft technology selections  (<b>backend</b>).
-											</li>
-										</ol></p>
-										<p><b>Initial Foundation Work:</b>
-										I began my work on this program by producing its first comprehensive 30-page documentation suite detailing the math and architecture of the CP-SAT optimizer framework, then refactored the entire codebase to improve code clarity and usability. Building on this foundation, I developed within the program's existing Python-based stack (using Dash for frontend and Python backend) to create visualization charting and mapping tools that processed 2GB of data stored in .zip, .csv, and .parquet files.</p>
-										<p><b>Strategic Architecture Transformation:</b>
-										Recognizing that the original design would not scale for internal deployment, I made the strategic decision to completely transform the application's technology stack. I migrated all data to a custom-designed ORM-PostgreSQL database, creating the table structures and schema myself, then prototyped a React TypeScript frontend connected to a Python FastAPI backend. This V2 application replicated most V1 functionality including data selection via AG-Grid, mapping of routes/airports/infrastructure, and interactive charts (histograms, scatterplots, etc.), though the decision-making modeling interface remains in development. While I attempted internal deployment to VMware Tanzu and Azure, funding constraints and administrative resistance limited progress, though I gained valuable experience in designing applications for scalable deployment.</p>
-										<p><b>Technical Leadership and Model Enhancement:</b>
-										As the lead full-stack developer with control over merge request reviews, I ensure code quality while directing the application's development. I collaborated with a teammate to extend the decision-making framework by creating a time-dependent model for a specific energy carrier that remembers past decisions in future years, allowing solutions to persist across time periods. I then leveraged this enhanced model to create and present case studies to 25 engineers (many at senior level) at a Boeing sustainability workshop in Seattle, demonstrating how the model's enhanced decision-making capabilities enable extraction of valuable insights for predicting key investments. Additionally, I created a separate presentation analyzing the economics of an existing Boeing aircraft, explaining its market value and current operational patterns across global markets.</p>
-										<h4><u>Backend Modeling (3 months)</u></h4>
-										<p>I worked as a backend modeling developer on Boeing's <a href="https://cascade.boeing.com/">Cascade Climate Impact Model</a>, focusing on enhancing code quality, maintainability, and performance for the backend library distributed to hundreds of users. My most significant contribution was winning first place in a team hackathon by dramatically optimizing the Non-CO2 module's runtime from nearly 18 minutes to 4.3 seconds—a 99.6% performance improvement achieved through efficient algorithm design and code refactoring. This critical optimization unblocked the module for customer deployment.</p>
-										<h4><u>Software Services (1 month)</u></h4>
-										<p>I designed and prototyped a service to monitor inter-agent communication for Aurora's internal autonomy framework. The solution implemented a distributed network of C++ DDS subscribers that consume and log messages at 1 Hz into a SQL database while exposing a REST API for the Python frontend, enhancing backend performance and data handling capabilities.</p>
-										<h3><b>Associate Autonomy Engineer &#8226; August 2023 - April 2024</b></h3>
-										<h4><u>DoD Autonomy Architecture</u></h4>
-										<p>I earned a promotion within a year at Aurora after leading key contributions to a high-visibility Department of Defense autonomy architecture program. I collaborated with a cross-functional 8-person team to design Level 1 compliance requirements and develop a scalable Command and Control authority model for autonomous distributed systems. To improve program documentation accessibility, I taught myself HTML and CSS to create a static site hosting our complete decision-justification documentation, then created Jira tickets and delegated tasking to 4 team members for about a month. Following the program, I prototyped a low-latency C++ library framework to validate the authority model, identifying scalability constraints to inform future development.</p>
-									</section>
-								</div>
+      <div class="exp-row" onclick="openModal('exp','e3')">
+        <div class="exp-node"></div>
+        <a href="https://robotics.umich.edu/" target="_blank" class="exp-logo" onclick="event.stopPropagation();"><img src="assets/images/michigan_logo.png" alt="University of Michigan"></a>
+        <span class="exp-date" data-meta="e3"></span>
+        <h3 data-meta="e3"></h3>
+        <span class="exp-company" data-meta="e3"></span>
+        <p data-meta="e3"></p>
+        <div class="exp-arrow">→ view experience</div>
+      </div>
 
-						</section>
+      <div class="exp-row" onclick="openModal('exp','e2')">
+        <div class="exp-node"></div>
+        <a href="https://www.navsea.navy.mil/" target="_blank" class="exp-logo" onclick="event.stopPropagation();"><img src="assets/images/navsea_logo.jpg" alt="NAVSEA"></a>
+        <span class="exp-date" data-meta="e2"></span>
+        <h3 data-meta="e2"></h3>
+        <span class="exp-company" data-meta="e2"></span>
+        <p data-meta="e2"></p>
+        <div class="exp-arrow">→ view experience</div>
+      </div>
 
-						<section class="wrapper style4 container">
+      <div class="exp-row" onclick="openModal('exp','e1')">
+        <div class="exp-node"></div>
+        <a href="https://www.gwu.edu/" target="_blank" class="exp-logo" onclick="event.stopPropagation();"><img src="assets/images/george_washington_university_logo.png" alt="The George Washington University"></a>
+        <span class="exp-date" data-meta="e1"></span>
+        <h3 data-meta="e1"></h3>
+        <span class="exp-company" data-meta="e1"></span>
+        <p data-meta="e1"></p>
+        <div class="exp-arrow">→ view experience</div>
+      </div>
 
-							<!-- Content -->
-								<div class="content">
-									<section>
-										<h2><b>Analog Devices, Inc.</b></h2> 
-										<h3><b>Product/ Test Engineering Intern &#8226; Summer 2022</b></h3>
-										<p>As part of ADI's Aerospace and Defense team, I automated the Radio Frequency (RF) characterization measurement process for the company's new chips. Analog Devices, Inc. (ADI) provides industry-leading integrated circuits (ICs) to top satellite communications companies, including Starlink and Blue Origin. This role not only immersed me in RF test engineering but also exposed me to the cutting-edge technologies driving the 5G revolution.</p>
-										<p>My primary responsibility was to standardize RF characterization data collection on a single, robust platform: Zero Code GUI (ZCG) by Soliton Technologies. After completing LabVIEW Core 1 and 2 training, I developed graphical user interfaces (GUIs) using National Instruments LabVIEW scripts to automate RF characterization data collection across various ADI technologies. For instance, I created a GUI to measure 2nd and 3rd order two-tone intermodulations using two signal generators. Additionally, I authored a ZCG tutorial guide to encourage other ADI RF testing teams to adopt the platform and suggested weekly user interface (UI) improvements to the ZCG development team. My work demonstrated the efficiency gained through automation and will facilitate the characterization of even more ADI technologies.</p>
-										<p>Beyond my primary assignment, I developed MATLAB programs to enhance ADI’s data processing capabilities for test results analysis. One program generated radiation performance reports by parsing large datasets to produce tables of key statistics. Another parser sifted through thousands of raw data files, compiling essential spreadsheets and hundreds of plots for the design team. These automation efforts have significantly reduced the senior engineering team's workload and cumulatively saved them days or even months of effort. My comprehensive MATLAB documentation will support the team in tackling similar data parsing projects in the future.</p>
-                                        <img src="assets/images/ADI.jpg" style="width:80%"/>
-									</section>
-								</div>
+    </div>
+  </section>
 
-						</section>
+  <!-- ── PROJECTS ── -->
+  <section id="projects">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <h2>Projects</h2>
+    </div>
+    <div class="projects-grid">
 
-						<section class="wrapper style4 container">
+      <div class="project-card" data-num="001" data-proj="p12" onclick="openModal('proj','p12')">
+        <span class="project-tag"></span>
+        <h3></h3>
+        <p></p>
+        <div class="project-img" style="background-image:url('assets/images/nycwsoc_app_player_screen.png')"></div>
+        <div class="project-arrow">→ view project</div>
+      </div>
 
-							<!-- Content -->
-								<div class="content">
-									<section>
-										<h2><b>University of Michigan Robotics Institute</b></h2> 
-										<h3><b>Robotics Research Engineering Intern &#8226; Summer 2021</b></h3>
-										<p>I collaborated with an interdisciplinary team of graduates and undergraduates on the Open Dynamic Robot Initiative (ODRI), which aims to develop a low-cost, open-source quadruped robot as a platform for researchers worldwide to create innovative control systems. Traditionally, robotics has had a high barrier to entry due to educational and financial constraints. Our advanced 3D-printed robots, equipped with numerous degrees of freedom, enhanced sensing capabilities, and robust online support, offer significant opportunities to expand the field globally.</p>
-										<p>Our primary research objective was to implement and refine ODRI’s quadruped robot. I enhanced the technical documentation by conducting a statistical cost analysis, creating detailed wiring schematics, assembling circuit tutorials, and compiling an original bill of materials on <a href="https://github.com/EmiliaPsach/open_robot_actuator_hardware">GitHub</a> to track our research progress for other collaborators. Additionally, I led the redesign of the robot’s electrical components, circuitry, computing, communication, and motor control systems. By replacing ODRI’s highly specialized PCBs with generic control platforms, we quadrupled the communication capabilities and motor control bandwidth while reducing costs by over 91%. We documented our mechanical and electrical redesigns in a research paper and presented our findings at Michigan’s Summer Undergraduate Research in Engineering (SURE) symposium.</p>
-                                        <img src="assets/images/SURE_Poster.jpg" style="width:100%"/>
-									</section>
-								</div>
+      <div class="project-card" data-num="002" data-proj="p11" onclick="openModal('proj','p11')">
+        <span class="project-tag"></span>
+        <h3></h3>
+        <p></p>
+        <div class="project-img" style="background-image:url('assets/images/packages_topics_connectivity_system_diagram.png')"></div>
+        <div class="project-arrow">→ view project</div>
+      </div>
 
-						</section>
+      <div class="project-card" data-num="003" data-proj="p10" onclick="openModal('proj','p10')">
+        <span class="project-tag"></span>
+        <h3></h3>
+        <p></p>
+        <div class="project-img" style="background-image:url('assets/images/eecs467.jpg')"></div>
+        <div class="project-arrow">→ view project</div>
+      </div>
 
-						<section class="wrapper style4 container">
+      <div class="project-card" data-num="004" data-proj="p9" onclick="openModal('proj','p9')">
+        <span class="project-tag"></span>
+        <h3></h3>
+        <p></p>
+        <div class="project-img" style="background-image:url('assets/images/slam.png')"></div>
+        <div class="project-arrow">→ view project</div>
+      </div>
 
-							<!-- Content -->
-								<div class="content">
-									<section>
-										<h2><b>NAVSEA</b></h2> 
-										<h3><b>Engineering Technician Intern &#8226; Summer 2020</b></h3>
-										<p>I compiled and synthesized hundreds of testing documents into executive summaries that conveyed key Lessons Learned to Navy leadership in the Unmanned Maritime Systems Program Office (PMS 406). Additionally, I collaborated with senior engineers to organize a multi-day leadership conference for Unmanned Undersea Vehicle (UUV) Homeport program managers. My communication and documentation skills were recognized as exceptional by the Strategic Capabilities Office (SCO).</p>
-									</section>
-								</div>
+      <div class="project-card" data-num="005" data-proj="p7" onclick="openModal('proj','p7')">
+        <span class="project-tag"></span>
+        <h3></h3>
+        <p></p>
+        <div class="project-img" style="background-image:url('assets/images/EECS373_Poster.pptx.png')"></div>
+        <div class="project-arrow">→ view project</div>
+      </div>
 
-						</section>
+      <div class="project-card" data-num="006" data-proj="p8" onclick="openModal('proj','p8')">
+        <span class="project-tag"></span>
+        <h3></h3>
+        <p></p>
+        <div class="project-img" style="background-image:url('assets/images/eecs_442.png')"></div>
+        <div class="project-arrow">→ view project</div>
+      </div>
 
-						<section class="wrapper style4 container">
+      <div class="project-card" data-num="007" data-proj="p6" onclick="openModal('proj','p6')">
+        <span class="project-tag"></span>
+        <h3></h3>
+        <p></p>
+        <div class="project-arrow">→ view project</div>
+      </div>
 
-							<!-- Content -->
-								<div class="content">
-									<section>
-										<h2><b>The George Washington University</b></h2> 
-										<h3><b>Engineering Intern &#8226; Summer 2018</b></h3>
-										<p>I assisted mechanical engineering PhD students in researching hydrophobic aluminum treatment methods to prevent cracking in the hulls of container ships bound for arctic regions.</p>
-									</section>
-								</div>
+      <div class="project-card" data-num="008" data-proj="p5" onclick="openModal('proj','p5')">
+        <span class="project-tag"></span>
+        <h3></h3>
+        <p></p>
+        <div class="project-img" style="background-image:url('assets/images/eecs461sim.jpg')"></div>
+        <div class="project-arrow">→ view project</div>
+      </div>
 
-						</section>
+      <div class="project-card" data-num="009" data-proj="p4" onclick="openModal('proj','p4')">
+        <span class="project-tag"></span>
+        <h3></h3>
+        <p></p>
+        <div class="project-img" style="background-image:url('assets/images/EECS351.jpg')"></div>
+        <div class="project-arrow">→ view project</div>
+      </div>
 
-			</article>
+      <div class="project-card" data-num="010" data-proj="p3" onclick="openModal('proj','p3')">
+        <span class="project-tag"></span>
+        <h3></h3>
+        <p></p>
+        <div class="project-img" style="background-image:url('assets/images/pathPlanning.jpg')"></div>
+        <div class="project-arrow">→ view project</div>
+      </div>
 
-			<!-- Footer -->
-            <div id="footer-placeholder"></div>
+      <div class="project-card" data-num="011" data-proj="p2" onclick="openModal('proj','p2')">
+        <span class="project-tag"></span>
+        <h3></h3>
+        <p></p>
+        <div class="project-img" style="background-image:url('assets/images/EECS216.jpg')"></div>
+        <div class="project-arrow">→ view project</div>
+      </div>
 
-		</div>
+      <div class="project-card" data-num="012" data-proj="p1" onclick="openModal('proj','p1')">
+        <span class="project-tag"></span>
+        <h3></h3>
+        <p></p>
+        <div class="project-arrow">→ view project</div>
+      </div>
 
-		<!-- Scripts -->
-		<div id="scripts-placeholder"></div>
-		<script src="assets/js/loadhtml.js"></script>
-		<script>
-			loadHTML("scripts-placeholder", "components/scripts.html");
-		</script>
+    </div>
+  </section>
 
-	</body>
-</html>
+  <!-- ── SKILLS ── -->
+  <section id="skills">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2>Skills</h2>
+    </div>
+    <div class="skills-grid">
+
+      <div class="skill-group">
+        <div class="skill-group-header">
+          <div class="skill-group-icon skill-group-icon--blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <span class="skill-group-name">Languages</span>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">C++</span>
+          <span class="skill-tag">C</span>
+          <span class="skill-tag">TypeScript</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">MATLAB</span>
+          <span class="skill-tag">HTML/CSS</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-header">
+          <div class="skill-group-icon skill-group-icon--green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </div>
+          <span class="skill-group-name">Frameworks</span>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">React Native</span>
+          <span class="skill-tag">FastAPI</span>
+          <span class="skill-tag">Dash</span>
+          <span class="skill-tag">ROS 2</span>
+          <span class="skill-tag">Simulink</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-header">
+          <div class="skill-group-icon skill-group-icon--orange">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <span class="skill-group-name">Data &amp; Infra</span>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">REST APIs</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">GitLab CI/CD</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-header">
+          <div class="skill-group-icon skill-group-icon--purple">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <span class="skill-group-name">Modeling &amp; Algorithms</span>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">CP-SAT</span>
+          <span class="skill-tag">Optimization</span>
+          <span class="skill-tag">Computer Vision</span>
+          <span class="skill-tag">DSP</span>
+          <span class="skill-tag">Runtime Optimization</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-header">
+          <div class="skill-group-icon skill-group-icon--blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          </div>
+          <span class="skill-group-name">AI Dev Tooling</span>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">Claude Code</span>
+          <span class="skill-tag">Agent Workflows</span>
+          <span class="skill-tag">Plan Mode</span>
+          <span class="skill-tag">MCP Servers</span>
+          <span class="skill-tag">CLAUDE.md</span>
+          <span class="skill-tag">Context Engineering</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-header">
+          <div class="skill-group-icon skill-group-icon--green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </div>
+          <span class="skill-group-name">Engineering Practices</span>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">Test-Driven Debugging</span>
+          <span class="skill-tag">Root Cause Analysis</span>
+          <span class="skill-tag">Technical Scoping</span>
+          <span class="skill-tag">Product Scoping</span>
+          <span class="skill-tag">Technical Implementation Planning</span>
+          <span class="skill-tag">QA Test Planning</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── EDUCATION ── -->
+  <section id="education">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <h2>Education</h2>
+    </div>
+
+    <div class="edu-block">
+
+      <div class="edu-top">
+        <h3>University of Michigan</h3>
+        <div class="edu-sub-row">
+          <span class="edu-degree">B.S.E. Computer Engineering &nbsp;·&nbsp; Minor in Mathematics &nbsp;·&nbsp; Magna Cum Laude</span>
+          <span class="edu-honor-date">Ann Arbor &nbsp;·&nbsp; April 2023</span>
+        </div>
+      </div>
+
+      <div class="edu-summary-wrap">
+        <div class="edu-summary">
+          At Michigan, I built my own curriculum within the computer engineering program, choosing courses across mathematical modeling, signal processing, circuit analysis, and core CS fundamentals like data structures and algorithms. I added a math minor because I really liked structuring a well-reasoned proof in discrete math and performing mathematical analysis in digital signal processing. By senior year, I was concentrating on autonomous robotics and embedded systems, and culminated my studies with a capstone project in <a href="https://web.eecs.umich.edu/~kuipers/teaching/eecs467-F19.html" target="_blank">EECS 467: Autonomous Robotics</a> where my team and I designed and demonstrated a multi-agent path planning and collision avoidance system on physical robots.
+        </div>
+        <div class="edu-personal-photo">
+          <img src="assets/images/grad_photo.jpeg" alt="Grad Photo">
+        </div>
+      </div>
+
+      <div class="edu-highlights">
+
+        <div class="mde-card" onclick="openModal('proj','p10')">
+          <div class="edu-activity-left">
+            <span class="edu-activity-label">Major Design Experience · EECS 467</span>
+            <div class="edu-activity-title">Multi-Agent Path Planning &amp; Collision Avoidance Algorithm</div>
+          </div>
+          <div class="edu-activity-date">Winter 2023</div>
+          <div class="mde-arrow">→ view project</div>
+        </div>
+
+        <div class="edu-activity-row" onclick="openModal('exp','e0')">
+          <div class="edu-activity-left">
+            <span class="edu-activity-label">Extracurricular</span>
+            <div class="edu-activity-title">Director of Music &amp; Guitar Tutor</div>
+            <div class="edu-activity-org">Seven Mile at the University of Michigan</div>
+          </div>
+          <div class="edu-activity-date">Sep 2019 — May 2023</div>
+          <div class="edu-activity-arrow">→ view experience</div>
+        </div>
+
+      </div>
+
+      <div class="edu-coursework-block">
+        <div class="edu-coursework-subhead">Coursework</div>
+
+        <details class="course-category">
+          <summary>Programming &amp; Software <span class="course-count">4 courses</span></summary>
+          <div class="course-table-wrap"><table class="course-table">
+            <tr><td class="course-code"><a href="https://www.eecs.umich.edu/courses/eecs201/fa2021/" target="_blank">EECS 201</a></td><td class="course-name"><a href="https://www.eecs.umich.edu/courses/eecs201/fa2021/" target="_blank">Computer Science Pragmatics</a></td></tr>
+            <tr><td class="course-code"><a href="https://eecs280staff.github.io/eecs280.org/syllabus.html" target="_blank">EECS 280</a></td><td class="course-name"><a href="https://eecs280staff.github.io/eecs280.org/syllabus.html" target="_blank">Programming &amp; Intro Data Structures</a></td></tr>
+            <tr><td class="course-code"><a href="https://www.eecs.umich.edu/courses/eecs281/course" target="_blank">EECS 281</a></td><td class="course-name"><a href="https://www.eecs.umich.edu/courses/eecs281/course" target="_blank">Data Structures &amp; Algorithms</a></td></tr>
+            <tr><td class="course-code"><a href="https://eecs370.github.io/" target="_blank">EECS 370</a></td><td class="course-name"><a href="https://eecs370.github.io/" target="_blank">Introduction to Computer Organization</a></td></tr>
+          </table></div>
+        </details>
+
+        <details class="course-category">
+          <summary>Signals, Systems &amp; Hardware <span class="course-count">6 courses</span></summary>
+          <div class="course-table-wrap"><table class="course-table">
+            <tr><td class="course-code"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-200/" target="_blank">EECS 200</a></td><td class="course-name"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-200/" target="_blank">Electrical Engineering Systems Design I</a></td></tr>
+            <tr><td class="course-code"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-215/" target="_blank">EECS 215</a></td><td class="course-name"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-215/" target="_blank">Introduction to Electronic Circuits</a></td></tr>
+            <tr><td class="course-code"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-216/" target="_blank">EECS 216</a></td><td class="course-name"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-216/" target="_blank">Introduction to Signals &amp; Systems</a></td></tr>
+            <tr><td class="course-code"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-230/" target="_blank">EECS 230</a></td><td class="course-name"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-230/" target="_blank">Electromagnetics I</a></td></tr>
+            <tr><td class="course-code"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-270/" target="_blank">EECS 270</a></td><td class="course-name"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-270/" target="_blank">Introduction to Logic Design</a></td></tr>
+            <tr><td class="course-code"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-351/" target="_blank">EECS 351</a></td><td class="course-name"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-351/" target="_blank">Digital Signal Processing &amp; Analysis</a></td></tr>
+          </table></div>
+        </details>
+
+        <details class="course-category">
+          <summary>Robotics &amp; Autonomous Systems <span class="course-count">4 courses</span></summary>
+          <div class="course-table-wrap"><table class="course-table">
+            <tr><td class="course-code"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-373/" target="_blank">EECS 373</a></td><td class="course-name"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-373/" target="_blank">Introduction to Embedded System Design</a></td></tr>
+            <tr><td class="course-code"><a href="https://web.eecs.umich.edu/~justincj/teaching/eecs442/WI2021/syllabus.html" target="_blank">EECS 442</a></td><td class="course-name"><a href="https://web.eecs.umich.edu/~justincj/teaching/eecs442/WI2021/syllabus.html" target="_blank">Computer Vision</a></td></tr>
+            <tr><td class="course-code"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-461/" target="_blank">EECS 461</a></td><td class="course-name"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-461/" target="_blank">Embedded Control Systems</a></td></tr>
+            <tr><td class="course-code"><a href="https://web.eecs.umich.edu/~kuipers/teaching/eecs467-F19.html" target="_blank">EECS 467</a></td><td class="course-name"><a href="https://web.eecs.umich.edu/~kuipers/teaching/eecs467-F19.html" target="_blank">Autonomous Robotics (Major Design Experience)</a></td></tr>
+          </table></div>
+        </details>
+
+        <details class="course-category">
+          <summary>Probability &amp; Mathematical Modeling <span class="course-count">7 courses</span></summary>
+          <div class="course-table-wrap"><table class="course-table">
+            <tr><td class="course-code"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-203/" target="_blank">EECS 203</a></td><td class="course-name"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-203/" target="_blank">Discrete Mathematics</a></td></tr>
+            <tr><td class="course-code"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-301/" target="_blank">EECS 301</a></td><td class="course-name"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-301/" target="_blank">Probabilistic Methods in Engineering</a></td></tr>
+            <tr><td class="course-code"><a href="https://lsa.umich.edu/math/undergraduates/undergraduate-math-courses/200-level-math-courses.html" target="_blank">MATH 214</a></td><td class="course-name"><a href="https://lsa.umich.edu/math/undergraduates/undergraduate-math-courses/200-level-math-courses.html" target="_blank">Applied Linear Algebra</a></td></tr>
+            <tr><td class="course-code"><a href="https://lsa.umich.edu/math/undergraduates/undergraduate-math-courses/200-level-math-courses.html" target="_blank">MATH 215</a></td><td class="course-name"><a href="https://lsa.umich.edu/math/undergraduates/undergraduate-math-courses/200-level-math-courses.html" target="_blank">Multivariable &amp; Vector Calculus</a></td></tr>
+            <tr><td class="course-code"><a href="https://lsa.umich.edu/math/undergraduates/undergraduate-math-courses/200-level-math-courses.html" target="_blank">MATH 216</a></td><td class="course-name"><a href="https://lsa.umich.edu/math/undergraduates/undergraduate-math-courses/200-level-math-courses.html" target="_blank">Differential Equations</a></td></tr>
+            <tr><td class="course-code"><a href="https://lsa.umich.edu/math/undergraduates/undergraduate-math-courses/300-level-math-courses.html" target="_blank">MATH 351</a></td><td class="course-name"><a href="https://lsa.umich.edu/math/undergraduates/undergraduate-math-courses/300-level-math-courses.html" target="_blank">Principles of Analysis</a></td></tr>
+            <tr><td class="course-code"><a href="https://lsa.umich.edu/math/undergraduates/undergraduate-math-courses/400-level-courses.html" target="_blank">MATH 462</a></td><td class="course-name"><a href="https://lsa.umich.edu/math/undergraduates/undergraduate-math-courses/400-level-courses.html" target="_blank">Mathematical Modeling</a></td></tr>
+          </table></div>
+        </details>
+
+        <details class="course-category">
+          <summary>Technical Communication <span class="course-count">2 courses</span></summary>
+          <div class="course-table-wrap"><table class="course-table">
+            <tr><td class="course-code"><a href="https://bulletin.engin.umich.edu/courses/techcomm/" target="_blank">TCHNCLCM 300</a></td><td class="course-name"><a href="https://bulletin.engin.umich.edu/courses/techcomm/" target="_blank">Technical Communication for ECE</a></td></tr>
+            <tr><td class="course-code"><a href="https://bulletin.engin.umich.edu/courses/techcomm/" target="_blank">TCHNCLCM 496</a></td><td class="course-name"><a href="https://bulletin.engin.umich.edu/courses/techcomm/" target="_blank">Advanced Technical Communication for EE &amp; CE</a></td></tr>
+          </table></div>
+        </details>
+
+        <div class="coursework-end"></div>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+<!-- ── MODAL ── -->
+<div class="modal-overlay" id="modal" onclick="closeModal(event)">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-header-top">
+        <h1 id="modal-title"></h1>
+        <button class="modal-close" onclick="closeModalDirect()">✕ close</button>
+      </div>
+      <div id="modal-subtitle" class="modal-subtitle"></div>
+      <div id="modal-header-dates" class="modal-dates modal-header-dates"></div>
+      <div id="modal-header-links" class="modal-header-links"></div>
+    </div>
+    <div class="modal-body" id="modal-body-content"></div>
+  </div>
+</div>

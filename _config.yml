@@ -1,0 +1,16 @@
+title: Emilia Psacharopoulos
+description: Software Engineer & Mathematical Modeler
+baseurl: ""
+url: "https://emiliapsacharopoulos.com"
+
+# Build settings
+permalink: pretty
+markdown: kramdown
+theme: null
+plugins: []
+
+# Exclude files
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
