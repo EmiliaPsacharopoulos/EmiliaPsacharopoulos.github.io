@@ -174,7 +174,10 @@ const data = {
         <p>I built the first version of this site in summer 2022 using HTML, CSS, and JavaScript, customizing an <a href="https://html5up.net/" target="_blank">HTML5 UP</a> template as a foundation. It did the job of displaying my work, but returning to it later, I realized the layout was harder to read than it should have been — even I struggled to skim it, and I wrote the material. The visual design didn't reflect how I think about my own work, and nothing about it communicated a clear point of view.</p>
         <p>I decided to redesign it from scratch, starting by defining my personal brand: an engineer who approaches problems logically with a creative flair and communicates clearly. I used that as the design brief and built the entire UI myself. The most important structural change was introducing a two-layer content model: all detailed content is now hidden behind both a modal and a longform toggle, so the reader actively chooses how deep to go rather than being confronted with everything at once. The main view stays clean and skimmable by default. The visual design I built from scratch to match that brand — the site now feels like it belongs to someone with a specific point of view rather than a generic portfolio template. The audience I had in mind was primarily myself: I wanted somewhere to proudly display years of work in a way that's visually impactful and easy to navigate, not just a page that technically exists.</p>
       `,
-      tags: ['HTML', 'CSS', 'JavaScript', 'Jekyll']
+      tags: ['HTML', 'CSS', 'JavaScript', 'Jekyll'],
+      links: [
+        { emoji: '🔗', label: 'View on GitHub', url: 'https://github.com/EmiliaPsacharopoulos/EmiliaPsacharopoulos.github.io' }
+      ]
     },
     p7: {
       title: '"Autonomous Rocket League" Embedded System',
