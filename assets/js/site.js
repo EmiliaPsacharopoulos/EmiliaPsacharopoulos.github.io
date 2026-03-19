@@ -296,20 +296,23 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDi
   const [urlType, slug, view] = parts;
   const type = urlToType[urlType] || urlType;
 
-  const sectionMap = { experience: 'experience', projects: 'projects', skills: 'skills', education: 'education' };
+  const sectionMap = { experience: 'experience', projects: 'projects', skills: 'skills', education: 'education', about: null };
 
   // Section-root path (e.g. /experience with no slug) — scroll to section or redirect if unknown
   if (urlType && !slug) {
-    const sectionId = sectionMap[urlType];
-    if (sectionId) {
-      const el = document.getElementById(sectionId);
-      if (el) {
-        document.fonts.ready.then(() => {
-          const navOffset = document.querySelector('nav')?.offsetHeight || 0;
-          const target = el.querySelector('.section-header') || el;
-          window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - navOffset });
-        });
+    if (urlType in sectionMap) {
+      const sectionId = sectionMap[urlType];
+      if (sectionId) {
+        const el = document.getElementById(sectionId);
+        if (el) {
+          document.fonts.ready.then(() => {
+            const navOffset = document.querySelector('nav')?.offsetHeight || 0;
+            const target = el.querySelector('.section-header') || el;
+            window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - navOffset });
+          });
+        }
       }
+      // else: recognized page (e.g. /about) — stay put, URL is already correct
     } else {
       history.replaceState(null, '', '/');
     }

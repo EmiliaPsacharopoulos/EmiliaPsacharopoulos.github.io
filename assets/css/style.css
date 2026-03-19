@@ -925,12 +925,11 @@ a.modal-subtitle-company:hover { color: var(--teal); }
   max-width: 1100px; margin: 0 auto; padding: 2rem 3rem 3rem;
 }
 .about-row {
-  display: flex; gap: 3rem; align-items: flex-start;
+  display: flex; flex-direction: row-reverse; gap: 3rem; align-items: flex-start;
   padding: 2.5rem 0;
   border-top: 1px solid var(--grid);
 }
-.about-row--last { border-bottom: 1px solid var(--grid); }
-.about-row--flip { flex-direction: row-reverse; }
+.about-row:last-child { border-bottom: 1px solid var(--grid); }
 .about-row-img {
   width: 300px; flex-shrink: 0;
   aspect-ratio: 4/3; object-fit: cover;
@@ -960,7 +959,7 @@ a.modal-subtitle-company:hover { color: var(--teal); }
 @media (max-width: 680px) {
   .about-page-self { padding: 5rem 1.5rem 1.5rem; }
   .about-page-content { padding: 1.5rem 1.5rem 2.5rem; }
-  .about-row, .about-row--flip { flex-direction: column; gap: 1.5rem; }
+  .about-row { flex-direction: column; gap: 1.5rem; }
   .about-row-img, .about-row-video { width: 100%; }
 }
 
