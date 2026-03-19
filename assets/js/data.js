@@ -61,7 +61,7 @@ const data = {
         <p>The PRM algorithm distributes randomly placed nodes across a map, connects any two nodes within a specified Euclidean distance, and uses Dijkstra's algorithm to find the shortest path from start to goal. To test its robustness, we varied node count and connection distance across three maps of increasing complexity: 20%, 50%, and 73% obstacle coverage. The results were concrete: on the simplest map with 100 nodes and a long connection distance, the algorithm found a valid path in 100% of trials. As map complexity increased and node count dropped, success rates fell sharply — to 0% on the most complex map with only 5 nodes. We also found that increasing node count from 100 to 300 produced diminishing returns on path quality, suggesting an optimal node count exists for any given map beyond which additional nodes only increase computational cost without meaningfully improving the path.</p>
         <p>On the vehicle dynamics side, we implemented our own plant model in Simulink using continuous time integration to solve the bicycle's kinematic equations — the system of differential equations governing its x/y position and heading angle. Compared to the original model's discrete time integration, our version produced a smoother path, which we attributed to continuous integration better capturing the underlying dynamics of a physical bicycle.</p>
       `,
-      tags: ['MATLAB', 'Simulink', 'Path Planning', 'Mathematical Modeling'],
+      tags: ['MATLAB', 'Path Planning', 'Mathematical Modeling'],
       links: [
         { emoji: '📄', label: 'View Project Paper', url: 'assets/pdfs/MATH_pathPlanningProject.pdf' }
       ]
@@ -119,7 +119,7 @@ const data = {
         <p>The final project brought all of it together: an ACC (Adaptive Cruise Control) system with three operating modes and auto-steering active throughout. In Manual mode, the user controls speed and path through a potentiometer and haptic wheel. Velocity mode sets a fixed traveling speed via dip switches on the microcontroller. Position mode activates automatically when a lead car enters a preset distance and is traveling slower, matching its speed. We built the entire system in Simulink using scaffolding provided by the course instructors, then used Simulink's automatic C code generation to deploy it onto the S32K144 microcontroller running on a physical driving simulator.</p>
         <p>The system performed successfully at the demo — all three modes triggered and transitioned correctly, and the position-following behavior worked as intended.</p>
       `,
-      tags: ['C', 'Simulink', 'Embedded Systems', 'PID Control', 'Control Systems']
+      tags: ['C', 'Embedded Systems', 'PID Control']
     },
     p6: {
       title: 'Personal Portfolio Website',
@@ -193,7 +193,7 @@ const data = {
         <p>The model, originally from Zhang et al.'s <a href="https://richzhang.github.io/colorization/" target="_blank">"Colorful Image Colorization" (ECCV 2016)</a>, uses a CNN (Convolutional Neural Network) architecture (a class of neural network that applies learned filters across an image to detect patterns) with downsampling and upsampling layers to compress and reconstruct spatial information, batch normalization to stabilize training, and Leaky ReLU (Rectified Linear Unit) activation functions that introduce non-linearity so the network can learn complex mappings. My replication trained on a 90,000-image subset of the MIT Mini Places dataset using a tuned ADAM (Adaptive Moment Estimation) optimizer, an adaptive gradient descent algorithm that adjusts learning rates per parameter during training, and deliberately omitted the authors' class-rebalancing method to isolate the variable I was testing: replacing their Cross Entropy loss function with MSE (Mean Squared Error).</p>
         <p>The results were clear. MSE produced consistently duller, more monochromatic outputs — only blues retained any vibrancy across test images. My explanation was that MSE, designed for regression problems where outputs can range across any value, converges much more slowly on a classification task like colorization than Cross Entropy, which is purpose-built to penalize confident wrong predictions. The experiment confirmed that loss function choice is not just a technical detail — it has a direct, visible impact on what a model actually learns to produce.</p>  
       `,
-      tags: ['Python', 'CNN', 'Computer Vision', 'Deep Learning'],
+      tags: ['Python', 'Computer Vision', 'Deep Learning'],
       links: [
         { emoji: '📄', label: 'View Project Paper', url: 'assets/pdfs/EECS_442_emiliap_final_report.pdf' }
       ]
@@ -297,15 +297,15 @@ const data = {
         <p>I joined a recreational soccer league in NYC, took on the role of team captain, and decided to build an app after noticing how much friction the league's current setup created. Managing attendance meant chasing RSVPs over WhatsApp, game times arrived via email two days before kickoff, and players enrolled in new seasons through a Google Sheet linked on the league's website. Most leagues in the city already have a dedicated app for this, and it seemed like a natural gap to fill.</p>
         <p>I built a React Native iOS MVP in TypeScript, covering the core player-facing and admin workflows: player accounts and authentication, schedule viewing with a calendar grid, game RSVPs, push notification reminders, league enrollment, team management, and an admin dashboard with CSV export — motivated by a problem I experienced firsthand as team captain. It's currently in alpha; I'm replacing dummy data with real league data and verifying the notification system end-to-end before pitching it to the league and deploying to the App Store.</p>
         `,
-      tags: ['React Native', 'JavaScript', 'Full-Stack Development'],
+      tags: ['React Native', 'TypeScript', 'Full-Stack Development'],
       links: [
         { emoji: '🔗', label: 'View on GitHub', url: 'https://github.com/EmiliaPsach/nycwsoc' }
       ]
     }
   },
   expMeta: {
-    e1: { jobTitle: 'Engineering Intern', company: 'The George Washington University', location: 'Ashburn, VA', dates: 'June 2018 — August 2018', tagline: 'Lab assistant.', website: 'https://www.gwu.edu/' },
-    e2: { jobTitle: 'Engineering Technician Intern', company: 'NAVSEA', location: 'Washington Navy Yard, DC (Remote)', dates: 'May 2020 — January 2021', tagline: 'Technical documentation assistant.', website: 'https://www.navsea.navy.mil/' },
+    e1: { jobTitle: 'Engineering Intern', company: 'The George Washington University', location: 'Ashburn, VA', dates: 'June 2018 — August 2018', tagline: 'Supported PhD research on hydrophobic aluminum treatment methods and independently designed a phase change materials heat retention experiment using the lab\'s facilities.', website: 'https://www.gwu.edu/' },
+    e2: { jobTitle: 'Engineering Technician Intern', company: 'NAVSEA', location: 'Washington Navy Yard, DC (Remote)', dates: 'May 2020 — January 2021', tagline: 'Synthesized hundreds of testing documents into executive summaries for Navy leadership and organized a multi-day leadership conference for Unmanned Undersea Vehicle program managers.', website: 'https://www.navsea.navy.mil/' },
     e3: { jobTitle: 'Robotics Research Engineering Intern', company: 'University of Michigan Robotics Institute', location: 'Ann Arbor, MI', dates: 'May 2021 — December 2021', tagline: 'Proposed and led a full electrical redesign of an open-source research robot — cutting platform costs by over 91% and quadrupling communication and motor control capabilities.', website: 'https://robotics.umich.edu/' },
     e4: { jobTitle: 'Product/Test Engineering Intern', company: 'Analog Devices, Inc.', location: 'Greensboro, NC', dates: 'May 2022 — August 2022', tagline: 'RF test engineering intern on the Aerospace and Defense team, automating chip characterization and test results analysis for satellite communications technologies.', website: 'https://www.analog.com/en/index.html' },
     e5: { jobTitle: 'Autonomy Software Engineer', company: 'Aurora Flight Sciences (Boeing)', location: 'Cambridge, MA (and remote)', dates: 'July 2023 — November 2025', tagline: 'Software engineer at a Boeing-subsidiary R&D company, owning full-stack development, systems architecture, and technical delivery across six programs in autonomous systems and sustainable aviation.', website: 'https://www.aurora.aero/' },
@@ -317,7 +317,7 @@ const data = {
         <ul style="font-size:0.9rem;line-height:1.8;color:var(--muted);padding-left:1.2rem">
           <li>Assumed full technical ownership of the reconciliations product area within two months — the previous lead departed mid-project, and I drove it forward as the only engineer on one of the most critical parts of an accounting automation product</li>
           <li>Designed and shipped Custom-Month Reconciliations from scratch — reworking backend data structures and calculation logic throughout to support any combination of monthly close cadences (e.g. quarterly, annual), replacing hardcoded calendar-month logic; led product scoping, stakeholder alignment, technical scoping, QA, and production rollout for thousands of customers</li>
-          <li>Diagnosed and resolved blocking issues in the Reconciliation Editor — a replacement UX built by a contractor who left before finishing it — designed the QA test plan, and drove it to production</li>
+          <li>Diagnosed and resolved blocking issues in the Reconciliation Editor (a replacement UX built by a contractor who left before finishing it), designed the QA test plan, and drove it to production</li>
           <li>Designed and shipped 12-Month Planning Visibility from scratch — extending the platform's planning horizon for accountants with product-level permissions; authored product scoping document, aligned with PM and tech lead, and owned full lifecycle through production rollout for thousands of customers</li>
           <li>Resolved 30 customer bugs using test-driven debugging practices — writing tests to reproduce failures before fixing, then expanding the test suite to prevent regressions; frequently the engineer on-call escalations landed on</li>
           <li>Diagnosed and fixed 4 system-level performance issues including line item matching timeouts, database query bottlenecks in orchestration services, and chronic background job failures</li>
@@ -332,7 +332,7 @@ const data = {
         <p>Basis has an entire internal team dedicated to making every employee more productive with AI — treating company context with the same rigor as code: version control, ownership, and deployment pipelines for internal knowledge. I learned to integrate AI agents into every stage of the work (product scoping, technical architecture tradeoffs, milestone planning, and code contribution) and leveraged their internal tooling, including a traceability logging MCP server, to streamline debugging: diagnosing failures, reproducing them in the test suite, implementing fixes, and verifying the result.</p>
         <p>After four months I decided to leave — on good terms with the team. I was the only product engineer on an entire part of the project and worked almost entirely in isolation outside of scoping reviews, so I wanted to find an environment with more engineering collaboration around me. I left having learned a lot about AI-native development and end-to-end product ownership, and having delivered features from zero to production for thousands of customers.</p>
       `,
-      tags: ['Python', 'PostgreSQL', 'React', 'TypeScript', 'Full-Stack Development']
+      tags: ['Python', 'PostgreSQL', 'React', 'TypeScript', 'Full-Stack Development', 'Test-Driven Development']
     },
     e5: {
       htmlShort: `
@@ -351,7 +351,7 @@ const data = {
         </ul>
         <span class="modal-tl-role">Boeing Cascade Climate Impact Model</span>
         <ul style="font-size:0.9rem;line-height:1.8;color:var(--muted);padding-left:1.2rem;margin-bottom:1.1rem">
-          <li>Won first place in a two-week engineering hackathon by diagnosing and restructuring the Non-CO2 module — eliminating redundant queries and recomputations — cutting runtime from 17m 50s to 4.3s (99.6% improvement) and unblocking the module for customer deployment; received an Aurora immediate recognition award</li>
+          <li>Won first place in a two-week engineering hackathon by diagnosing and restructuring the Non-CO2 module: eliminating redundant queries and recomputations, cutting runtime from 17m 50s to 4.3s (99.6% improvement), and unblocking the module for customer deployment; received an Aurora immediate recognition award</li>
         </ul>
         <span class="modal-tl-role">DoD Autonomy Architecture</span>
         <ul style="font-size:0.9rem;line-height:1.8;color:var(--muted);padding-left:1.2rem">
@@ -430,7 +430,7 @@ const data = {
         <p>I joined ADI's Aerospace and Defense team as an RF (Radio Frequency) test engineering intern, with a primary assignment to standardize RF characterization data collection for new chips onto a single platform — Zero Code GUI (ZCG) by Soliton Technologies. After completing LabVIEW Core 1 and 2 training, I built GUIs (graphical user interfaces) in National Instruments LabVIEW to automate data collection across multiple ADI technologies, including a GUI to measure 2nd and 3rd order two-tone intermodulation distortion using two signal generators. I also authored a ZCG tutorial guide to help other ADI RF testing teams adopt the platform and contributed weekly UI improvement suggestions to the ZCG development team. I finished the entire assignment within my first month.</p>
         <p>With my manager on vacation for much of the summer, I spent the remaining time on a problem I had identified while going through the test results analysis process myself — it was slow and largely manual for the senior engineering team. I built several MATLAB programs to automate it: one parsed large datasets to generate radiation performance reports with tables of key statistics, and another sifted through thousands of raw data files to compile spreadsheets and hundreds of plots for the design team. My manager returned to find the work completed with a few days left in my internship. The automation cumulatively saved the team days to months of effort, and the accompanying MATLAB documentation left them equipped to tackle similar projects going forward.</p>
       `,
-      tags: ['LabVIEW', 'MATLAB', 'RF Test Engineering', 'Test Automation']
+      tags: ['MATLAB', 'Signal Processing', 'Test Automation']
     },
     e3: {
       htmlShort: `
@@ -473,7 +473,7 @@ const data = {
         <p>The summer before starting college I took an unpaid internship at a mechanical engineering research lab at George Washington University — mostly to get a firsthand sense of what research actually looks like before deciding how much to pursue it in college. The day-to-day was unglamorous: compiling notes from research papers, washing labware, preparing samples, and taking observations during experiments run by PhD students studying <a href="https://technologies.research.gwu.edu/technology/45714#:~:text=Researchers%20at%20GW%20have%20invented,of%20ice%20in%20various%20surfaces." target="_blank">hydrophobic aluminum treatment methods</a> to prevent hull cracking in container ships bound for arctic regions.</p>
         <p>At the end of the summer the team gave me free rein to pick a topic related to the research and use the lab facilities to explore it. I designed and built a metal block with a grid of drilled cavities to test how different phase change materials (materials the PhD students were evaluating) retained heat under varying ambient conditions. The experiment involved heating the block for a set duration, then measuring how long each material held its temperature once removed from the heat source.</p>
       `,
-      tags: ['Research', 'Materials Science', 'Mechanical Engineering']
+      tags: ['Research', 'Materials Science']
     },
   },
   eduMeta: {
