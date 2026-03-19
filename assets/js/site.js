@@ -50,7 +50,7 @@ const data = {
           </ul>
       `,
       html: `
-        <p><a href="https://www.eecs.umich.edu/courses/eecs281/course" target="_blank">EECS 281</a> is Michigan's core data structures and algorithms course, centered on understanding and navigating the space and time tradeoffs in algorithmic design. The curriculum covered hash tables, binary search trees, graph algorithms, sorting algorithms, priority queues and heaps, and dynamic programming — with a consistent emphasis on knowing not just how a structure works, but when to reach for it and at what cost.</p>
+        <p><a href="https://www.eecs.umich.edu/courses/eecs281/course" target="_blank">EECS 281</a> is Michigan's core data structures and algorithms course, centered on understanding and navigating the space and time tradeoffs in algorithmic design. The curriculum covered hash tables, binary search trees, graph algorithms, sorting algorithms, priority queues and heaps, and dynamic programming.</p>
         <p>The final project was SillyQL, a simplified version of SQL (Structured Query Language, the standard language for querying relational databases). The core challenge was parsing large datasets efficiently — the project required designing a system that could create tables, insert rows, and execute queries, all while choosing the right underlying data structures to meet performance constraints. I used hash tables for fast lookups and binary search trees for ordered queries, selecting between them based on the access pattern the query required.</p>
       `,
       tags: ['C++', 'Data Structures', 'Algorithms', 'SQL']
@@ -68,7 +68,7 @@ const data = {
         </ul>
       `,
       html: `
-        <img src="assets/images/EECS216.jpg" style="width:100%;margin-bottom:1.1rem;border:1px solid var(--grid)" alt="Radio Circuit">
+        <img src="/assets/images/EECS216.jpg" style="width:100%;margin-bottom:1.1rem;border:1px solid var(--grid)" alt="Radio Circuit">
         <p><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-216/" target="_blank">EECS 216</a> was an introduction to continuous-time linear systems, covering convolution, Fourier series and transforms, frequency response and filtering, the sampling theorem, and Laplace transforms with poles and zeros. The course tied theory directly to application — lectures covered analog communications and feedback control alongside the mathematical foundations, and five labs put those concepts on physical hardware.</p>
         <p>The final lab was the one that brought the most of it together: building the back end of a functioning superheterodyne AM radio from discrete components. Starting from the antenna input, I wired a bandpass filter built from resistors and capacitors to isolate a specific frequency range, an envelope detector using a diode and capacitor to demodulate the AM (Amplitude Modulation) signal by extracting the audio from the carrier wave, and an output amplifier using op-amps to boost the recovered audio signal before sending it to a speaker — all connected in series. To tune to a station, I adjusted the local oscillator frequency to shift a target broadcast into the bandpass filter's range.</p>
       `,
@@ -91,7 +91,7 @@ const data = {
         </ul>
       `,
       html: `
-        <img src="assets/images/pathPlanning.jpg" style="width:100%;margin-bottom:1.1rem;border:1px solid var(--grid)" alt="Path Planning">
+        <img src="/assets/images/pathPlanning.jpg" style="width:100%;margin-bottom:1.1rem;border:1px solid var(--grid)" alt="Path Planning">
         <p><a href="https://lsa.umich.edu/math/undergraduates/undergraduate-math-courses/400-level-courses.html" target="_blank">MATH 462</a> was a mathematical modeling course in which my partner and I chose our own research topic for the <a href='assets/pdfs/MATH_pathPlanningProject.pdf' target="_blank">final paper</a>. We decided to investigate an autonomous bicycle robot model in Simulink, focusing on three areas: the existing control system, the vehicle dynamics, and the robustness of the PRM (Probabilistic Roadmap) path planning algorithm.</p>
         <p>The PRM algorithm distributes randomly placed nodes across a map, connects any two nodes within a specified Euclidean distance, and uses Dijkstra's algorithm to find the shortest path from start to goal. To test its robustness, we varied node count and connection distance across three maps of increasing complexity — 20%, 50%, and 73% obstacle coverage. The results were concrete: on the simplest map with 100 nodes and a long connection distance, the algorithm found a valid path in 100% of trials. As map complexity increased and node count dropped, success rates fell sharply — to 0% on the most complex map with only 5 nodes. We also found that increasing node count from 100 to 300 produced diminishing returns on path quality, suggesting an optimal node count exists for any given map beyond which additional nodes only increase computational cost without meaningfully improving the path.</p>
         <p>On the vehicle dynamics side, we implemented our own plant model in Simulink using continuous time integration to solve the bicycle's kinematic equations — the system of differential equations governing its x/y position and heading angle. Compared to the original model's discrete time integration, our version produced a smoother path, which we attributed to continuous integration better capturing the underlying dynamics of a physical bicycle.</p>
@@ -118,7 +118,7 @@ const data = {
           </ul>
       `,
       html: `
-        <img src="assets/images/EECS351.jpg" style="width:100%;margin-bottom:1.1rem;border:1px solid var(--grid)" alt="OCR System">
+        <img src="/assets/images/EECS351.jpg" style="width:100%;margin-bottom:1.1rem;border:1px solid var(--grid)" alt="OCR System">
         <p><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-351/" target="_blank">EECS 351</a> was a digital signal processing course with a team project component. Our five-person team chose to build a pipeline to convert whiteboard lecture screenshots into formatted LaTeX (a document typesetting language used widely in technical and academic writing) documents, motivated by a real problem we had during COVID: students who miss class and rely on lecture recordings often can't read what's written on the board. The system ran in four sequential stages: image processing and filtering, character isolation, character classification, and LaTeX document generation.</p>
         <p>I led the character classification subsystem, where I benchmarked five classifiers in Python using the scikit-learn library against the EMNIST dataset (a standard handwritten character dataset with 60,000 training samples): K-Nearest Neighbors, SVM (Support Vector Machine), Multinomial Naïve Bayes, Decision Trees, and a LeNet CNN (Convolutional Neural Network), each implemented in their own Jupyter Notebook. SVM achieved the highest accuracy at 90.87%, but I selected the LeNet CNN for the full-scale model because SVM's training and testing time was prohibitively slow and the CNN had a cleaner interface with the broader MATLAB codebase. I also owned the LaTeX document formatting subsystem, which I implemented in MATLAB to take the classifier output and generate a structured document with metadata fields and LaTeX syntax support like superscripts. I led the project plan as well, defining subsystem ownership and deadlines, and wrote the majority of the documentation across <a href="https://github.com/EmiliaPsacharopoulos/HandwritingToLatex" target="_blank">GitHub</a> and the <a href="https://sites.google.com/umich.edu/eecs-351-handwriting-to-latex/home?authuser=0" target="_blank">team website</a>.</p>
         <p>The full pipeline worked end-to-end on block handwriting under good lighting conditions. The main failure modes were light-colored markers, slanted writing, and ambiguous character pairs like O vs. 0 and l vs. 1, limitations we documented and attributed primarily to training data constraints rather than architectural issues.</p>
@@ -147,8 +147,8 @@ const data = {
       `,
       html: `
         <div style="display:flex;gap:0.5rem;margin-bottom:1.1rem;flex-wrap:wrap">
-          <img src="assets/images/eecs461sim.jpg" style="flex:2;min-width:200px;border:1px solid var(--grid)" alt="Simulator">
-          <img src="assets/images/eecs461microprocessor.jpg" style="flex:1;min-width:100px;border:1px solid var(--grid)" alt="Microprocessor">
+          <img src="/assets/images/eecs461sim.jpg" style="flex:2;min-width:200px;border:1px solid var(--grid)" alt="Simulator">
+          <img src="/assets/images/eecs461microprocessor.jpg" style="flex:1;min-width:100px;border:1px solid var(--grid)" alt="Microprocessor">
         </div>
         <p><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-461/" target="_blank">EECS 461</a> was an embedded control systems course built around progressively complex assignments, each adding a layer toward the final project. Throughout the semester, my partner and I developed a haptic interface embedded controller using an S32K144 microcontroller, C, and SPI (Serial Peripheral Interface) protocol in an NXP software workspace, writing C code to read from and write to hardware registers directly. We designed flow logic, PID controllers, and vehicle dynamics models in Simulink to represent complex systems of differential equations, and used an oscilloscope to analyze subsystem waveform responses for debugging.</p>
         <p>The final project brought all of it together: an ACC (Adaptive Cruise Control) system with three operating modes and auto-steering active throughout. In Manual mode, the user controls speed and path through a potentiometer and haptic wheel. Velocity mode sets a fixed traveling speed via dip switches on the microcontroller. Position mode activates automatically when a lead car enters a preset distance and is traveling slower, matching its speed. We built the entire system in Simulink using scaffolding provided by the course instructors, then used Simulink's automatic C code generation to deploy it onto the S32K144 microcontroller running on a physical driving simulator.</p>
@@ -198,7 +198,7 @@ const data = {
       html: `
         <iframe class="modal-video" src="https://www.youtube.com/embed/ynsI1RB5d14" title="Rocket League Demo 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <iframe class="modal-video" src="https://www.youtube.com/embed/HcMNyMvgoTM" title="Rocket League Demo 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <img src="assets/images/EECS373_Poster.pptx.png" style="width:100%;margin-bottom:1.1rem;border:1px solid var(--grid)" alt="Project Poster">
+        <img src="/assets/images/EECS373_Poster.pptx.png" style="width:100%;margin-bottom:1.1rem;border:1px solid var(--grid)" alt="Project Poster">
 
         <p><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-373/" target="_blank">EECS 373</a> was an embedded systems design course built around a semester-long team project. Our team of four chose to build a real-life version of Rocket League, the car-soccer video game, where a human-controlled robot competed against an autonomous one on a physical field. My primary ownership was the autonomy algorithm: a reactive system that used a computer vision Python script to detect the ball and field state in real time and feed that directly into the robot's decisions.</p>
         <p>On the embedded side, I led the C implementation for several components: a magnetometer for orientation, gameplay timers, PlayStation 2 controller SPI (Serial Peripheral Interface) communication for the human-controlled robot, and a USB-to-Serial adapter for system communication. The computer vision side was Python — I wrote the script that detected AprilTags (QR-code-style markers used for position tracking) and colors on the field to feed real-time state into the robot's decisions. I also designed and implemented the full autonomous Rocket League algorithm, though the demo circumstances meant it never got validated and tested in time. My documentation contributions included systems engineering diagrams, a milestone report, and the project poster.</p>
@@ -223,7 +223,7 @@ const data = {
         </ul>
       `,
       html: `
-        <img src="assets/images/eecs_442.png" style="width:100%;margin-bottom:1.1rem;border:1px solid var(--grid)" alt="Colorization Results">
+        <img src="/assets/images/eecs_442.png" style="width:100%;margin-bottom:1.1rem;border:1px solid var(--grid)" alt="Colorization Results">
         <p><a href="https://web.eecs.umich.edu/~justincj/teaching/eecs442/WI2021/syllabus.html" target="_blank">EECS 442</a> covered the core theory and methods of computer vision, including convolutional neural networks, image processing, and deep learning approaches to visual understanding. The course culminated in an independent research report, for which I chose to replicate a published deep learning colorization model and use it to investigate how loss function choice affects output quality.</p>
         <p>The model, originally from Zhang et al.'s <a href="https://richzhang.github.io/colorization/" target="_blank">"Colorful Image Colorization" (ECCV 2016)</a>, uses a CNN (Convolutional Neural Network) architecture — a class of neural network that applies learned filters across an image to detect patterns — with downsampling and upsampling layers to compress and reconstruct spatial information, batch normalization to stabilize training, and Leaky ReLU (Rectified Linear Unit) activation functions that introduce non-linearity so the network can learn complex mappings. My replication trained on a 90,000-image subset of the MIT Mini Places dataset using a tuned ADAM (Adaptive Moment Estimation) optimizer, an adaptive gradient descent algorithm that adjusts learning rates per parameter during training, and deliberately omitted the authors' class-rebalancing method to isolate the variable I was testing: replacing their Cross Entropy loss function with MSE (Mean Squared Error).</p>
         <p>The results were clear. MSE produced consistently duller, more monochromatic outputs — only blues retained any vibrancy across test images. My explanation was that MSE, designed for regression problems where outputs can range across any value, converges much more slowly on a classification task like colorization than Cross Entropy, which is purpose-built to penalize confident wrong predictions. The experiment confirmed that loss function choice is not just a technical detail — it has a direct, visible impact on what a model actually learns to produce.</p>  
@@ -251,9 +251,9 @@ const data = {
         </ul>
       `,
       html: `
-        <img src="assets/images/slam.png" style="width:100%;margin-bottom:0.5rem;border:1px solid var(--grid)" alt="SLAM map">
-        <img src="assets/images/mbots.png" style="width:100%;margin-bottom:0.5rem;border:1px solid var(--grid)" alt="M-Bots">
-        <img src="assets/images/slam_2.jpg" style="width:50%;margin-bottom:1.1rem;border:1px solid var(--grid)" alt="SLAM 2">
+        <img src="/assets/images/slam.png" style="width:100%;margin-bottom:0.5rem;border:1px solid var(--grid)" alt="SLAM map">
+        <img src="/assets/images/mbots.png" style="width:100%;margin-bottom:0.5rem;border:1px solid var(--grid)" alt="M-Bots">
+        <img src="/assets/images/slam_2.jpg" style="width:50%;margin-bottom:1.1rem;border:1px solid var(--grid)" alt="SLAM 2">
         <p><a href="https://web.eecs.umich.edu/~kuipers/teaching/eecs467-F19.html" target="_blank">EECS 467</a> was a lab-based robotics course built around the M-Bot, a four-wheel-drive robot equipped with a LiDAR (Light Detection and Ranging) sensor. Working with one partner, I implemented the core stack for SLAM (Simultaneous Localization and Mapping) based autonomous navigation across a series of labs that each built on the last.</p>
         <p>We started with low-level control — odometry and PID (Proportional-Integral-Derivative) tuning to get the robot moving accurately — then moved up to occupancy grid mapping, where the robot used LiDAR readings to build a 2D map of its environment. From there we added localization using a particle filter, so the robot could track its position within that map in real time. Path planning came last, tying everything together so the robot could navigate autonomously — finding its way through a maze it had never seen before.</p>
         <p>Watching it work end-to-end on physical hardware — where sensor noise and imperfect odometry are real — made the abstractions from lecture concrete in a way that's hard to get from coursework alone.</p>
@@ -277,7 +277,7 @@ const data = {
       `,
       html: `
         <iframe class="modal-video" src="https://www.youtube.com/embed/qFqYIITFqd0?si=hdwI-rVQdYdWpBuQ" title="Multi-Agent Path Planning Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <img src="assets/images/eecs467.jpg" style="width:100%;margin-bottom:1.1rem;border:1px solid var(--grid)" alt="M-Bots testing">
+        <img src="/assets/images/eecs467.jpg" style="width:100%;margin-bottom:1.1rem;border:1px solid var(--grid)" alt="M-Bots testing">
         <p>I selected <a href="https://web.eecs.umich.edu/~kuipers/teaching/eecs467-F19.html" target="_blank">EECS 467: Autonomous Robotics</a> as my capstone — Michigan's Major Design Experience (MDE) — to finish my computer engineering degree. Our team of four designed and demonstrated a multi-agent path planning and collision avoidance system on Michigan's physical M-Bot robots. We built on the CBS (Conflict-Based Search) algorithm for its completeness and optimality guarantees, implementing path-following logic that translated a 2D path array into linear and angular velocities over a TCP (Transmission Control Protocol) server-client architecture, and configured a PID (Proportional-Integral-Derivative) controller for each robot to ensure smooth real-world operation.</p>
         <p>My primary contributions were leading the path-following logic implementation, TCP communications, and PID controller configuration, as well as owning the testing effort. I designed the QA test plan to verify the system worked end-to-end in the real world — creating test scenarios, designing the simulation field, and building the testing matrix. We ran six trials across varying levels of map complexity, and the system performed successfully. I also led the team's technical documentation, including producing a video walkthrough of the system.</p>
         `,
@@ -301,7 +301,7 @@ const data = {
         </ul>
       `,
       html: `
-        <img src="assets/images/packages_topics_connectivity_system_diagram.png" style="width:100%;margin-bottom:1.1rem;border:1px solid var(--grid)" alt="System Diagram">
+        <img src="/assets/images/packages_topics_connectivity_system_diagram.png" style="width:100%;margin-bottom:1.1rem;border:1px solid var(--grid)" alt="System Diagram">
           <p>For a 6-hour robotics coding challenge, I designed and implemented a ROS 2 (Robot Operating System 2) stack in C++ where a robot follows pose inputs from multiple sources and reaches each target using a motion controller. I built five packages from scratch, each with a focused responsibility. The clock pose issuer converts clock time into 6D positions on a unit circle. The GUI pose issuer gives the user a manual interface to issue pose commands directly, with a spacebar reset. The motion controller subscribes to both pose sources and converts the target pose into velocity commands. Two transformer packages handle coordinate frame conversion — mapping between the normalized world frame and the robot's local body frame — so each component stays decoupled from the simulation's internal coordinate system.</p>
           <p>I also wrote a full documentation suite covering installation, build and run instructions, and testing and formatting procedures, and included a system diagram showing how all five packages connect through their ROS 2 topics. I kept each package's structure consistent and straightforward to extend — adding a new package or controller means following a clear pattern rather than reverse-engineering existing code. The submission included a test suite and shell scripts for rebuilding and launching the system.</p>
         `,
@@ -325,10 +325,10 @@ const data = {
       `,
       html: `
         <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0.5rem;margin-bottom:1.1rem">
-          <img src="assets/images/nycwsoc_app_admin_dashboard.png" style="width:100%;border:1px solid var(--grid)" alt="Admin Dashboard">
-          <img src="assets/images/nycwsoc_app_player_screen.png" style="width:100%;border:1px solid var(--grid)" alt="Player Screen">
-          <img src="assets/images/nycwsoc_app_game_details.png" style="width:100%;border:1px solid var(--grid)" alt="Game Details">
-          <img src="assets/images/nycwsoc_app_league_registration.png" style="width:100%;border:1px solid var(--grid)" alt="League Registration">
+          <img src="/assets/images/nycwsoc_app_admin_dashboard.png" style="width:100%;border:1px solid var(--grid)" alt="Admin Dashboard">
+          <img src="/assets/images/nycwsoc_app_player_screen.png" style="width:100%;border:1px solid var(--grid)" alt="Player Screen">
+          <img src="/assets/images/nycwsoc_app_game_details.png" style="width:100%;border:1px solid var(--grid)" alt="Game Details">
+          <img src="/assets/images/nycwsoc_app_league_registration.png" style="width:100%;border:1px solid var(--grid)" alt="League Registration">
         </div>
         <p>I joined a recreational soccer league in NYC, took on the role of team captain, and decided to build an app after noticing how much friction the league's current setup created. Managing attendance meant chasing RSVPs over WhatsApp, game times arrived via email two days before kickoff, and players enrolled in new seasons through a Google Sheet linked on the league's website. Most leagues in the city already have a dedicated app for this, and it seemed like a natural gap to fill.</p>
         <p>The app is a React Native iOS MVP (Minimum Viable Product) written in TypeScript, covering the core player-facing and admin workflows: player accounts and authentication, schedule viewing with a calendar grid, game RSVPs, push notification reminders, league enrollment, team management, and an admin dashboard with CSV export. I built it partly to solve a real problem I experienced firsthand and partly to get hands-on experience with full-stack mobile app development before tackling more complex personal projects. Deployment on the App Store runs $99/year and a cloud backend would add another ~$30/month, so for now it lives on <a href="https://github.com/EmiliaPsach/nycwsoc" target="_blank">GitHub</a>. Before pitching it to the league, I plan to clean up the UI/UX, replace the dummy data with real league data, and verify the notification system works correctly end-to-end.</p>
@@ -456,7 +456,7 @@ const data = {
         </ul>
       `,
       html: `
-        <img src="assets/images/ADI.jpg" style="width:80%;display:block;margin:0 auto 1.1rem;border:1px solid var(--grid)" alt="ADI">
+        <img src="/assets/images/ADI.jpg" style="width:80%;display:block;margin:0 auto 1.1rem;border:1px solid var(--grid)" alt="ADI">
         <p>I joined ADI's Aerospace and Defense team as an RF (Radio Frequency) test engineering intern, with a primary assignment to standardize RF characterization data collection for new chips onto a single platform — Zero Code GUI (ZCG) by Soliton Technologies. After completing LabVIEW Core 1 and 2 training, I built GUIs (graphical user interfaces) in National Instruments LabVIEW to automate data collection across multiple ADI technologies, including a GUI to measure 2nd and 3rd order two-tone intermodulation distortion using two signal generators. I also authored a ZCG tutorial guide to help other ADI RF testing teams adopt the platform and contributed weekly UI improvement suggestions to the ZCG development team. I finished the entire assignment within my first month.</p>
         <p>With my manager on vacation for much of the summer, I spent the remaining time on a problem I had identified while going through the test results analysis process myself — it was slow and largely manual for the senior engineering team. I built several MATLAB programs to automate it: one parsed large datasets to generate radiation performance reports with tables of key statistics, and another sifted through thousands of raw data files to compile spreadsheets and hundreds of plots for the design team. My manager returned to find the work completed with a few days left in my internship. The automation cumulatively saved the team days to months of effort, and the accompanying MATLAB documentation left them equipped to tackle similar projects going forward.</p>
       `,
@@ -472,7 +472,7 @@ const data = {
         </ul>
       `,
       html: `
-        <img src="assets/images/SURE_Poster.jpg" style="width:100%;margin-bottom:1.1rem;border:1px solid var(--grid)" alt="SURE Poster">
+        <img src="/assets/images/SURE_Poster.jpg" style="width:100%;margin-bottom:1.1rem;border:1px solid var(--grid)" alt="SURE Poster">
         <p>The <a href="https://open-dynamic-robot-initiative.github.io/" target="_blank">Open Dynamic Robot Initiative (ODRI)</a> is an open-source research effort to develop a low-cost quadruped robot as a platform for researchers worldwide to build and test control systems on — the goal being to lower the financial and educational barriers that have historically made robotics research inaccessible. I was one of two undergraduates selected to join the interdisciplinary research team through <a href="https://sure.engin.umich.edu/" target="_blank">Michigan's SURE (Summer Undergraduate Research in Engineering) program</a>.</p>
         <p>My first contribution was improving the technical foundation for other collaborators — conducting a statistical cost analysis, creating wiring schematics, assembling circuit tutorials, and compiling a bill of materials on <a href="https://github.com/EmiliaPsacharopoulos/open_robot_actuator_hardware" target="_blank">GitHub</a> to track research progress. From there I identified that ODRI's reliance on highly specialized PCBs (printed circuit boards) was a core driver of both cost and capability constraints, and proposed replacing them with generic control platforms. I led the electrical redesign — reworking the robot's circuitry, computing, communication, and motor control systems — which quadrupled communication capabilities and motor control bandwidth while reducing costs by over 91%. We documented the mechanical and electrical redesigns in a research paper and presented our findings at Michigan's SURE symposium.</p>
       `,
@@ -500,7 +500,7 @@ const data = {
         </ul>
       `,
       html: `
-        <img src="assets/images/gwu.png" style="width:100%;border:1px solid var(--grid);margin-bottom:1.1rem" alt="GWU Internship">
+        <img src="/assets/images/gwu.png" style="width:100%;border:1px solid var(--grid);margin-bottom:1.1rem" alt="GWU Internship">
         <p>The summer before starting college I took an unpaid internship at a mechanical engineering research lab at George Washington University — mostly to get a firsthand sense of what research actually looks like before deciding how much to pursue it in college. The day-to-day was unglamorous: compiling notes from research papers, washing labware, preparing samples, and taking observations during experiments run by PhD students studying <a href="https://technologies.research.gwu.edu/technology/45714#:~:text=Researchers%20at%20GW%20have%20invented,of%20ice%20in%20various%20surfaces." target="_blank">hydrophobic aluminum treatment methods</a> to prevent hull cracking in container ships bound for arctic regions.</p>
         <p>At the end of the summer the team gave me free rein to pick a topic related to the research and use the lab facilities to explore it. I designed and built a metal block with a grid of drilled cavities to test how different phase change materials (materials the PhD students were evaluating) retained heat under varying ambient conditions. The experiment involved heating the block for a set duration, then measuring how long each material held its temperature once removed from the heat source.</p>
       `,
@@ -514,7 +514,7 @@ const data = {
         </ul>
       `,
       html: `
-        <img src="assets/images/sevenMile.jpg" style="width:100%;margin-bottom:0.5rem;border:1px solid var(--grid)" alt="Seven Mile">
+        <img src="/assets/images/sevenMile.jpg" style="width:100%;margin-bottom:0.5rem;border:1px solid var(--grid)" alt="Seven Mile">
         <p>I started tutoring guitar at <a href="https://www.umsevenmile.org/" target="_blank">Seven Mile</a> during my freshman year of college — their mission of providing equal access to arts education in underserved communities was one I wanted to be a part of. A few hours a week watching students grow, as musicians and as people, was one of the most rewarding parts of my time in college.</p>
         <p>In my senior year, I stepped into the Director of Music role to get more involved. That meant coordinating tutor and student attendance across multiple locations, managing financial expenditures, and planning public musical showcases at the end of each term where students could perform for their communities. The showcases were the highlight of each term, bringing together tutors, students, and venues to give students a real performance experience and a chance to celebrate their progress.</p>
       `,
@@ -524,7 +524,7 @@ const data = {
 };
 
 /* ── URL deep-linking ── */
-const sectionBase = { exp: '#experience', proj: '#projects' };
+const sectionBase = { exp: '/experience', proj: '/projects' };
 const typeToUrl = { exp: 'experience', proj: 'project' };
 const urlToType = { experience: 'exp', project: 'proj' };
 
@@ -547,22 +547,18 @@ function idToSlug(type, id) {
   return id;
 }
 
-function setModalHash(type, id, view, replace) {
+function setModalPath(type, id, view, replace) {
   const slug = idToSlug(type, id);
   const urlType = typeToUrl[type] || type;
-  const hash = (view && view !== 'short') ? `#${urlType}/${slug}/${view}` : `#${urlType}/${slug}`;
+  const path = (view && view !== 'short') ? `/${urlType}/${slug}/${view}` : `/${urlType}/${slug}`;
   if (replace) {
-    history.replaceState({ modal: { type, id, view } }, '', hash);
+    history.replaceState({ modal: { type, id, view } }, '', path);
   } else {
     // Ensure back button returns to the correct section, not wherever the user was
     const base = sectionBase[type];
     if (base) history.replaceState(null, '', base);
-    history.pushState({ modal: { type, id, view } }, '', hash);
+    history.pushState({ modal: { type, id, view } }, '', path);
   }
-}
-
-function clearModalHash() {
-  history.pushState(null, '', window.location.pathname + window.location.search);
 }
 
 window.addEventListener('popstate', e => {
@@ -576,10 +572,13 @@ window.addEventListener('popstate', e => {
   }
 });
 
+let currentModal = null;
+
 function openModal(type, id, view, fromHash) {
   view = view || 'short';
   fromHash = fromHash || false;
   const isLong = view === 'long';
+  currentModal = { type, id, view };
 
   const item = data[type][id];
   const meta = data[type + 'Meta'] ? data[type + 'Meta'][id] : null;
@@ -634,12 +633,12 @@ function openModal(type, id, view, fromHash) {
         shortBtn.addEventListener('click', () => {
           shortBtn.classList.add('active'); longBtn.classList.remove('active');
           shortContent.style.display = 'block'; longContent.style.display = 'none';
-          setModalHash(type, id, 'short', true);
+          setModalPath(type, id, 'short', true);
         });
         longBtn.addEventListener('click', () => {
           longBtn.classList.add('active'); shortBtn.classList.remove('active');
           shortContent.style.display = 'none'; longContent.style.display = 'block';
-          setModalHash(type, id, 'long', true);
+          setModalPath(type, id, 'long', true);
         });
       }
     }, 0);
@@ -711,12 +710,12 @@ function openModal(type, id, view, fromHash) {
         shortBtn.addEventListener('click', () => {
           shortBtn.classList.add('active'); longBtn.classList.remove('active');
           shortContent.style.display = 'block'; longContent.style.display = 'none';
-          setModalHash(type, id, 'short', true);
+          setModalPath(type, id, 'short', true);
         });
         longBtn.addEventListener('click', () => {
           longBtn.classList.add('active'); shortBtn.classList.remove('active');
           shortContent.style.display = 'none'; longContent.style.display = 'block';
-          setModalHash(type, id, 'long', true);
+          setModalPath(type, id, 'long', true);
         });
       }
     }, 0);
@@ -726,7 +725,7 @@ function openModal(type, id, view, fromHash) {
   document.getElementById('modal').classList.add('open');
   document.body.style.overflow = 'hidden';
 
-  if (!fromHash) setModalHash(type, id, view);
+  if (!fromHash) setModalPath(type, id, view);
 
   // Initialize carousel if present
   setTimeout(() => {
@@ -756,30 +755,73 @@ function closeModal(e) { if (e.target.id === 'modal') closeModalDirect(); }
 function closeModalDirect() {
   document.getElementById('modal').classList.remove('open');
   document.body.style.overflow = '';
-  clearModalHash();
+  const base = (currentModal && sectionBase[currentModal.type]) || '/';
+  currentModal = null;
+  history.replaceState(null, '', base);
 }
 
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDirect(); });
 
-// Open modal from URL hash (handles both initial load and same-page hash navigation)
-function openModalFromHash(hash) {
-  hash = (hash || window.location.hash).slice(1);
-  if (!hash) return;
-  const [urlType, slug, view] = hash.split('/');
+// Open modal from URL path on load (also handles 404 redirect via ?path= query param)
+(function openModalFromPath() {
+  const params = new URLSearchParams(window.location.search);
+  const redirectPath = params.get('path');
+  let path;
+
+  if (redirectPath) {
+    // Came via 404.html redirect — restore clean URL before opening modal
+    history.replaceState(null, '', '/');
+    history.pushState(null, '', redirectPath);
+    path = redirectPath;
+  } else {
+    path = window.location.pathname;
+  }
+
+  const parts = path.replace(/^\//, '').split('/');
+  const [urlType, slug, view] = parts;
   const type = urlToType[urlType] || urlType;
+
+  // Section-root path (e.g. /experience or /projects with no slug) — scroll to section
+  if (urlType && !slug) {
+    const sectionMap = { experience: 'experience', projects: 'projects', skills: 'skills', education: 'education' };
+    const sectionId = sectionMap[urlType];
+    if (sectionId) {
+      const el = document.getElementById(sectionId);
+      if (el) el.scrollIntoView();
+    }
+    return;
+  }
+
   const id = slugToId[type] && slugToId[type][slug];
   if (id && data[type] && data[type][id]) {
+    // Scroll background to the relevant section before opening modal
+    const sectionId = type === 'exp' ? 'experience' : type === 'proj' ? 'projects' : null;
+    if (sectionId) {
+      const sectionEl = document.getElementById(sectionId);
+      if (sectionEl) {
+      const scrollToSection = () => {
+        const navOffset = document.querySelector('nav')?.offsetHeight || 0;
+        const target = sectionEl.querySelector('.section-header') || sectionEl;
+        window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - navOffset });
+      };
+      document.fonts.ready.then(scrollToSection);
+    }
+    }
     openModal(type, id, view || 'short', true);
   }
-}
+})();
 
-// On initial load (script is at bottom of body so DOM is ready)
-openModalFromHash();
-
-// On same-page hash navigation (e.g. user types URL in address bar while already on the page)
-window.addEventListener('hashchange', e => {
-  const hash = new URL(e.newURL).hash;
-  openModalFromHash(hash);
+/* ── Nav section links ── */
+document.querySelectorAll('a[data-section]').forEach(a => {
+  a.addEventListener('click', e => {
+    const sectionId = a.dataset.section;
+    const el = document.getElementById(sectionId);
+    if (el) {
+      e.preventDefault();
+      history.pushState(null, '', a.getAttribute('href'));
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
 });
 
 /* ── Populate project cards ── */
