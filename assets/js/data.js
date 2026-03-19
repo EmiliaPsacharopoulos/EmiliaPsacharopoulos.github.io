@@ -2,7 +2,7 @@
 const data = {
   proj: {
     p1: {
-      title: 'Algorithmic Software Design — SillyQL',
+      title: 'SillyQL — Simplified SQL Query Engine',
       tag: 'academic',
       cardDesc: 'Built a simplified SQL query engine in C++, applying space and time tradeoff analysis to meet performance constraints on large datasets.',
       subtitle: 'EECS 281: Data Structures & Algorithms',
@@ -97,7 +97,7 @@ const data = {
     p5: {
       title: 'Adaptive Cruise Control Embedded System',
       tag: 'academic',
-      cardDesc: 'Semester-long embedded control systems course culminating in a fully autonomous Adaptive Cruise Control system deployed on physical hardware.',
+      cardDesc: 'Built and deployed a fully autonomous Adaptive Cruise Control system on a physical driving simulator, covering three operating modes from manual to position-following.',
       subtitle: 'EECS 461: Embedded Control Systems',
       subtitleUrl: 'https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-461/',
       date: 'Winter 2022',
@@ -137,7 +137,7 @@ const data = {
       `,
       html: `
         <p>I built the first version of this site in summer 2022 using HTML, CSS, and JavaScript, customizing an <a href="https://html5up.net/" target="_blank">HTML5 UP</a> template as a foundation. It did the job of displaying my work, but returning to it later, I realized the layout was harder to read than it should have been — even I struggled to skim it, and I wrote the material. The visual design didn't reflect how I think about my own work, and nothing about it communicated a clear point of view.</p>
-        <p>In spring 2026, I decided to redesign it from scratch, starting by defining my personal brand: an engineer who approaches problems logically and communicates clearly. I used that as the design brief and built the entire UI myself. The most important structural change was introducing a two-layer content model: all detailed content is now hidden behind both a modal and a longform toggle, so the reader actively chooses how deep to go rather than being confronted with everything at once. The main view stays clean and skimmable by default. The visual design I built from scratch to match that brand — the site now feels like it belongs to someone with a specific point of view rather than a generic portfolio template. The audience I had in mind was primarily myself: I wanted somewhere to proudly display years of work in a way that's visually impactful and easy to navigate, not just a page that technically exists.</p>
+        <p>In spring 2026, I decided to redesign it from scratch, starting by defining my personal brand: an engineer who approaches problems logically and communicates clearly. I used that as the design brief and built the entire UI myself. The most important structural change was introducing a two-layer content model: all detailed content is now hidden behind both a modal and a longform toggle, so the reader actively chooses how deep to go rather than being confronted with everything at once. The main view stays clean and skimmable by default. The visual design I built from scratch to match that brand — the site now feels like it belongs to someone with a specific point of view rather than a generic portfolio template.</p>
       `,
       tags: ['HTML', 'CSS', 'JavaScript'],
       links: [
@@ -211,7 +211,6 @@ const data = {
           <li>Built forward and inverse kinematics models to translate between joint space and physical robot motion</li>
           <li>Fused odometry and LiDAR data for accurate real-time localization</li>
           <li>Tuned PID controllers for reliable low-level motor control on physical hardware</li>
-          <li>Built a full SLAM-based autonomous navigation stack across a series of labs, each extending the last</li>
           <li>Demonstrated end-to-end autonomous maze navigation on a physical robot</li>
         </ul>
       `,
@@ -220,7 +219,7 @@ const data = {
         <img src="/assets/images/mbots.png" style="width:100%;margin-bottom:0.5rem;border:1px solid var(--grid)" alt="M-Bots">
         <img src="/assets/images/slam_2.jpg" style="width:50%;margin-bottom:1.1rem;border:1px solid var(--grid)" alt="SLAM 2">
         <p><a href="https://web.eecs.umich.edu/~kuipers/teaching/eecs467-F19.html" target="_blank">EECS 467</a> was a lab-based robotics course built around the M-Bot, a four-wheel-drive robot equipped with a LiDAR (Light Detection and Ranging) sensor. Working with one partner, I implemented the core stack for SLAM (Simultaneous Localization and Mapping) based autonomous navigation across a series of labs that each built on the last.</p>
-        <p>We started with low-level control: odometry and PID (Proportional-Integral-Derivative) tuning to get the robot moving accurately, then moved up to occupancy grid mapping, where the robot used LiDAR readings to build a 2D map of its environment. From there we added localization using a particle filter, so the robot could track its position within that map in real time. Path planning came last, tying everything together so the robot could navigate autonomously — finding its way through a maze it had never seen before.</p>
+        <p>We started with low-level control: odometry and PID (Proportional-Integral-Derivative) tuning to get the robot moving accurately, then moved up to occupancy grid mapping, where the robot used LiDAR readings to build a 2D map of its environment. From there we added localization using a particle filter, so the robot could track its position within that map in real time. Path planning came last, tying everything together so the robot could navigate autonomously — finding its way through a maze it had never seen before. The robot navigated the maze end-to-end at the final demo.</p>
 `,
       tags: ['C++', 'Python', 'SLAM', 'LIDAR', 'Robotics']
     },
@@ -319,7 +318,7 @@ const data = {
           <li>Designed and shipped Custom-Month Reconciliations from scratch — reworking backend data structures and calculation logic throughout to support any combination of monthly close cadences (e.g. quarterly, annual), replacing hardcoded calendar-month logic; led product scoping, stakeholder alignment, technical scoping, QA, and production rollout for thousands of customers</li>
           <li>Diagnosed and resolved blocking issues in the Reconciliation Editor (a replacement UX built by a contractor who left before finishing it), designed the QA test plan, and drove it to production</li>
           <li>Designed and shipped 12-Month Planning Visibility from scratch — extending the platform's planning horizon for accountants with product-level permissions; authored product scoping document, aligned with PM and tech lead, and owned full lifecycle through production rollout for thousands of customers</li>
-          <li>Resolved 30 customer bugs using test-driven debugging practices — writing tests to reproduce failures before fixing, then expanding the test suite to prevent regressions; frequently the engineer on-call escalations landed on</li>
+          <li>Resolved 30 customer bugs using test-driven debugging practices — writing tests to reproduce failures before fixing, then expanding the test suite to prevent regressions; was frequently the primary escalation contact for on-call incidents</li>
           <li>Diagnosed and fixed 4 system-level performance issues including line item matching timeouts, database query bottlenecks in orchestration services, and chronic background job failures</li>
         </ul>
       `,
@@ -330,7 +329,7 @@ const data = {
         <p>Beyond reconciliations, I designed, scoped, and shipped a 12-Month Planning Visibility feature from scratch — extending the platform's planning horizon for accountants and including product-level permissions. I authored the product scoping document and got alignment from the program manager, then moved into technical scoping and alignment with the engineering pod's tech lead before owning the full lifecycle through implementation, QA, and production rollout for thousands of customers.</p>
         <p>On the production stability side, I resolved 30 customer bugs (including production hotfixes and database migrations to clean up duplicate records and session context errors) using test-driven debugging practices: writing tests to reproduce each failure before implementing a fix, then expanding the test suite to prevent regressions. I was frequently the engineer that on-call escalations landed on, and wrote detailed root cause analyses after each incident. I also diagnosed and fixed four system-level performance issues — line item matching timeouts, database query bottlenecks in orchestration services, and chronic background job failures — improving reliability for scheduled processing.</p>
         <p>Basis has an entire internal team dedicated to making every employee more productive with AI — treating company context with the same rigor as code: version control, ownership, and deployment pipelines for internal knowledge. I learned to integrate AI agents into every stage of the work (product scoping, technical architecture tradeoffs, milestone planning, and code contribution) and leveraged their internal tooling, including a traceability logging MCP server, to streamline debugging: diagnosing failures, reproducing them in the test suite, implementing fixes, and verifying the result.</p>
-        <p>After four months I decided to leave — on good terms with the team. I was the only product engineer on an entire part of the project and worked almost entirely in isolation outside of scoping reviews, so I wanted to find an environment with more engineering collaboration around me. I left having learned a lot about AI-native development and end-to-end product ownership, and having delivered features from zero to production for thousands of customers.</p>
+        <p>After four months I decided to leave — on good terms with the team. I left having learned a lot about AI-native development and end-to-end product ownership, and having delivered features from zero to production for thousands of customers.</p>
       `,
       tags: ['Python', 'PostgreSQL', 'React', 'TypeScript', 'Full-Stack Development', 'Test-Driven Development']
     },
@@ -446,7 +445,7 @@ const data = {
         <p>The <a href="https://open-dynamic-robot-initiative.github.io/" target="_blank">Open Dynamic Robot Initiative (ODRI)</a> is an open-source research effort to develop a low-cost quadruped robot as a platform for researchers worldwide to build and test control systems on — the goal being to lower the financial and educational barriers that have historically made robotics research inaccessible. I was one of two undergraduates selected to join the interdisciplinary research team through <a href="https://sure.engin.umich.edu/" target="_blank">Michigan's SURE (Summer Undergraduate Research in Engineering) program</a>.</p>
         <p>My first contribution was improving the technical foundation for other collaborators: conducting a statistical cost analysis, creating wiring schematics, assembling circuit tutorials, and compiling a bill of materials on <a href="https://github.com/EmiliaPsacharopoulos/open_robot_actuator_hardware" target="_blank">GitHub</a> to track research progress. From there I identified that ODRI's reliance on highly specialized PCBs (printed circuit boards) was a core driver of both cost and capability constraints, and proposed replacing them with generic control platforms. I led the electrical redesign, reworking the robot's circuitry, computing, communication, and motor control systems, which quadrupled communication capabilities and motor control bandwidth while reducing costs by over 91%. We documented the mechanical and electrical redesigns in a research paper and presented our findings at Michigan's SURE symposium.</p>
       `,
-      tags: ['Robotics', 'Hardware Design', 'Electrical Design', 'Open-Source Development', 'Research']
+      tags: ['Robotics', 'Hardware Design', 'Electrical Design', 'Open-Source Development']
     },
     e2: {
       htmlShort: `
@@ -473,7 +472,7 @@ const data = {
         <p>The summer before starting college I took an unpaid internship at a mechanical engineering research lab at George Washington University — mostly to get a firsthand sense of what research actually looks like before deciding how much to pursue it in college. The day-to-day was unglamorous: compiling notes from research papers, washing labware, preparing samples, and taking observations during experiments run by PhD students studying <a href="https://technologies.research.gwu.edu/technology/45714#:~:text=Researchers%20at%20GW%20have%20invented,of%20ice%20in%20various%20surfaces." target="_blank">hydrophobic aluminum treatment methods</a> to prevent hull cracking in container ships bound for arctic regions.</p>
         <p>At the end of the summer the team gave me free rein to pick a topic related to the research and use the lab facilities to explore it. I designed and built a metal block with a grid of drilled cavities to test how different phase change materials (materials the PhD students were evaluating) retained heat under varying ambient conditions. The experiment involved heating the block for a set duration, then measuring how long each material held its temperature once removed from the heat source.</p>
       `,
-      tags: ['Research', 'Materials Science']
+      tags: ['Experimental Design', 'Materials Science']
     },
   },
   eduMeta: {
