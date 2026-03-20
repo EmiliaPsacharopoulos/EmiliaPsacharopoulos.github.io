@@ -1,0 +1,189 @@
+- id: e1
+  jobTitle: "Engineering Intern"
+  company: "The George Washington University"
+  logo: "assets/images/george_washington_university_logo.png"
+  location: "Ashburn, VA"
+  dates: "June 2018 \u2014 August 2018"
+  tagline: "Supported PhD research on hydrophobic aluminum treatment methods and independently designed a phase change materials heat retention experiment using the lab's facilities."
+  website: "https://www.gwu.edu/"
+  tags: ["Experimental Design", "Materials Science"]
+  htmlShort: |
+    <ul class="modal-ul">
+      <li>Took an unpaid internship before college to get firsthand exposure to engineering research; supported PhD students studying <a href="https://technologies.research.gwu.edu/technology/45714#:~:text=Researchers%20at%20GW%20have%20invented,of%20ice%20in%20various%20surfaces." target="_blank">hydrophobic aluminum treatment methods</a> for arctic-bound container ship hulls</li>
+      <li>Designed and built an experiment at the end of the summer to test how different phase change materials retained heat under varying ambient conditions, using lab facilities and materials from the PhD team's own research</li>
+    </ul>
+  html: |
+    <img src="/assets/images/gwu.png" class="modal-img" alt="GWU Internship">
+    <p>The summer before starting college I took an unpaid internship at a mechanical engineering research lab at George Washington University — mostly to get a firsthand sense of what research actually looks like before deciding how much to pursue it in college. The day-to-day was unglamorous: compiling notes from research papers, washing labware, preparing samples, and taking observations during experiments run by PhD students studying <a href="https://technologies.research.gwu.edu/technology/45714#:~:text=Researchers%20at%20GW%20have%20invented,of%20ice%20in%20various%20surfaces." target="_blank">hydrophobic aluminum treatment methods</a> to prevent hull cracking in container ships bound for arctic regions.</p>
+    <p>At the end of the summer the team gave me free rein to pick a topic related to the research and use the lab facilities to explore it. I designed and built a metal block with a grid of drilled cavities to test how different phase change materials (materials the PhD students were evaluating) retained heat under varying ambient conditions. The experiment involved heating the block for a set duration, then measuring how long each material held its temperature once removed from the heat source.</p>
+
+- id: e2
+  jobTitle: "Engineering Technician Intern"
+  company: "NAVSEA"
+  logo: "assets/images/navsea_logo.jpg"
+  location: "Washington Navy Yard, DC (Remote)"
+  dates: "May 2020 \u2014 January 2021"
+  tagline: "Synthesized hundreds of testing documents into executive summaries for Navy leadership and organized a multi-day leadership conference for Unmanned Undersea Vehicle program managers."
+  website: "https://www.navsea.navy.mil/"
+  tags: ["Technical Writing", "Communication"]
+  htmlShort: |
+    <ul class="modal-ul">
+      <li>Compiled and synthesized hundreds of testing documents into executive summaries conveying key Lessons Learned to Navy leadership in the Unmanned Maritime Systems Program Office (PMS 406)</li>
+      <li>Collaborated with senior engineers to organize a multi-day leadership conference for Unmanned Undersea Vehicle (UUV) Homeport program managers</li>
+      <li>Recognized for exceptional communication and documentation skills by the Strategic Capabilities Office (SCO); PMS 406 extended a part-time continuation offer into sophomore year, which I accepted</li>
+    </ul>
+  html: |
+    <p>I joined the Navy's Unmanned Maritime Systems Program Office (PMS 406) after my freshman year of college. My primary work was independently synthesizing hundreds of testing documents into executive summaries conveying key lessons learned, which went directly to Navy leadership within PMS 406. I also collaborated with senior engineers to organize a multi-day leadership conference for UUV (Unmanned Undersea Vehicle) Homeport program managers. The Strategic Capabilities Office recognized my communication and documentation work at the end of the summer, and PMS 406 liked my work enough to offer a part-time continuation into my sophomore year, which I accepted.</p>
+
+- id: e3
+  jobTitle: "Robotics Research Engineering Intern"
+  company: "University of Michigan Robotics Institute"
+  logo: "assets/images/michigan_logo.png"
+  location: "Ann Arbor, MI"
+  dates: "May 2021 \u2014 December 2021"
+  tagline: "Proposed and led a full electrical redesign of an open-source research robot \u2014 cutting platform costs by over 91% and quadrupling communication and motor control capabilities."
+  website: "https://robotics.umich.edu/"
+  tags: ["Robotics", "Hardware Design", "Electrical Design"]
+  htmlShort: |
+    <ul class="modal-ul">
+      <li>Identified ODRI's original electronics architecture as the primary driver of cost and capability constraints; proposed and led a full electrical redesign replacing it with the MicroDriver v2 and Master Board system — quadrupling communication capabilities and motor control bandwidth while reducing costs by over 91%</li>
+      <li>Built out the technical documentation foundation for external collaborators: cost analysis, wiring schematics, circuit tutorials, and a bill of materials on <a href="https://github.com/EmiliaPsacharopoulos/Quadruped-8dof-Robot" target="_blank">GitHub</a></li>
+      <li>Co-authored a research paper documenting the redesign and presented findings at Michigan's SURE symposium</li>
+
+    </ul>
+  html: |
+    <img src="/assets/images/SURE_Poster.jpg" class="modal-img" alt="SURE Poster">
+    <p>The <a href="https://open-dynamic-robot-initiative.github.io/" target="_blank">Open Dynamic Robot Initiative (ODRI)</a> is an open-source research effort to develop a low-cost quadruped robot as a platform for researchers worldwide to build and test control systems on — the goal being to lower the financial and educational barriers that have historically made robotics research inaccessible. I was one of two undergraduates selected to join the interdisciplinary research team through <a href="https://sure.engin.umich.edu/" target="_blank">Michigan's SURE (Summer Undergraduate Research in Engineering) program</a>.</p>
+    <p>My first contribution was improving the technical foundation for other collaborators: conducting a statistical cost analysis, creating wiring schematics, assembling circuit tutorials, and compiling a bill of materials on <a href="https://github.com/EmiliaPsacharopoulos/Quadruped-8dof-Robot" target="_blank">GitHub</a> to track research progress. From there I identified that ODRI's original electronics architecture, built around TI evaluation boards requiring separate hardware per motor pair connected to the host PC via CAN, was the primary driver of both cost and capability constraints, and proposed replacing it with the MicroDriver v2 and Master Board system. I led the electrical redesign, reworking the robot's circuitry, computing, communication, and motor control systems: the Master Board manages all motor drivers simultaneously over a high-speed SPI bus and adds WiFi and Ethernet communication to the host PC in place of CAN, quadrupling communication capabilities and motor control bandwidth while reducing costs by over 91%. We documented the mechanical and electrical redesigns in a research paper and presented our findings at Michigan's SURE symposium.</p>
+
+- id: e4
+  jobTitle: "Product/Test Engineering Intern"
+  company: "Analog Devices, Inc."
+  logo: "assets/images/ADI_logo.png"
+  location: "Greensboro, NC"
+  dates: "May 2022 \u2014 August 2022"
+  tagline: "Test engineering intern automating hardware performance testing and data analysis."
+  website: "https://www.analog.com/en/index.html"
+  tags: ["MATLAB", "Signal Processing", "Test Automation"]
+  htmlShort: |
+    <ul class="modal-ul">
+      <li>Completed the primary internship assignment within the first month — built LabVIEW GUIs to automate RF characterization data collection across multiple ADI technologies, including a two-tone intermodulation distortion measurement GUI; authored a ZCG (Zero Code GUI) tutorial guide adopted by other ADI RF testing teams</li>
+      <li>Independently identified and automated the senior engineering team's manual test results analysis process while manager was on vacation — built MATLAB parsers that generated radiation performance reports, compiled thousands of raw data files into spreadsheets, and produced hundreds of plots for the design team, saving days of engineering effort per input analyzed</li>
+    </ul>
+  html: |
+    <img src="/assets/images/ADI.jpg" class="modal-img modal-img--center" alt="ADI">
+    <p>I joined ADI's Aerospace and Defense team as an RF (Radio Frequency) test engineering intern, with a primary assignment to standardize RF characterization data collection for new chips onto a single platform — Zero Code GUI (ZCG) by Soliton Technologies. After completing LabVIEW Core 1 and 2 training, I built GUIs (graphical user interfaces) in National Instruments LabVIEW to automate data collection across multiple ADI technologies, including a GUI to measure 2nd and 3rd order two-tone intermodulation distortion using two signal generators. I also authored a ZCG tutorial guide to help other ADI RF testing teams adopt the platform and contributed weekly UI improvement suggestions to the ZCG development team. I finished the entire assignment within my first month.</p>
+    <p>With my manager on vacation for much of the summer, I spent the remaining time on a problem I had identified while going through the test results analysis process myself — it was slow and largely manual for the senior engineering team. I built several MATLAB programs to automate it: one parsed large datasets to generate radiation performance reports with tables of key statistics, and another sifted through thousands of raw data files to compile spreadsheets and hundreds of plots for the design team. My manager returned to find the work completed with a few days left in my internship. The automation saved the team days of engineering effort per input analyzed, and the accompanying MATLAB documentation left them equipped to tackle similar projects going forward.</p>
+
+- id: e5
+  jobTitle: "Autonomy Software Engineer"
+  company: "Aurora Flight Sciences (Boeing)"
+  logo: "assets/images/aurora_logo.png"
+  location: "Cambridge, MA (and remote)"
+  dates: "July 2023 \u2014 November 2025"
+  tagline: "Software engineer at a Boeing-subsidiary R&D company, owning full-stack development, optimization modeling, and systems architecture across six programs in autonomous systems and sustainable aviation."
+  website: "https://www.aurora.aero/"
+  tags: ["Python", "React", "TypeScript", "FastAPI", "PostgreSQL", "C++", "Optimization Modeling", "Constraint Programming", "Data Visualization", "Full-Stack Development", "Systems Architecture", "Technical Communication"]
+  htmlShort: |
+    <span class="modal-tl-role">Overall</span>
+    <ul class="modal-ul">
+      <li>Promoted from Associate to Autonomy Engineer in eight months — a track that typically takes two or more years</li>
+    </ul>
+    <span class="modal-tl-role">Paradigm — Business Insights Optimization Tool for Sustainable Aviation</span>
+    <ul class="modal-ul">
+      <li>Identified that the existing Python/Dash stack couldn't support internal deployment and independently rebuilt the application from scratch as a React TypeScript + Python FastAPI + PostgreSQL full-stack web application, designing the database schema and migrating 2GB of data</li>
+      <li>Built a Mapbox route network visualization to communicate the optimizer's output — rendering which combinations of airport upgrades enabled which route networks across a target market for a given technology scenario, making the geographic and connectivity implications of each upgrade sequence legible at a glance</li>
+      <li>Owned all coding changes to extend the CP-SAT decision model with time-dependent logic, co-developing the math with the senior engineer who originally built the framework, allowing optimal technology selections to persist across multi-year planning horizons</li>
+      <li>Drove the case study effort end-to-end — identifying insights to surface, collecting the data, and presenting to 25 Boeing engineers at a sustainability workshop in Seattle</li>
+      <li>Produced the program's first comprehensive documentation suite for an 8,000+ line CP-SAT optimization codebase — enabling future developer onboarding on a mathematical framework too complex to approach without it; received an Aurora immediate recognition award</li>
+    </ul>
+    <span class="modal-tl-role">Boeing Cascade Climate Impact Model</span>
+    <ul class="modal-ul">
+      <li>Won first place in a two-week engineering hackathon by diagnosing and restructuring the Non-CO2 module: eliminating redundant queries and recomputations, cutting runtime from 17m 50s to 4.3s (99.6% improvement), and unblocking the module for customer deployment; received an Aurora immediate recognition award</li>
+    </ul>
+    <span class="modal-tl-role">DoD Autonomy Architecture</span>
+    <ul class="modal-ul">
+      <li>Selected among five Aurora engineers in a competitive downselect to continue the program, and placed on the highest-priority workstream: delivering the ICD (Interface Control Document) — coordinating across six companies, architecting the documentation format, and driving on-time content merging for a hundreds-of-pages primary deliverable</li>
+      <li>Built two automated verification tools to validate the ICD: a Groovy Cameo macro cross-validating thousands of message schema references against the reference architecture, and a Python Word parser flagging prose inconsistencies — recommendations from the latter were adopted into the program's syntax guidelines; received an Aurora immediate recognition award</li>
+      <li>Designed Level 1 compliance requirements and a C2 (Command and Control) authority model for autonomous distributed systems; both passed Change Review Board across all participating companies</li>
+    </ul>
+  html: |
+    <p>Aurora Flight Sciences is structured as an R&D company, meaning engineers rotate across programs rather than owning a single product long-term. In my time there I worked across six programs, and was promoted from Associate to Autonomy Engineer in eight months — a track that typically takes two or more years.</p>
+
+    <div class="modal-timeline">
+
+      <div class="modal-tl-item">
+        <div class="modal-tl-dot"></div>
+        <span class="modal-tl-date">July 2023 – October 2023</span>
+        <span class="modal-tl-role">Autonomy Core — Aurora Internal Framework</span>
+        <p>My first few months at Aurora were spent on the internal autonomy framework, working through bug fixes to get oriented on the codebase before moving onto the DoD program.</p>
+      </div>
+
+      <div class="modal-tl-item">
+        <div class="modal-tl-dot"></div>
+        <span class="modal-tl-date">September 2023 – March 2024</span>
+        <span class="modal-tl-role">DoD Autonomy Architecture</span>
+        <p>From the start I was simultaneously on the compliance and authority team and the documentation team. On the compliance side, I worked with a small group to design Level 1 compliance requirements and a scalable C2 (Command and Control) authority model for autonomous distributed systems, defining how authority propagates through both command chain and distributed system architectures. Both architectural contributions passed a Change Review Board process across all participating companies to be included in the program. On the documentation side, I engineered a pipeline of Python parsers and Bash scripts to collect, integrate, and present content on a static site hosting all decision-justification documentation. When a security delay blocked several teammates from accessing the program, I identified non-confidential site development tasks and delegated them to three teammates to keep delivery on track — Aurora recognized this with an immediate recognition award.</p>
+        <p>Around December, delivering the ICD (Interface Control Document) became the program's top priority. I transitioned onto that effort full time, taking on a largely technical communication role — architecting the documentation format, establishing a review process with a senior engineer, coordinating across all six companies to define what each team needed to contribute, and driving the merging of their content into the final document on time.</p>
+        <p>In February 2024 I was among five Aurora engineers selected to continue through the final downselect phase. To verify the ICD's accuracy, I built two tools: a Groovy Cameo macro that automated cross-validation of thousands of message schema references against the reference architecture, catching misalignments between the autonomy message schema and the MBSE (Model-Based Systems Engineering) model that had been accumulating as the two fell out of sync; and a Python Word parser that flagged inconsistencies between message table contents and surrounding prose, which surfaced enough structural issues that I ended up recommending changes to the program's message reference syntax guidelines. The program concluded in March 2024. After it ended, I prototyped a modular C++ base library to implement the authority definition we had designed — left unfinished when I was pulled onto a Boeing continuation effort.</p>
+      </div>
+
+      <div class="modal-tl-item">
+        <div class="modal-tl-dot"></div>
+        <span class="modal-tl-date">March 2024</span>
+        <span class="modal-tl-role">Mission Debrief Utility — Boeing DoD Continuation</span>
+        <p>After the DoD Autonomy Architecture program ended, I moved onto a Boeing continuation effort focused on building tooling to replay and visualize recorded flight data from simulated missions in a 3D environment, so engineers could analyze what happened after the fact. Working with another developer, we containerized an AFSIM (Advanced Framework for Simulation, Integration, and Modeling) simulation environment with Docker, evaluated and selected EFK (Elasticsearch, Fluent Bit, and Kibana) as the real-time log aggregation solution for flight data, and began developing a custom C++ plugin to feed captured autonomy messages into the 3D replay viewer.</p>
+        <p>The team's objectives were unclear and scope was undefined, which was creating real delivery risk. I put together a full program plan covering deliverables, schedule, and scope for all five members, which program leadership approved with minor edits. The program ended before it could be executed.</p>
+      </div>
+
+      <div class="modal-tl-item">
+        <div class="modal-tl-dot"></div>
+        <span class="modal-tl-date">June 2024</span>
+        <span class="modal-tl-role">C++ DDS Monitoring Service — Aurora Internal Framework</span>
+        <p>Before moving onto Boeing's Cascade program, I designed and built a backend C++ service to monitor inter-agent communication on Aurora's internal autonomy framework. The service implemented a distributed network of DDS (Data Distribution Service) subscribers that consumed and logged messages at 1Hz into a SQL database, with a REST API exposing the data to a Python frontend. I also containerized the service with Docker to streamline deployment. The service was deployed and integrated into the framework.</p>
+      </div>
+
+      <div class="modal-tl-item">
+        <div class="modal-tl-dot"></div>
+        <span class="modal-tl-date">June 2024 – August 2024</span>
+        <span class="modal-tl-role">Boeing <a href="https://cascade.boeing.com/" target="_blank">Cascade</a> Climate Impact Model</span>
+        <p>I spent three months as a backend developer on Boeing's Cascade Climate Impact Model — an open-source core library that serves both an internal API and web app, and is distributed to external users who want to build on top of it directly. My day-to-day work involved refactoring, variable renames coordinated across teams, and minor bug patches to improve code quality and maintainability.</p>
+        <p>The highlight was a two-week hackathon to find and fix inefficiencies across the codebase. I worked directly with the mathematician who originally designed the Non-CO2 module (a composition of models calculating the indirect atmospheric effects of commercial aircraft emissions like contrails and radiative forcing), using her math documentation to guide both performance improvements and correctness fixes. I restructured the program's design to eliminate redundant queries and recomputations, reduced large dataframe sizes being passed around, and standardized datatypes with consistent index labeling throughout. Runtime dropped from nearly 18 minutes to 4.3 seconds (a 99.6% improvement), and I won first place in the hackathon, unblocking the module for customer deployment. Aurora recognized my performance with an immediate recognition award. When I was rolled off, I handed off a documented list of remaining action items for the team to continue from.</p>
+      </div>
+
+      <div class="modal-tl-item">
+        <div class="modal-tl-dot"></div>
+        <span class="modal-tl-date">August 2024 – November 2025</span>
+        <span class="modal-tl-role">Paradigm — Business Insights Optimization Tool for Sustainable Aviation</span>
+        <p>My last and longest program was Paradigm — a Boeing-led initiative to build a data analysis platform and CP-SAT (Constraint Programming - Satisfiability) optimization framework for informing Boeing's sustainable aircraft technology selection. The optimizer solved a configurable version of the same core problem: given a target market (European routes, United's network, a global coverage threshold) and a selected alternative fuel technology, find the cost-minimizing sequence of airport infrastructure upgrades required to enable that technology across the network, and quantify the emissions savings those enablements would produce. The core optimizer used Google OR-Tools CP-SAT to solve across multiple objective functions simultaneously. The codebase had never been documented and was too complex to onboard new developers without it.</p>
+        <p>The first priority was making the codebase accessible. The program's first comprehensive documentation suite covered the entire codebase (over 8,000 lines of Python) with docstrings, inline comments, type hinting, linting, and a README with user and developer instructions. Beyond the code itself, a separate conceptual documentation suite covered the problem statement, high-level vocabulary, system descriptions and diagrams, framework summaries, Monte Carlo sweep explanations, a class inheritance diagram for roughly 50 classes, input and output dataset explanations, current limitations, and an end-to-end example trade walkthrough. Aurora recognized this work with an immediate recognition award.</p>
+        <p>From there my focus shifted to building out the platform. Starting in the existing Python/Dash stack, I built visualization and mapping tools that processed 2GB of data across multiple file formats. I identified that Dash wasn't a viable path to hosting the application on Boeing's internal servers and pushed to rebuild from scratch using modern full-stack technologies. I designed a custom PostgreSQL schema, migrated all the data into it, and built a React TypeScript frontend connected to a Python FastAPI backend — reproducing and extending the full feature set on a stack deployable on Boeing's internal servers. Working with the team lead, I built the frontend's mapping layer in Mapbox to visualize the optimizer's output as interactive geographic route networks, showing which airport upgrade combinations unlocked which route sets across each target market for a given technology scenario.</p>
+        <p>The platform also became the foundation for external communication. I collaborated with a teammate to extend the CP-SAT decision model with time-dependent logic, allowing optimal technology selections to persist across multi-year planning horizons, then leveraged this enhanced model to build case studies for a Boeing sustainability workshop in Seattle. I drove the effort — identifying what insights to surface, collecting the data, and building the case studies, with light input from program management. The final presentation went to 25 engineers, many at the senior level, on how the model's enhanced decision-making capabilities could inform key technology investment decisions for sustainable aviation.</p>
+      </div>
+
+    </div>
+
+- id: e7
+  jobTitle: "Product Engineer"
+  company: "Basis AI"
+  logo: "assets/images/basis_logo.png"
+  location: "New York, NY"
+  dates: "December 2025 \u2014 March 2026"
+  tagline: "Technical owner of full-stack development for key product features from design to production at an early-stage startup."
+  website: "https://www.getbasis.ai/"
+  tags: ["Python", "PostgreSQL", "React", "TypeScript", "Full-Stack Development", "Test-Driven Development"]
+  htmlShort: |
+    <ul class="modal-ul">
+      <li>Assumed full technical ownership of the reconciliations product area within two months — the previous lead departed mid-project, and I drove it forward as the only engineer on one of the most critical parts of an accounting automation product</li>
+      <li>Designed and shipped Custom-Month Reconciliations from scratch, owning the full lifecycle from product scoping and stakeholder alignment through QA and production rollout for thousands of customers — reworking backend data structures and calculation logic to support any monthly close cadence in place of hardcoded calendar-month logic</li>
+      <li>Diagnosed and resolved blocking issues in the Reconciliation Editor (a replacement UX built by a contractor who left before finishing it), designed the QA test plan, and drove it to production</li>
+      <li>Designed and shipped 12-Month Planning Visibility from scratch, owning the full lifecycle from product scoping and alignment with PM and tech lead through production rollout for thousands of customers — extending the platform's planning horizon for accountants and introducing product controls such as disabling auto-sign-off on tasks in future months</li>
+      <li>Resolved 30 customer bugs using test-driven debugging practices — writing tests to reproduce failures before fixing, then expanding the test suite to prevent regressions; was frequently the primary escalation contact for on-call incidents</li>
+      <li>Diagnosed and fixed 4 system-level performance issues including line item matching timeouts, database query bottlenecks in orchestration services, and chronic background job failures</li>
+    </ul>
+  html: |
+    <p>I shipped 3 features to production for thousands of customers and owned the entire reconciliations product area — picking up accounting as a new domain from scratch in the process. Within two months of joining, the engineer leading reconciliations departed mid-project, and I assumed full technical ownership as the only engineer actively working on one of the most critical parts of the product.</p>
+    <p>The flagship initiative I took on was Custom-Month Reconciliations, which I designed and shipped from scratch. The original codebase was hardcoded to perform reconciliations only from the first to the last day of a calendar month. I extended this across the backend, reworking data structures and calculation logic throughout, to support any combination of months over a year, enabling close cadences like quarterly (March, June, September, December) or annual. I started with product scoping (user flow diagrams, product descriptions, and internal FAQs) then validated proposed business logic with accounting stakeholders before moving into technical scoping, breaking my work into milestones with effort estimates and verification criteria. I led a full round of QA testing to verify the feature end-to-end, set up a feature flag for the rollout, authored a finalized product description distributed to non-technical stakeholders, and delivered an internal presentation to the customer-facing support team before driving it to production.</p>
+    <p>In parallel, I took over the Reconciliation Editor — a replacement UX for the live editor, originally built by a contractor who left before finishing it. The code had been sitting dormant: core UI interactions were broken, including file linking that failed to resolve the correct month and category folder, and any change required mirroring updates across both editors simultaneously. I diagnosed and resolved the blocking issues across frontend and backend logic, designed the QA test plan to verify the feature end-to-end before rollout, and drove it to production.</p>
+    <p>Beyond reconciliations, I designed, scoped, and shipped a 12-Month Planning Visibility feature from scratch — extending the platform's planning horizon for accountants and including product-level permissions. I authored the product scoping document and got alignment from the program manager, then moved into technical scoping and alignment with the engineering pod's tech lead before owning the full lifecycle through implementation, QA, and production rollout for thousands of customers.</p>
+    <p>On the production stability side, I resolved 30 customer bugs (including production hotfixes and database migrations to clean up duplicate records and session context errors) using test-driven debugging practices: writing tests to reproduce each failure before implementing a fix, then expanding the test suite to prevent regressions. I was frequently the engineer that on-call escalations landed on, and wrote detailed root cause analyses after each incident. I also diagnosed and fixed four system-level performance issues: line item matching timeouts, database query bottlenecks in orchestration services, and chronic background job failures, unblocking jobs that had been failing entirely. I worked fully AI-native, using AI agents as the primary tool across every stage of the work: coding, debugging, product scoping, technical architecture, and documentation. After four months I decided to leave — the reconciliations product area was in a stable state and I handed it off completely before my last day.</p>

@@ -1,0 +1,8 @@
+{% if include.entry.highlight_sections %}
+  {% for section in include.entry.highlight_sections %}
+  <span class="modal-tl-role">{{ section.label }}</span>
+  <ul class="modal-ul">{% for h in section.highlights %}<li>{{ h }}</li>{% endfor %}</ul>
+  {% endfor %}
+{% elsif include.entry.highlights %}
+  <ul class="modal-ul">{% for h in include.entry.highlights %}<li>{{ h }}</li>{% endfor %}</ul>
+{% endif %}

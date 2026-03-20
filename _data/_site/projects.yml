@@ -1,0 +1,294 @@
+# Display order: this file is iterated top-to-bottom in the projects grid.
+- id: p12
+  title: "NYC Soccer League App"
+  tag: personal
+  cardImg: "assets/images/nycwsoc_app_player_screen.png"
+  cardDesc: "Built a React Native iOS app in TypeScript to modernize player management for a NYC recreational soccer league."
+  subtitle: "Personal Project"
+  date: "Summer 2025"
+  tags: ["Mobile Development", "React Native", "TypeScript"]
+  links:
+    - emoji: "\U0001F517"
+      label: "View on GitHub"
+      url: "https://github.com/EmiliaPsach/nycwsoc"
+  htmlShort: |
+    <ul class="modal-ul">
+      <li>As team captain for a NYC recreational soccer league, identified that managing attendance over WhatsApp, schedules over email, and enrollment through a Google Sheet was unnecessary friction — and built an app to address it</li>
+      <li>Built a React Native iOS MVP in TypeScript covering player accounts, schedule viewing, game RSVPs, push notifications, league enrollment, team management, and an admin dashboard</li>
+      <li>Currently in alpha — replacing dummy data with real league data and validating the push notification system before pitching to the league and submitting to the App Store</li>
+    </ul>
+  html: |
+    <div class="modal-img-grid">
+      <img src="/assets/images/nycwsoc_app_admin_dashboard.png"  alt="Admin Dashboard">
+      <img src="/assets/images/nycwsoc_app_player_screen.png"  alt="Player Screen">
+      <img src="/assets/images/nycwsoc_app_game_details.png"  alt="Game Details">
+      <img src="/assets/images/nycwsoc_app_league_registration.png"  alt="League Registration">
+    </div>
+    <p>I joined a recreational soccer league in NYC, took on the role of team captain, and decided to build an app after noticing how much friction the league's current setup created. Managing attendance meant chasing RSVPs over WhatsApp, game times arrived via email two days before kickoff, and players enrolled in new seasons through a Google Sheet linked on the league's website. Most leagues in the city already have a dedicated app for this, and it seemed like a natural gap to fill.</p>
+    <p>I built a React Native iOS MVP in TypeScript, covering the core player-facing and admin workflows: player accounts and authentication, schedule viewing with a calendar grid, game RSVPs, push notification reminders, league enrollment, team management, and an admin dashboard with CSV export. It's currently in alpha; I'm replacing dummy data with real league data and verifying the notification system end-to-end before pitching it to the league and deploying to the App Store.</p>
+
+- id: p11
+  title: "ROS 2 Infrastructure Stack"
+  tag: personal
+  cardImg: "assets/images/packages_topics_connectivity_system_diagram.png"
+  cardDesc: "Designed and implemented a five-package ROS 2 stack in C++ where a robot follows pose inputs from multiple sources and reaches targets via a motion controller."
+  subtitle: "Coding Challenge"
+  date: "Summer 2025"
+  tags: ["C++", "ROS 2", "Robotics", "Motion Control", "Systems Design"]
+  links:
+    - emoji: "\U0001F517"
+      label: "View on GitHub"
+      url: "https://github.com/EmiliaPsach/ROS2-Infrastructure-Stack"
+  htmlShort: |
+    <ul class="modal-ul">
+      <li>Built five modular C++ ROS 2 (Robot Operating System 2) packages from scratch in a 6-hour coding challenge: clock pose issuer, GUI pose issuer, motion controller, and two coordinate frame transformers</li>
+      <li>Designed the system so a robot follows pose inputs from multiple sources (clock-based positions or user-selected GUI poses) and reaches each target via a motion controller</li>
+      <li>Handled coordinate frame conversion between the normalized world frame and the robot's local body frame to keep each package decoupled from the simulation's internals</li>
+      <li>Delivered a full documentation suite, system connectivity diagram, test suite, and shell scripts for building and launching the system</li>
+    </ul>
+  html: |
+    <img src="/assets/images/packages_topics_connectivity_system_diagram.png" class="modal-img" alt="System Diagram">
+      <p>For a 6-hour robotics coding challenge, I designed and implemented a ROS 2 (Robot Operating System 2) stack in C++ where a robot follows pose inputs from multiple sources and reaches each target using a motion controller. I built five packages from scratch, each with a focused responsibility. The clock pose issuer converts clock time into 6D positions on a unit circle. The GUI pose issuer gives the user a manual interface to issue pose commands directly, with a spacebar reset. The motion controller subscribes to both pose sources and converts the target pose into velocity commands. Two transformer packages handle coordinate frame conversion, mapping between the normalized world frame and the robot's local body frame, so each component stays decoupled from the simulation's internal coordinate system.</p>
+      <p>I also wrote a full documentation suite covering installation, build and run instructions, and testing and formatting procedures, and included a system diagram showing how all five packages connect through their ROS 2 topics. I kept each package's structure consistent and straightforward to extend — adding a new package or controller means following a clear pattern rather than reverse-engineering existing code. The submission included a test suite and shell scripts for rebuilding and launching the system.</p>
+
+- id: p10
+  title: "Multi-Agent Path Planning & Collision Avoidance"
+  tag: academic
+  cardImg: "assets/images/eecs467.jpg"
+  cardDesc: "Led path planning, path-following, and testing for a multi-agent collision avoidance system on physical robots."
+  subtitle: "EECS 467: Autonomous Robots \xB7 Major Design Experience"
+  subtitleUrl: "https://web.eecs.umich.edu/~kuipers/teaching/eecs467-F19.html"
+  date: "Winter 2023"
+  tags: ["C++", "Multi-Agent Systems", "Path Planning", "Robotics", "PID Control"]
+  links:
+    - emoji: "\U0001F517"
+      label: "View on GitHub"
+      url: "https://github.com/EmiliaPsacharopoulos/multi-agent-collision-avoidance"
+  htmlShort: |
+    <ul class="modal-ul">
+      <li>Designed and demonstrated a multi-agent path planning and collision avoidance system on Michigan's physical M-Bot robots, built on the CBS (Conflict-Based Search) algorithm for completeness and optimality guarantees</li>
+      <li>Led path-following logic implementation, TCP (Transmission Control Protocol) server-client architecture, and PID (Proportional-Integral-Derivative) controller configuration for robot operation</li>
+      <li>Owned the testing effort — designed the QA test plan, test scenarios, simulation field, and testing matrix; ran six successful trials across varying levels of map complexity; produced a video walkthrough of the system</li>
+    </ul>
+  html: |
+    <iframe class="modal-video" src="https://www.youtube.com/embed/qFqYIITFqd0?si=hdwI-rVQdYdWpBuQ" title="Multi-Agent Path Planning Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <img src="/assets/images/eecs467.jpg" class="modal-img" alt="M-Bots testing">
+    <p>I chose <a href="https://web.eecs.umich.edu/~kuipers/teaching/eecs467-F19.html" target="_blank">EECS 467: Autonomous Robotics</a> as my capstone (Michigan's Major Design Experience, or MDE) because I had a strong interest and academic background in robotics by senior year. Our team of four designed and demonstrated a multi-agent path planning and collision avoidance system on Michigan's physical M-Bot robots. We built on the CBS (Conflict-Based Search) algorithm for its completeness and optimality guarantees, implementing path-following logic that translated a 2D path array into linear and angular velocities over a TCP (Transmission Control Protocol) server-client architecture, and configured a PID (Proportional-Integral-Derivative) controller for each robot to ensure smooth operation.</p>
+    <p>My primary contributions were leading the path-following logic implementation, TCP communications, and PID controller configuration, as well as owning the testing effort. I designed the QA test plan to verify the system worked end-to-end in the real world — creating test scenarios, designing the simulation field, and building the testing matrix. We ran six trials across varying levels of map complexity, and the system performed successfully. I also led the team's technical documentation, including producing a video walkthrough of the system.</p>
+
+- id: p9
+  title: "Autonomous Path Planning with LIDAR"
+  tag: academic
+  cardImg: "assets/images/slam.png"
+  cardDesc: "Built a SLAM-based autonomous navigation stack on physical robots, from motor control to maze navigation."
+  subtitle: "EECS 467: Autonomous Robots"
+  subtitleUrl: "https://web.eecs.umich.edu/~kuipers/teaching/eecs467-F19.html"
+  date: "Winter 2023"
+  tags: ["C++", "Python", "Autonomous Navigation", "Sensor Fusion", "Robotics"]
+  htmlShort: |
+    <ul class="modal-ul">
+      <li>Implemented occupancy grid mapping, particle filter localization, and path planning on a LiDAR-equipped M-Bot</li>
+      <li>Built forward and inverse kinematics models to translate between joint space and physical robot motion</li>
+      <li>Fused odometry and LiDAR data for accurate real-time localization</li>
+      <li>Tuned PID controllers for reliable low-level motor control on physical hardware</li>
+      <li>Demonstrated end-to-end autonomous maze navigation on a physical robot</li>
+    </ul>
+  html: |
+    <img src="/assets/images/slam.png" class="modal-img modal-img--tight" alt="SLAM map">
+    <img src="/assets/images/mbots.png" class="modal-img modal-img--tight" alt="M-Bots">
+    <img src="/assets/images/slam_2.jpg" class="modal-img modal-img--half" alt="SLAM 2">
+    <p><a href="https://web.eecs.umich.edu/~kuipers/teaching/eecs467-F19.html" target="_blank">EECS 467</a> was a lab-based robotics course built around the M-Bot, a four-wheel-drive robot equipped with a LiDAR (Light Detection and Ranging) sensor. Working with one partner, I implemented the core stack for SLAM (Simultaneous Localization and Mapping) based autonomous navigation across a series of labs that each built on the last.</p>
+    <p>We started with low-level control: odometry and PID (Proportional-Integral-Derivative) tuning to get the robot moving accurately, then moved up to occupancy grid mapping, where the robot used LiDAR readings to build a 2D map of its environment. From there we added localization using a particle filter, so the robot could track its position within that map in real time. Path planning came last, tying everything together so the robot could navigate autonomously — finding its way through a maze it had never seen before. The robot navigated the maze end-to-end at the final demo.</p>
+
+- id: p7
+  title: '"Autonomous Rocket League" Embedded System'
+  tag: academic
+  cardImg: "assets/images/EECS373_Poster.pptx.png"
+  cardDesc: "Designed a reactive autonomous robot and full embedded systems stack for a physical recreation of Rocket League."
+  subtitle: "EECS 373: Embedded System Design"
+  subtitleUrl: "https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-373/"
+  date: "Fall 2022"
+  tags: ["C", "Python", "Embedded Systems", "Computer Vision"]
+  htmlShort: |
+    <ul class="modal-ul">
+      <li>Designed and implemented a reactive autonomous Rocket League algorithm using real-time computer vision input</li>
+      <li>Wrote the computer vision Python script detecting AprilTags and field colors for real-time robot state estimation</li>
+      <li>Led C implementation of embedded components: magnetometer, gameplay timers, PS2 controller SPI communication, and USB-to-Serial adapter</li>
+      <li>Scoped and demoed a goaltending robot under time pressure after a last-minute team setback</li>
+      <li>Produced systems engineering diagrams, a milestone report, and the project poster</li>
+    </ul>
+  html: |
+    <iframe class="modal-video" src="https://www.youtube.com/embed/ynsI1RB5d14" title="Rocket League Demo 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe class="modal-video" src="https://www.youtube.com/embed/HcMNyMvgoTM" title="Rocket League Demo 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <img src="/assets/images/EECS373_Poster.pptx.png" class="modal-img" alt="Project Poster">
+
+    <p><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-373/" target="_blank">EECS 373</a> was an embedded systems design course concluding with a month-long team project. Our team of four chose to build a real-life version of Rocket League, the car-soccer video game, where a human-controlled robot competed against an autonomous one on a physical field. My primary ownership was the autonomy algorithm: a reactive system that used a computer vision Python script to detect the ball and field state in real time and feed that directly into the robot's decisions.</p>
+    <p>On the embedded side, I led the C implementation for several components: a magnetometer for orientation, gameplay timers, PlayStation 2 controller SPI (Serial Peripheral Interface) communication for the human-controlled robot, and a USB-to-Serial adapter for system communication. The computer vision side was Python — I wrote the script that detected AprilTags (QR-code-style markers used for position tracking) and colors on the field to feed real-time state into the robot's decisions. I also designed and implemented the full autonomous Rocket League algorithm, though the demo circumstances meant it never got validated and tested in time. My documentation contributions included systems engineering diagrams, a milestone report, and the project poster.</p>
+    <p>Two days before the demo, it was clear a critical piece of a teammate's work wasn't going to be ready. The rest of the team pulled an all-nighter to stabilize what we could, which left no time to validate the full autonomy algorithm. I made the call to scope it down to a goaltending robot that used the CV (computer vision) system to track the ball and move to intercept it. It worked, though latency in the pipeline meant it struggled with fast shots. The lesson I took from it was practical: trust teammates but verify progress early, and test in small integrated chunks throughout a project rather than waiting for full system tests at the end.</p>
+
+- id: p8
+  title: "Colorization Model Replication with Loss Function Analysis"
+  tag: academic
+  cardImg: "assets/images/eecs_442.png"
+  cardDesc: "Replicated a deep learning image colorization model to investigate how loss function choice affects output quality."
+  subtitle: "EECS 442: Computer Vision"
+  subtitleUrl: "https://web.eecs.umich.edu/~justincj/teaching/eecs442/WI2021/syllabus.html"
+  date: "Fall 2022"
+  tags: ["Python", "Computer Vision", "Deep Learning"]
+  links:
+    - emoji: "\U0001F4C4"
+      label: "View Project Paper"
+      url: "assets/pdfs/EECS_442_emiliap_final_report.pdf"
+  htmlShort: |
+    <ul class="modal-ul">
+      <li>Replicated Zhang et al.'s <a href="https://richzhang.github.io/colorization/" target="_blank">"Colorful Image Colorization"</a> CNN architecture, training on a 90,000-image subset of the MIT Mini Places dataset</li>
+      <li>Investigated the impact of loss function choice by substituting the authors' Cross Entropy loss with MSE (Mean Squared Error)</li>
+      <li>Tuned ADAM (Adaptive Moment Estimation) optimizer parameters to compensate for reduced computational resources and training data</li>
+      <li>Demonstrated that MSE produces visibly duller, more monochromatic outputs than Cross Entropy on a pixel classification task</li>
+
+    </ul>
+  html: |
+    <img src="/assets/images/eecs_442.png" class="modal-img" alt="Colorization Results">
+    <p><a href="https://web.eecs.umich.edu/~justincj/teaching/eecs442/WI2021/syllabus.html" target="_blank">EECS 442</a> covered the core theory and methods of computer vision, including convolutional neural networks, image processing, and deep learning approaches to visual understanding. The course culminated in an independent research report, for which I chose to replicate a published deep learning colorization model and use it to investigate how loss function choice affects output quality.</p>
+    <p>The model, originally from Zhang et al.'s <a href="https://richzhang.github.io/colorization/" target="_blank">"Colorful Image Colorization" (ECCV 2016)</a>, uses a CNN (Convolutional Neural Network) architecture (a class of neural network that applies learned filters across an image to detect patterns) with downsampling and upsampling layers to compress and reconstruct spatial information, batch normalization to stabilize training, and Leaky ReLU (Rectified Linear Unit) activation functions that introduce non-linearity so the network can learn complex mappings. My replication trained on a 90,000-image subset of the MIT Mini Places dataset using a tuned ADAM (Adaptive Moment Estimation) optimizer, an adaptive gradient descent algorithm that adjusts learning rates per parameter during training, and deliberately omitted the authors' class-rebalancing method to isolate the variable I was testing: replacing their Cross Entropy loss function with MSE (Mean Squared Error).</p>
+    <p>The results were clear. MSE produced consistently duller, more monochromatic outputs — only blues retained any vibrancy across test images. My explanation was that MSE, designed for regression problems where outputs can range across any value, converges much more slowly on a classification task like colorization than Cross Entropy, which is purpose-built to penalize confident wrong predictions. The experiment confirmed that loss function choice is not just a technical detail: it has a direct, visible impact on what a model actually learns to produce.</p>
+
+- id: p6
+  title: "Personal Portfolio Website"
+  tag: personal
+  cardDesc: "Built a personal portfolio site in HTML, CSS, and JavaScript — clean, skimmable by default, and designed to reflect a specific point of view."
+  subtitle: "Personal Project"
+  date: "Summer 2022"
+  tags: ["HTML", "CSS", "JavaScript", "UX Design"]
+  links:
+    - emoji: "\U0001F517"
+      label: "View on GitHub"
+      url: "https://github.com/EmiliaPsacharopoulos/EmiliaPsacharopoulos.github.io"
+  htmlShort: |
+    <ul class="modal-ul">
+      <li>Built the original site in summer 2022 using HTML, CSS, and JavaScript, customizing an <a href="https://html5up.net/" target="_blank">HTML5 UP</a> template as a foundation</li>
+      <li>Identified a gap between the site and my personal brand, then redesigned the entire UI from scratch</li>
+      <li>Introduced a two-layer content model (modal and longform toggle) so the reader actively chooses how deep to go, keeping the main view skimmable by default</li>
+      <li>Rebuilt the visual design to reflect a clear personal brand: an engineer who thinks logically and communicates clearly</li>
+    </ul>
+  html: |
+    <p>I built the first version of this site in summer 2022 using HTML, CSS, and JavaScript, customizing an <a href="https://html5up.net/" target="_blank">HTML5 UP</a> template as a foundation. It did the job of displaying my work, but returning to it later, I realized the layout was harder to read than it should have been — even I struggled to skim it, and I wrote the material. The visual design didn't reflect how I think about my own work, and nothing about it communicated a clear point of view.</p>
+    <p>In spring 2026, I decided to redesign it from scratch, starting by defining my personal brand: an engineer who approaches problems logically and communicates clearly. I used that as the design brief and built the entire UI myself. The most important structural change was introducing a two-layer content model: all detailed content is now hidden behind both a modal and a longform toggle, so the reader actively chooses how deep to go rather than being confronted with everything at once. The main view stays clean and skimmable by default. The visual design I built from scratch to match that brand — the site now feels like it belongs to someone with a specific point of view rather than a generic portfolio template.</p>
+
+- id: p5
+  title: "Adaptive Cruise Control Embedded System"
+  tag: academic
+  cardImg: "assets/images/eecs461sim.jpg"
+  cardDesc: "Built and deployed a fully autonomous Adaptive Cruise Control system on a physical driving simulator, covering three operating modes from manual to position-following."
+  subtitle: "EECS 461: Embedded Control Systems"
+  subtitleUrl: "https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-461/"
+  date: "Winter 2022"
+  tags: ["C", "Embedded Systems", "Control Systems", "PID Control", "Simulink"]
+  htmlShort: |
+    <ul class="modal-ul">
+      <li>Built an ACC (Adaptive Cruise Control) system in Simulink with three autonomous operating modes: manual, fixed-velocity, and lead-car position-following</li>
+      <li>Deployed the system onto an S32K144 microcontroller via Simulink's automatic C code generation, running on a physical driving simulator</li>
+      <li>Developed a haptic interface embedded controller across earlier assignments using C, SPI protocol, and NXP software</li>
+      <li>Designed PID controllers and vehicle dynamics models in Simulink to represent systems of differential equations</li>
+      <li>Debugged subsystem behavior by analyzing oscilloscope waveform responses from sensor inputs</li>
+    </ul>
+  html: |
+    <div class="modal-img-flex">
+      <img src="/assets/images/eecs461sim.jpg" style="flex:2;min-width:200px" alt="Simulator">
+      <img src="/assets/images/eecs461microprocessor.jpg" style="flex:1;min-width:100px" alt="Microprocessor">
+    </div>
+    <p><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-461/" target="_blank">EECS 461</a> was an embedded control systems course built around progressively complex assignments, each adding a layer toward the final project. Throughout the semester, my partner and I developed a haptic interface embedded controller using an S32K144 microcontroller, C, and SPI (Serial Peripheral Interface) protocol in an NXP software workspace, writing C code to read from and write to hardware registers directly. We designed flow logic, PID controllers, and vehicle dynamics models in Simulink to represent complex systems of differential equations, and used an oscilloscope to analyze subsystem waveform responses for debugging.</p>
+    <p>The final project brought all of it together: an ACC (Adaptive Cruise Control) system with three operating modes and auto-steering active throughout. In Manual mode, the user controls speed and path through a potentiometer and haptic wheel. Velocity mode sets a fixed traveling speed via dip switches on the microcontroller. Position mode activates automatically when a lead car enters a preset distance and is traveling slower, matching its speed. We built the entire system in Simulink using scaffolding provided by the course instructors, then used Simulink's automatic C code generation to deploy it onto the S32K144 microcontroller running on a physical driving simulator.</p>
+    <p>The system performed successfully at the demo — all three modes triggered and transitioned correctly, and the position-following behavior worked as intended.</p>
+
+- id: p4
+  title: "Digital Signal Processing Optical Character Recognition"
+  tag: academic
+  cardImg: "assets/images/EECS351.jpg"
+  cardDesc: "Led character classification and LaTeX document formatting for a five-person pipeline that converts handwritten lecture board screenshots into structured notes."
+  subtitle: "EECS 351: Digital Signal Processing"
+  subtitleUrl: "https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-351/"
+  date: "Winter 2022"
+  tags: ["Python", "MATLAB", "Signal Processing", "Machine Learning"]
+  links:
+    - emoji: "\U0001F517"
+      label: "View on GitHub"
+      url: "https://github.com/EmiliaPsacharopoulos/HandwritingToLatex"
+    - emoji: "\U0001F310"
+      label: "View Project Website"
+      url: "https://sites.google.com/umich.edu/eecs-351-handwriting-to-latex/home"
+  htmlShort: |
+    <ul class="modal-ul">
+        <li>Benchmarked five character classifiers in Python using scikit-learn against the EMNIST (Extended Modified National Institute of Standards and Technology) dataset (60,000 training samples): KNN (K-Nearest Neighbors), SVM (Support Vector Machine), Naïve Bayes, Decision Trees, and a LeNet CNN (Convolutional Neural Network)</li>
+        <li>Selected the LeNet CNN for the full-scale model based on accuracy, speed, and MATLAB interface compatibility</li>
+        <li>Implemented the LaTeX (a document typesetting language used widely in technical and academic writing) document formatting subsystem in MATLAB to convert classifier output into a structured, formatted document</li>
+        <li>Led the project plan, defining subsystem ownership and deadlines across a five-person team</li>
+        <li>Wrote the majority of project documentation across GitHub and the team website</li>
+      </ul>
+  html: |
+    <img src="/assets/images/EECS351.jpg" class="modal-img" alt="OCR System">
+    <p><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-351/" target="_blank">EECS 351</a> was a digital signal processing course with a team project component. Our five-person team chose to build a pipeline to convert whiteboard lecture screenshots into formatted LaTeX (a document typesetting language used widely in technical and academic writing) documents, motivated by a real problem we had during COVID: students who miss class and rely on lecture recordings often can't read what's written on the board. The system ran in four sequential stages: image processing and filtering, character isolation, character classification, and LaTeX document generation.</p>
+    <p>I led the character classification subsystem, where I benchmarked five classifiers in Python using the scikit-learn library against the EMNIST dataset (a standard handwritten character dataset with 60,000 training samples): K-Nearest Neighbors, SVM (Support Vector Machine), Multinomial Naïve Bayes, Decision Trees, and a LeNet CNN (Convolutional Neural Network), each implemented in their own Jupyter Notebook. SVM achieved the highest accuracy at 90.87%, but I selected the LeNet CNN for the full-scale model because SVM's training and testing time was prohibitively slow and the CNN had a cleaner interface with the broader MATLAB codebase. I also owned the LaTeX document formatting subsystem, which I implemented in MATLAB to take the classifier output and generate a structured document with metadata fields and LaTeX syntax support like superscripts. I led the project plan as well, defining subsystem ownership and deadlines, and wrote the majority of the documentation across <a href="https://github.com/EmiliaPsacharopoulos/HandwritingToLatex" target="_blank">GitHub</a> and the <a href="https://sites.google.com/umich.edu/eecs-351-handwriting-to-latex/home?authuser=0" target="_blank">team website</a>.</p>
+    <p>The full pipeline worked end-to-end on block handwriting under good lighting conditions. The main failure modes were light-colored markers, slanted writing, and ambiguous character pairs like O vs. 0 and l vs. 1, limitations we documented and attributed primarily to training data constraints rather than architectural issues.</p>
+
+- id: p3
+  title: "Probabilistic Roadmap Path Planning Study"
+  tag: academic
+  cardImg: "assets/images/pathPlanning.jpg"
+  cardDesc: "Co-authored a research paper analyzing the robustness of a PRM path planning algorithm and vehicle dynamics for an autonomous bicycle robot in Simulink."
+  subtitle: "MATH 462: Mathematical Modeling"
+  subtitleUrl: "https://lsa.umich.edu/math/undergraduates/undergraduate-math-courses/400-level-courses.html"
+  date: "Winter 2022"
+  tags: ["MATLAB", "Simulink", "Path Planning", "Mathematical Modeling"]
+  links:
+    - emoji: "\U0001F4C4"
+      label: "View Project Paper"
+      url: "assets/pdfs/MATH_pathPlanningProject.pdf"
+  htmlShort: |
+    <ul class="modal-ul">
+      <li>Co-authored a <a href='assets/pdfs/MATH_pathPlanningProject.pdf' target="_blank">research paper</a> with a partner analyzing an autonomous bicycle robot model in Simulink, covering the Pure Pursuit control system, vehicle dynamics, and PRM (Probabilistic Roadmap) path planning algorithm</li>
+      <li>Tested PRM robustness across three maps of increasing obstacle coverage (20%, 50%, 73%), varying node count and connection distance across 10,000 trials per configuration</li>
+      <li>Found that higher node counts consistently outperformed longer connection distances for path-finding success, with success rates ranging from 100% to 0% depending on map complexity and node count</li>
+      <li>Identified diminishing returns beyond 100 nodes, suggesting an optimal node count exists for any given map</li>
+      <li>Implemented a custom bicycle plant model in Simulink using continuous time integration, producing smoother paths than the original discrete time implementation</li>
+    </ul>
+  html: |
+    <img src="/assets/images/pathPlanning.jpg" class="modal-img" alt="Path Planning">
+    <p><a href="https://lsa.umich.edu/math/undergraduates/undergraduate-math-courses/400-level-courses.html" target="_blank">MATH 462</a> was a mathematical modeling course in which my partner and I chose our own research topic for the <a href='assets/pdfs/MATH_pathPlanningProject.pdf' target="_blank">final paper</a>. We decided to investigate an autonomous bicycle robot model in Simulink, focusing on three areas: the existing control system, the vehicle dynamics, and the robustness of the PRM (Probabilistic Roadmap) path planning algorithm.</p>
+    <p>The PRM algorithm distributes randomly placed nodes across a map, connects any two nodes within a specified Euclidean distance, and uses Dijkstra's algorithm to find the shortest path from start to goal. To test its robustness, we varied node count and connection distance across three maps of increasing complexity: 20%, 50%, and 73% obstacle coverage. The results were concrete: on the simplest map with 100 nodes and a long connection distance, the algorithm found a valid path in 100% of trials. As map complexity increased and node count dropped, success rates fell sharply — to 0% on the most complex map with only 5 nodes. We also found that increasing node count from 100 to 300 produced diminishing returns on path quality, suggesting an optimal node count exists for any given map beyond which additional nodes only increase computational cost without meaningfully improving the path.</p>
+    <p>On the vehicle dynamics side, we implemented our own plant model in Simulink using continuous time integration to solve the bicycle's kinematic equations — the system of differential equations governing its x/y position and heading angle. Compared to the original model's discrete time integration, our version produced a smoother path, which we attributed to continuous integration better capturing the underlying dynamics of a physical bicycle.</p>
+
+- id: p2
+  title: "AM Superheterodyne Radio Receiver"
+  tag: academic
+  cardImg: "assets/images/EECS216.jpg"
+  cardDesc: "Designed and wired a superheterodyne AM radio back end (bandpass filter, envelope detector, and output amplifier) as part of a signals and systems course."
+  subtitle: "EECS 216: Introduction to Signals & Systems"
+  subtitleUrl: "https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-216/"
+  date: "Winter 2021"
+  tags: ["Circuit Design", "Signal Processing", "Hardware"]
+  htmlShort: |
+    <ul class="modal-ul">
+      <li>Built the back end of a functioning superheterodyne AM radio from discrete components: bandpass filter to isolate a target frequency range, envelope detector to demodulate the AM (Amplitude Modulation) signal, and output amplifier to boost audio — all wired in series to a speaker</li>
+    </ul>
+  html: |
+    <img src="/assets/images/EECS216.jpg" class="modal-img" alt="Radio Circuit">
+    <p><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-216/" target="_blank">EECS 216</a> was an introduction to continuous-time linear systems, covering convolution, Fourier series and transforms, frequency response and filtering, the sampling theorem, and Laplace transforms with poles and zeros. The course tied theory directly to application — lectures covered analog communications and feedback control alongside the mathematical foundations, and five labs put those concepts on physical hardware.</p>
+    <p>The final lab was the one that brought the most of it together: building the back end of a functioning superheterodyne AM radio from discrete components. Starting from the antenna input, I wired a bandpass filter built from resistors and capacitors to isolate a specific frequency range, an envelope detector using a diode and capacitor to demodulate the AM (Amplitude Modulation) signal by extracting the audio from the carrier wave, and an output amplifier using op-amps to boost the recovered audio signal before sending it to a speaker — all connected in series. To tune to a station, I adjusted the local oscillator frequency to shift a target broadcast into the bandpass filter's range.</p>
+
+- id: p1
+  title: "SillyQL \u2014 Simplified SQL Query Engine"
+  tag: academic
+  cardDesc: "Built a simplified SQL query engine in C++, applying space and time tradeoff analysis to meet performance constraints on large datasets."
+  subtitle: "EECS 281: Data Structures & Algorithms"
+  subtitleUrl: "https://www.eecs.umich.edu/courses/eecs281/course"
+  date: "Winter 2022"
+  tags: ["C++", "Data Structures", "Algorithms", "SQL"]
+  htmlShort: |
+    <ul class="modal-ul">
+        <li>Implemented SillyQL, a simplified SQL (Structured Query Language) query engine in C++, supporting table creation, row insertion, and queries on large datasets</li>
+        <li>Made data structure design decisions based on space and time tradeoff analysis to meet performance constraints at scale</li>
+      </ul>
+  html: |
+    <p><a href="https://www.eecs.umich.edu/courses/eecs281/course" target="_blank">EECS 281</a> is Michigan's core data structures and algorithms course, centered on understanding and navigating the space and time tradeoffs in algorithmic design. The curriculum covered hash tables, binary search trees, graph algorithms, sorting algorithms, priority queues and heaps, and dynamic programming.</p>
+    <p>The final project was SillyQL, a simplified version of SQL (Structured Query Language, the standard language for querying relational databases). The core challenge was parsing large datasets efficiently — the project required designing a system that could create tables, insert rows, and execute queries, all while choosing the right underlying data structures to meet performance constraints. I used hash tables for fast lookups and binary search trees for ordered queries, selecting between them based on the access pattern the query required.</p>

@@ -1,0 +1,22 @@
+{% if include.entry.timeline %}
+  {% if include.entry.intro %}<p>{{ include.entry.intro }}</p>{% endif %}
+  <div class="modal-timeline">
+    {% for item in include.entry.timeline %}
+    <div class="modal-tl-item">
+      <div class="modal-tl-dot"></div>
+      <span class="modal-tl-date">{{ item.date }}</span>
+      <span class="modal-tl-role">{{ item.role }}</span>
+      {% for p in item.description %}<p>{{ p }}</p>{% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+{% else %}
+  {% for m in include.entry.media %}
+    {% if m.type == 'iframe' %}
+    <iframe class="modal-video" src="{{ m.src }}" title="{{ m.title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    {% else %}
+    <img src="{{ m.src }}" alt="{{ m.alt }}">
+    {% endif %}
+  {% endfor %}
+  {% for p in include.entry.description %}<p>{{ p }}</p>{% endfor %}
+{% endif %}

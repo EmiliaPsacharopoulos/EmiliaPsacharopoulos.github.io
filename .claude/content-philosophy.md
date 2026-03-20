@@ -20,6 +20,24 @@ researcher, engineer, and creative technologist.
 
 ---
 
+## Content in YAML, Structure in HTML
+
+All meaningful text content — names, taglines, bios, descriptions, bullet points, paragraphs,
+URLs — belongs in `_data/` YAML files, never hardcoded in HTML pages or templates.
+
+YAML files contain **data only**: plain strings, lists of strings, and structured objects.
+No HTML tags of any kind belong in YAML — not `<ul>`, `<li>`, `<p>`, `<img>`, `<div>`,
+`<span>`, or `<iframe>`. Inline markup (`<a href>`, `<i>`) is the only exception, since
+links and emphasis are part of the content itself, not structure.
+
+HTML files and includes define structure and formatting only — they loop over YAML data and
+wrap it in the appropriate tags.
+
+Exceptions: very short, stable UI strings (e.g. "Hi, I'm Emilia. Here are a few things about me
+outside of work.") may live in HTML when they are purely presentational and unlikely to change.
+
+---
+
 ## Content Philosophy
 
 - Content is **primarily for the author** first; secondarily for recruiters and collaborators.
