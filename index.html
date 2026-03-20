@@ -48,65 +48,17 @@ title: Emilia Psacharopoulos
     </div>
     <div class="exp-timeline">
 
-      <div class="exp-row" onclick="openModal('exp','e7')">
+      {% for exp in site.data.experience reversed %}
+      <div class="exp-row" onclick="openModal('exp','{{ exp.id }}')">
         <div class="exp-node"></div>
-        <a href="https://www.getbasis.ai/" target="_blank" class="exp-logo" onclick="event.stopPropagation();"><img src="assets/images/basis_logo.png" alt="Basis AI"></a>
-        <span class="exp-date" data-meta="e7"></span>
-        <h3 data-meta="e7"></h3>
-        <span class="exp-company" data-meta="e7"></span>
-        <p data-meta="e7"></p>
+        <a href="{{ exp.website }}" target="_blank" class="exp-logo" onclick="event.stopPropagation();"><img src="{{ exp.logo }}" alt="{{ exp.company }}"></a>
+        <span class="exp-date">{{ exp.dates }}</span>
+        <h3>{{ exp.jobTitle }}</h3>
+        <span class="exp-company">{{ exp.company }}</span>
+        <p>{{ exp.tagline }}</p>
         <div class="exp-arrow">→ view experience</div>
       </div>
-
-      <div class="exp-row" onclick="openModal('exp','e5')">
-        <div class="exp-node"></div>
-        <a href="https://www.aurora.aero/" target="_blank" class="exp-logo" onclick="event.stopPropagation();"><img src="assets/images/aurora_logo.png" alt="Aurora Flight Sciences"></a>
-        <span class="exp-date" data-meta="e5"></span>
-        <h3 data-meta="e5"></h3>
-        <span class="exp-company" data-meta="e5"></span>
-        <p data-meta="e5"></p>
-        <div class="exp-arrow">→ view experience</div>
-      </div>
-
-      <div class="exp-row" onclick="openModal('exp','e4')">
-        <div class="exp-node"></div>
-        <a href="https://www.analog.com/en/index.html" target="_blank" class="exp-logo" onclick="event.stopPropagation();"><img src="assets/images/ADI_logo.png" alt="Analog Devices"></a>
-        <span class="exp-date" data-meta="e4"></span>
-        <h3 data-meta="e4"></h3>
-        <span class="exp-company" data-meta="e4"></span>
-        <p data-meta="e4"></p>
-        <div class="exp-arrow">→ view experience</div>
-      </div>
-
-      <div class="exp-row" onclick="openModal('exp','e3')">
-        <div class="exp-node"></div>
-        <a href="https://robotics.umich.edu/" target="_blank" class="exp-logo" onclick="event.stopPropagation();"><img src="assets/images/michigan_logo.png" alt="University of Michigan"></a>
-        <span class="exp-date" data-meta="e3"></span>
-        <h3 data-meta="e3"></h3>
-        <span class="exp-company" data-meta="e3"></span>
-        <p data-meta="e3"></p>
-        <div class="exp-arrow">→ view experience</div>
-      </div>
-
-      <div class="exp-row" onclick="openModal('exp','e2')">
-        <div class="exp-node"></div>
-        <a href="https://www.navsea.navy.mil/" target="_blank" class="exp-logo" onclick="event.stopPropagation();"><img src="assets/images/navsea_logo.jpg" alt="NAVSEA"></a>
-        <span class="exp-date" data-meta="e2"></span>
-        <h3 data-meta="e2"></h3>
-        <span class="exp-company" data-meta="e2"></span>
-        <p data-meta="e2"></p>
-        <div class="exp-arrow">→ view experience</div>
-      </div>
-
-      <div class="exp-row" onclick="openModal('exp','e1')">
-        <div class="exp-node"></div>
-        <a href="https://www.gwu.edu/" target="_blank" class="exp-logo" onclick="event.stopPropagation();"><img src="assets/images/george_washington_university_logo.png" alt="The George Washington University"></a>
-        <span class="exp-date" data-meta="e1"></span>
-        <h3 data-meta="e1"></h3>
-        <span class="exp-company" data-meta="e1"></span>
-        <p data-meta="e1"></p>
-        <div class="exp-arrow">→ view experience</div>
-      </div>
+      {% endfor %}
 
     </div>
   </section>
@@ -119,99 +71,15 @@ title: Emilia Psacharopoulos
     </div>
     <div class="projects-grid">
 
-      <div class="project-card" data-num="001" data-proj="p12" onclick="openModal('proj','p12')">
-        <span class="project-tag"></span>
-        <h3></h3>
-        <p></p>
-        <div class="project-img" style="background-image:url('assets/images/nycwsoc_app_player_screen.png')"></div>
+      {% for proj in site.data.projects %}
+      <div class="project-card" data-num="{{ forloop.index | prepend: "00" | slice: -3, 3 }}" onclick="openModal('proj','{{ proj.id }}')">
+        <span class="project-tag">{{ proj.tag }}</span>
+        <h3>{{ proj.title }}</h3>
+        <p>{{ proj.cardDesc }}</p>
+        {% if proj.cardImg %}<div class="project-img" style="background-image:url('{{ proj.cardImg }}')"></div>{% endif %}
         <div class="project-arrow">→ view project</div>
       </div>
-
-      <div class="project-card" data-num="002" data-proj="p11" onclick="openModal('proj','p11')">
-        <span class="project-tag"></span>
-        <h3></h3>
-        <p></p>
-        <div class="project-img" style="background-image:url('assets/images/packages_topics_connectivity_system_diagram.png')"></div>
-        <div class="project-arrow">→ view project</div>
-      </div>
-
-      <div class="project-card" data-num="003" data-proj="p10" onclick="openModal('proj','p10')">
-        <span class="project-tag"></span>
-        <h3></h3>
-        <p></p>
-        <div class="project-img" style="background-image:url('assets/images/eecs467.jpg')"></div>
-        <div class="project-arrow">→ view project</div>
-      </div>
-
-      <div class="project-card" data-num="004" data-proj="p9" onclick="openModal('proj','p9')">
-        <span class="project-tag"></span>
-        <h3></h3>
-        <p></p>
-        <div class="project-img" style="background-image:url('assets/images/slam.png')"></div>
-        <div class="project-arrow">→ view project</div>
-      </div>
-
-      <div class="project-card" data-num="005" data-proj="p7" onclick="openModal('proj','p7')">
-        <span class="project-tag"></span>
-        <h3></h3>
-        <p></p>
-        <div class="project-img" style="background-image:url('assets/images/EECS373_Poster.pptx.png')"></div>
-        <div class="project-arrow">→ view project</div>
-      </div>
-
-      <div class="project-card" data-num="006" data-proj="p8" onclick="openModal('proj','p8')">
-        <span class="project-tag"></span>
-        <h3></h3>
-        <p></p>
-        <div class="project-img" style="background-image:url('assets/images/eecs_442.png')"></div>
-        <div class="project-arrow">→ view project</div>
-      </div>
-
-      <div class="project-card" data-num="007" data-proj="p6" onclick="openModal('proj','p6')">
-        <span class="project-tag"></span>
-        <h3></h3>
-        <p></p>
-        <div class="project-arrow">→ view project</div>
-      </div>
-
-      <div class="project-card" data-num="008" data-proj="p5" onclick="openModal('proj','p5')">
-        <span class="project-tag"></span>
-        <h3></h3>
-        <p></p>
-        <div class="project-img" style="background-image:url('assets/images/eecs461sim.jpg')"></div>
-        <div class="project-arrow">→ view project</div>
-      </div>
-
-      <div class="project-card" data-num="009" data-proj="p4" onclick="openModal('proj','p4')">
-        <span class="project-tag"></span>
-        <h3></h3>
-        <p></p>
-        <div class="project-img" style="background-image:url('assets/images/EECS351.jpg')"></div>
-        <div class="project-arrow">→ view project</div>
-      </div>
-
-      <div class="project-card" data-num="010" data-proj="p3" onclick="openModal('proj','p3')">
-        <span class="project-tag"></span>
-        <h3></h3>
-        <p></p>
-        <div class="project-img" style="background-image:url('assets/images/pathPlanning.jpg')"></div>
-        <div class="project-arrow">→ view project</div>
-      </div>
-
-      <div class="project-card" data-num="011" data-proj="p2" onclick="openModal('proj','p2')">
-        <span class="project-tag"></span>
-        <h3></h3>
-        <p></p>
-        <div class="project-img" style="background-image:url('assets/images/EECS216.jpg')"></div>
-        <div class="project-arrow">→ view project</div>
-      </div>
-
-      <div class="project-card" data-num="012" data-proj="p1" onclick="openModal('proj','p1')">
-        <span class="project-tag"></span>
-        <h3></h3>
-        <p></p>
-        <div class="project-arrow">→ view project</div>
-      </div>
+      {% endfor %}
 
     </div>
   </section>
@@ -378,6 +246,49 @@ title: Emilia Psacharopoulos
     </div>
   </section>
 
+</div>
+
+<!-- ── PRE-RENDERED MODAL DATA (SEO-visible, read by site.js) ── -->
+<div style="display:none" aria-hidden="true">
+  {% for proj in site.data.projects %}
+  <div id="modal-data-proj-{{ proj.id }}"
+       data-type="proj"
+       data-title="{{ proj.title | escape }}"
+       data-subtitle="{{ proj.subtitle | escape }}"
+       {% if proj.subtitleUrl %}data-subtitle-url="{{ proj.subtitleUrl | escape }}"{% endif %}
+       data-date="{{ proj.date | escape }}"
+       data-tags="{{ proj.tags | jsonify | escape }}"
+       {% if proj.links %}data-links="{{ proj.links | jsonify | escape }}"{% endif %}>
+    <div data-slot="htmlShort">{{ proj.htmlShort }}</div>
+    <div data-slot="html">{{ proj.html }}</div>
+  </div>
+  {% endfor %}
+  {% for exp in site.data.experience %}
+  <div id="modal-data-exp-{{ exp.id }}"
+       data-type="exp"
+       data-job-title="{{ exp.jobTitle | escape }}"
+       data-company="{{ exp.company | escape }}"
+       data-company-url="{{ exp.website | escape }}"
+       data-location="{{ exp.location | escape }}"
+       data-dates="{{ exp.dates | escape }}"
+       data-tags="{{ exp.tags | jsonify | escape }}">
+    <div data-slot="htmlShort">{{ exp.htmlShort }}</div>
+    <div data-slot="html">{{ exp.html }}</div>
+  </div>
+  {% endfor %}
+  {% for edu in site.data.education %}
+  <div id="modal-data-edu-{{ edu.id }}"
+       data-type="edu"
+       data-job-title="{{ edu.jobTitle | escape }}"
+       data-company="{{ edu.company | escape }}"
+       data-company-url="{{ edu.website | escape }}"
+       data-location="{{ edu.location | escape }}"
+       data-dates="{{ edu.dates | escape }}"
+       data-tags="{{ edu.tags | jsonify | escape }}">
+    <div data-slot="htmlShort">{{ edu.htmlShort }}</div>
+    <div data-slot="html">{{ edu.html }}</div>
+  </div>
+  {% endfor %}
 </div>
 
 <!-- ── MODAL ── -->

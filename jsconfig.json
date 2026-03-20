@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "checkJs": false
+  },
+  "exclude": [
+    "assets/js/data.js",
+    "_site"
+  ]
+}

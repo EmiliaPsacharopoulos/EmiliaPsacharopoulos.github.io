@@ -43,23 +43,26 @@ function slugify(str) {
   return str.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 }
 
-// Build slug ↔ id lookup maps
+// Build slug ↔ id lookup maps from pre-rendered DOM elements
 const slugToId = { proj: {}, exp: {}, edu: {} };
-Object.entries(data.proj).forEach(([id, item]) => {
-  slugToId.proj[slugify(item.title)] = id;
+document.querySelectorAll('[id^="modal-data-proj-"]').forEach(el => {
+  const id = el.id.replace('modal-data-proj-', '');
+  slugToId.proj[slugify(el.dataset.title)] = id;
 });
-Object.entries(data.expMeta).forEach(([id, meta]) => {
-  slugToId.exp[slugify(meta.company)] = id;
+document.querySelectorAll('[id^="modal-data-exp-"]').forEach(el => {
+  const id = el.id.replace('modal-data-exp-', '');
+  slugToId.exp[slugify(el.dataset.company)] = id;
 });
-Object.entries(data.eduMeta).forEach(([id, meta]) => {
-  slugToId.edu[slugify(meta.company)] = id;
+document.querySelectorAll('[id^="modal-data-edu-"]').forEach(el => {
+  const id = el.id.replace('modal-data-edu-', '');
+  slugToId.edu[slugify(el.dataset.company)] = id;
 });
 
 function idToSlug(type, id) {
-  if (type === 'proj') return slugify(data.proj[id].title);
-  if (type === 'exp') return slugify(data.expMeta[id].company);
-  if (type === 'edu') return slugify(data.eduMeta[id].company);
-  return id;
+  const el = document.getElementById(`modal-data-${type}-${id}`);
+  if (!el) return id;
+  if (type === 'proj') return slugify(el.dataset.title);
+  return slugify(el.dataset.company);
 }
 
 function setModalPath(type, id, view, replace) {
@@ -69,7 +72,6 @@ function setModalPath(type, id, view, replace) {
   if (replace) {
     history.replaceState({ modal: { type, id, view } }, '', path);
   } else {
-    // Ensure back button returns to the correct section, not wherever the user was
     const base = sectionBase[type];
     if (base) history.replaceState(null, '', base);
     history.pushState({ modal: { type, id, view } }, '', path);
@@ -95,31 +97,40 @@ function openModal(type, id, view, fromHash) {
   const isLong = view === 'long';
   currentModal = { type, id, view };
 
-  const item = data[type][id];
-  const meta = data[type + 'Meta'] ? data[type + 'Meta'][id] : null;
-  const body = document.getElementById('modal-body-content');
+  const dataEl = document.getElementById(`modal-data-${type}-${id}`);
+  if (!dataEl) return;
 
+  const htmlShortEl = dataEl.querySelector('[data-slot="htmlShort"]');
+  const htmlLongEl = dataEl.querySelector('[data-slot="html"]');
+  const tags = JSON.parse(dataEl.dataset.tags || '[]');
+  const body = document.getElementById('modal-body-content');
   let content = '';
 
-  if (meta) {
-    // Experience modal with metadata header
+  if (type === 'exp' || type === 'edu') {
+    // Experience / education modal
+    const jobTitle = dataEl.dataset.jobTitle;
+    const company = dataEl.dataset.company;
+    const companyUrl = dataEl.dataset.companyUrl;
+    const location = dataEl.dataset.location;
+    const dates = dataEl.dataset.dates;
+
     const tempDiv = document.createElement('div');
-    tempDiv.innerHTML = item.html || '';
+    tempDiv.innerHTML = htmlLongEl ? htmlLongEl.innerHTML : '';
     const images = tempDiv.querySelectorAll('img, iframe');
     const mediaHTML = Array.from(images).map(el => el.outerHTML).join('');
     images.forEach(img => img.remove());
     const htmlWithoutMedia = tempDiv.innerHTML;
 
     let htmlShortWithoutMedia = '';
-    if (item.htmlShort) {
+    if (htmlShortEl) {
       const tempDiv2 = document.createElement('div');
-      tempDiv2.innerHTML = item.htmlShort;
+      tempDiv2.innerHTML = htmlShortEl.innerHTML;
       const imagesShort = tempDiv2.querySelectorAll('img, iframe');
       imagesShort.forEach(img => img.remove());
       htmlShortWithoutMedia = tempDiv2.innerHTML;
     }
 
-    const toggleHTML = item.htmlShort ? `
+    const toggleHTML = htmlShortEl ? `
       <div class="exp-modal-toggle">
         <button class="exp-modal-toggle-btn exp-modal-toggle-short${isLong ? '' : ' active'}" data-format="short">highlights</button>
         <button class="exp-modal-toggle-btn exp-modal-toggle-long${isLong ? ' active' : ''}" data-format="long">in depth</button>
@@ -132,12 +143,12 @@ function openModal(type, id, view, fromHash) {
 
     content = `
       ${toggleHTML}
-      <div class="modal-tags">${item.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+      <div class="modal-tags">${tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
     `;
-    document.getElementById('modal-title').textContent = meta.jobTitle;
-    document.getElementById('modal-subtitle').innerHTML = `<a href="${meta.website}" target="_blank" class="modal-subtitle-company">${meta.company}</a>`;
-    document.getElementById('modal-header-dates').textContent = meta.dates ? `📅 ${meta.dates}` : '';
-    document.getElementById('modal-header-links').innerHTML = meta.location ? `<span class="modal-dates">📍 ${meta.location}</span>` : '';
+    document.getElementById('modal-title').textContent = jobTitle;
+    document.getElementById('modal-subtitle').innerHTML = `<a href="${companyUrl}" target="_blank" class="modal-subtitle-company">${company}</a>`;
+    document.getElementById('modal-header-dates').textContent = dates ? `📅 ${dates}` : '';
+    document.getElementById('modal-header-links').innerHTML = location ? `<span class="modal-dates">📍 ${location}</span>` : '';
 
     setTimeout(() => {
       const shortBtn = document.querySelector('.exp-modal-toggle-short');
@@ -157,21 +168,29 @@ function openModal(type, id, view, fromHash) {
         });
       }
     }, 0);
+
   } else {
     // Project modal
-    document.getElementById('modal-title').textContent = item.title;
-    document.getElementById('modal-subtitle').innerHTML = item.subtitle
-      ? (item.subtitleUrl
-          ? `<a href="${item.subtitleUrl}" target="_blank" class="modal-subtitle-company">${item.subtitle}</a>`
-          : `<span class="modal-subtitle-company">${item.subtitle}</span>`)
+    const title = dataEl.dataset.title;
+    const subtitle = dataEl.dataset.subtitle;
+    const subtitleUrl = dataEl.dataset.subtitleUrl;
+    const date = dataEl.dataset.date;
+    const links = dataEl.dataset.links ? JSON.parse(dataEl.dataset.links) : null;
+
+    document.getElementById('modal-title').textContent = title;
+    document.getElementById('modal-subtitle').innerHTML = subtitle
+      ? (subtitleUrl
+          ? `<a href="${subtitleUrl}" target="_blank" class="modal-subtitle-company">${subtitle}</a>`
+          : `<span class="modal-subtitle-company">${subtitle}</span>`)
       : '';
-    document.getElementById('modal-header-dates').textContent = item.date ? `📅 ${item.date}` : '';
-    document.getElementById('modal-header-links').innerHTML = (item.links && item.links.length)
-      ? item.links.map(l => `<a href="${l.url}" target="_blank" class="modal-header-link">${l.emoji} ${l.label}</a>`).join('')
+    document.getElementById('modal-header-dates').textContent = date ? `📅 ${date}` : '';
+    document.getElementById('modal-header-links').innerHTML = (links && links.length)
+      ? links.map(l => `<a href="${l.url}" target="_blank" class="modal-header-link">${l.emoji} ${l.label}</a>`).join('')
       : '';
-    if (item.html) {
+
+    if (htmlLongEl) {
       const tempDiv = document.createElement('div');
-      tempDiv.innerHTML = item.html;
+      tempDiv.innerHTML = htmlLongEl.innerHTML;
       const media = Array.from(tempDiv.querySelectorAll('img, iframe'));
       const mediaItems = media.map(el => el.outerHTML);
       media.forEach(el => el.remove());
@@ -199,21 +218,21 @@ function openModal(type, id, view, fromHash) {
         mediaSection = `<div class="exp-modal-media">${mediaItems[0]}</div>`;
       }
 
-      if (item.htmlShort) {
+      if (htmlShortEl) {
         content = `
           <div class="exp-modal-toggle">
             <button class="exp-modal-toggle-btn exp-modal-toggle-short${isLong ? '' : ' active'}">highlights</button>
             <button class="exp-modal-toggle-btn exp-modal-toggle-long${isLong ? ' active' : ''}">in depth</button>
           </div>
-          <div class="exp-modal-content exp-modal-short" style="display:${isLong ? 'none' : 'block'};">${item.htmlShort}</div>
+          <div class="exp-modal-content exp-modal-short" style="display:${isLong ? 'none' : 'block'};">${htmlShortEl.innerHTML}</div>
           <div class="exp-modal-content exp-modal-long" style="display:${isLong ? 'block' : 'none'};"><div class="modal-proj-text">${cleanTextHTML}</div>${mediaSection}</div>
-          <div class="modal-tags">${item.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+          <div class="modal-tags">${tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
         `;
       } else {
-        content = `<div class="modal-proj-text">${cleanTextHTML}</div>${mediaSection}<div class="modal-tags">${item.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>`;
+        content = `<div class="modal-proj-text">${cleanTextHTML}</div>${mediaSection}<div class="modal-tags">${tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>`;
       }
     } else {
-      content = `<div class="modal-proj-text"><p>${item.desc || ''}</p></div><div class="modal-tags">${item.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>`;
+      content = `<div class="modal-proj-text"><p></p></div><div class="modal-tags">${tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>`;
     }
 
     setTimeout(() => {
@@ -284,7 +303,6 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDi
   let path;
 
   if (redirectPath) {
-    // Came via 404.html redirect — restore clean URL before opening modal
     history.replaceState(null, '', '/');
     history.pushState(null, '', redirectPath);
     path = redirectPath;
@@ -298,7 +316,6 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDi
 
   const sectionMap = { experience: 'experience', projects: 'projects', skills: 'skills', education: 'education', about: null };
 
-  // Section-root path (e.g. /experience with no slug) — scroll to section or redirect if unknown
   if (urlType && !slug) {
     if (urlType in sectionMap) {
       const sectionId = sectionMap[urlType];
@@ -312,7 +329,6 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDi
           });
         }
       }
-      // else: recognized page (e.g. /about) — stay put, URL is already correct
     } else {
       history.replaceState(null, '', '/');
     }
@@ -320,23 +336,21 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDi
   }
 
   const id = slugToId[type] && slugToId[type][slug];
-  if (id && data[type] && data[type][id]) {
-    // Scroll background to the relevant section before opening modal
+  if (id && document.getElementById(`modal-data-${type}-${id}`)) {
     const sectionId = type === 'exp' ? 'experience' : type === 'proj' ? 'projects' : type === 'edu' ? 'education' : null;
     if (sectionId) {
       const sectionEl = document.getElementById(sectionId);
       if (sectionEl) {
-      const scrollToSection = () => {
-        const navOffset = document.querySelector('nav')?.offsetHeight || 0;
-        const target = sectionEl.querySelector('.section-header') || sectionEl;
-        window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - navOffset });
-      };
-      document.fonts.ready.then(scrollToSection);
-    }
+        const scrollToSection = () => {
+          const navOffset = document.querySelector('nav')?.offsetHeight || 0;
+          const target = sectionEl.querySelector('.section-header') || sectionEl;
+          window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - navOffset });
+        };
+        document.fonts.ready.then(scrollToSection);
+      }
     }
     openModal(type, id, view || 'short', true);
   } else if (urlType) {
-    // Unrecognised path — redirect to base
     history.replaceState(null, '', '/');
   }
 })();
@@ -352,32 +366,4 @@ document.querySelectorAll('a[data-section]').forEach(a => {
       el.scrollIntoView({ behavior: 'smooth' });
     }
   });
-});
-
-/* ── Populate project cards ── */
-document.querySelectorAll('[data-proj]').forEach(el => {
-  const proj = data.proj[el.dataset.proj];
-  if (!proj) return;
-  el.querySelector('h3').textContent = proj.title;
-  const tagEl = el.querySelector('.project-tag');
-  if (tagEl && proj.tag) tagEl.textContent = proj.tag;
-  const pEl = el.querySelector('p');
-  if (pEl && proj.cardDesc) pEl.textContent = proj.cardDesc;
-});
-
-/* ── Populate experience metadata ── */
-document.querySelectorAll('[data-meta]').forEach(el => {
-  const metaId = el.dataset.meta;
-  const meta = data.expMeta[metaId];
-  if (meta) {
-    if (el.classList.contains('exp-date')) {
-      el.textContent = meta.dates;
-    } else if (el.tagName === 'H3') {
-      el.textContent = meta.jobTitle;
-    } else if (el.classList.contains('exp-company')) {
-      el.textContent = meta.company;
-    } else if (el.tagName === 'P') {
-      el.textContent = meta.tagline;
-    }
-  }
 });

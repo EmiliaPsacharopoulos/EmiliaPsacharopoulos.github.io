@@ -1,17 +1,46 @@
-# Emilia Psacharopoulos' Personal Website
+# Emilia Psacharopoulos — Personal Website
 
-This repository contains all the source code for my [personal website](https://emiliapsacharopoulos.github.io/index.html).
+Source code for [emiliapsacharopoulos.com](https://emiliapsacharopoulos.com).
 
 ## Design
 
-The visual design and layout of this website are my original work. If you reuse or adapt any part of the design, please give appropriate credit.
+The visual design and layout are my original work. If you reuse or adapt any part of the design, please give appropriate credit.
 
-## Technical Details
+## Repo Structure
 
-### Stack
+```
+_data/
+  projects.yml        # all project entries (title, description, tags, modal HTML)
+  experience.yml      # all work experience entries
+  education.yml       # education activity entries
+assets/
+  css/style.css       # all styles
+  js/site.js          # modal system, URL routing, cursor, nav
+_layouts/
+  default.html        # base HTML layout
+_includes/            # shared partials (e.g. footer)
+index.html            # homepage; loops over _data/ at build time to render cards and modals
+about.html            # about page
+```
 
-I built this website with HTML, CSS, and JavaScript.
+Edit content in `_data/` only — never directly in site pages.
+
+## Running Locally
+
+This site requires Ruby. The correct version is managed with [asdf](https://asdf-vm.com/):
+
+```bash
+asdf set -u ruby 3.2.2
+```
+
+Then serve locally with:
+
+```bash
+jekyll serve
+```
+
+The site will be available at `http://localhost:4000`.
 
 ## Deployment
 
-The site is generated and served using **Jekyll** and hosted on **GitHub Pages**.
+Hosted on **GitHub Pages**. Pushing to `main` triggers an automatic build and deploy.

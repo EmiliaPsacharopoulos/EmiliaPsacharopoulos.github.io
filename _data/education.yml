@@ -1,0 +1,17 @@
+- id: e0
+  jobTitle: "Director of Music & Guitar Tutor"
+  company: "Seven Mile"
+  location: "Detroit, MI"
+  dates: "Sep 2019 \u2014 May 2023"
+  tagline: ""
+  website: "https://www.umsevenmile.org/"
+  tags: ["Leadership", "Program Management", "Mentorship"]
+  htmlShort: |
+    <ul style="font-size:0.9rem;line-height:1.8;color:var(--muted);padding-left:1.2rem">
+      <li>Tutored guitar to Detroit students through a <a href="https://www.umsevenmile.org/" target="_blank">University of Michigan nonprofit</a> providing free music education in underserved communities, freshman through senior year</li>
+      <li>As Director of Music, coordinated tutor and student attendance across multiple locations, managed financial expenditures, and planned end-of-term public showcases giving students a real performance experience</li>
+    </ul>
+  html: |
+    <img src="/assets/images/sevenMile.jpg" style="width:100%;margin-bottom:0.5rem;border:1px solid var(--grid)" alt="Seven Mile">
+    <p>I started tutoring guitar at <a href="https://www.umsevenmile.org/" target="_blank">Seven Mile</a> during my freshman year of college because I resonated with their mission of providing equal access to arts education in underserved communities. A few hours a week watching students grow, as musicians and as people, was one of the most rewarding parts of my time in college.</p>
+    <p>In my senior year, I stepped into the Director of Music role to get more involved. That meant coordinating tutor and student attendance across multiple locations, managing financial expenditures, and planning public musical showcases at the end of each term where students could perform for their communities. The showcases were the highlight of each term, bringing together tutors, students, and venues to give students a real performance experience and a chance to celebrate their progress.</p>
