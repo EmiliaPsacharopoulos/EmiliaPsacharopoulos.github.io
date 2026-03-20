@@ -8,7 +8,7 @@ Load this file when making design, layout, or content-structure decisions.
 
 **Identity statement:**
 Software engineer with experience owning and shipping full-stack features from design to
-production. Motivated by building systems that optimize or simulate real-world problems at scale. Naturally curious — drawn to
+production. Motivated by building systems that model and solve complex problems at scale. Naturally curious — drawn to
 understanding how and why things work, not just making them work. Prioritizes being
 straightforward, low-friction, and easy to work with.
 

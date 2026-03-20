@@ -66,7 +66,7 @@ Similar to internship — structured environment, assigned problem. Evaluate:
 ### Personal Projects
 These are fully self-directed — autonomy bar is high again. Scrutinize:
 - Is it clear she identified the problem and decided to build this, or does it read like a class assignment or tutorial project?
-- Does the project have a stated motivation / real-world connection?
+- Does the project have a stated motivation?
 - Are the highlights showing technical substance, not just "built X using Y"?
 - Does the in-depth narrative show engineering judgment — why this approach, what tradeoffs, what was hard?
 
@@ -84,7 +84,7 @@ These are assigned — autonomy bar is low. Evaluate:
 ### Branding & Site-Wide Identity
 This is a separate pass from individual entries. Look at:
 - Her headline and tagline — do they accurately and compellingly represent the target role intersection?
-- How she labels projects — do titles and taglines signal real-world impact and technical sophistication, or are they generic?
+- How she labels projects — do titles and taglines signal impact and technical sophistication, or are they generic?
 - Is there a consistent identity across the whole site, or does it feel like multiple different people?
 - Does anything she says about herself contradict or dilute the "autonomous problem-identifier" framing?
 - Are there missed branding opportunities — things she clearly did that the labels/taglines fail to communicate?
