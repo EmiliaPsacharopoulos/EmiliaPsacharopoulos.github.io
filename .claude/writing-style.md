@@ -18,9 +18,7 @@ blog posts, or any other text on the site.
   transforms — not "the math behind it all" or "the full stack of that domain."
 - **Conversational but never loose.** Smart person talking through their work. Cut filler
   transitions: "from there," "and I ended up," "naturally I." Warmth and specificity can coexist
-  with precision — the goal is no wasted words, not maximum brevity. Do not over-clip: "It's one
-  of the best ways I've found to meet people when you move to a new city" is the right length;
-  cutting it to "surprisingly good way to meet people" overshoots.
+  with precision — the goal is no wasted words, not maximum brevity. Do not over-clip.
 - **Avoid performing authenticity.** Flag and rewrite: "genuinely enjoyed," "took it seriously,"
   "which meant I got to," "clicked for me," "the same rigor that made X click."
 - **Em dashes sparingly.** At most one per paragraph, only when a comma or restructured sentence

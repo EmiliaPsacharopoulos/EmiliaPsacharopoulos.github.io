@@ -7,10 +7,10 @@ Load this file when making design, layout, or content-structure decisions.
 ## Personal Brand
 
 **Identity statement:**
-Software engineer with experience owning and shipping full-stack features from design to
-production. Motivated by building systems that model and solve complex problems at scale. Naturally curious — drawn to
-understanding how and why things work, not just making them work. Prioritizes being
-straightforward, low-friction, and easy to work with.
+NYC-based software engineer motivated by building systems that model and solve complex problems
+at scale. Work spans autonomous systems and optimization modeling to full-stack product ownership
+at early-stage startups. Naturally curious — drawn to understanding how and why things work, not
+just making them work. Prioritizes being straightforward, low-friction, and easy to work with.
 
 **Aesthetic label:** Computational Minimalism / Analytical Creative Engineer — a hybrid between
 researcher, engineer, and creative technologist.
