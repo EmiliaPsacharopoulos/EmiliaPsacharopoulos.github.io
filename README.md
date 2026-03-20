@@ -20,7 +20,9 @@ assets/
   js/site.js          # modal system, URL routing, cursor, nav
 _layouts/
   default.html        # base HTML layout
-_includes/            # shared partials (e.g. footer)
+_includes/
+  navbar.html         # site navigation
+  footer.html         # site footer
 index.html            # homepage; loops over _data/ at build time to render cards and modals
 about.html            # about page
 ```
