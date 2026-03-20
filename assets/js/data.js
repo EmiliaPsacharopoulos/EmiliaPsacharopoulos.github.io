@@ -61,7 +61,7 @@ const data = {
         <p>The PRM algorithm distributes randomly placed nodes across a map, connects any two nodes within a specified Euclidean distance, and uses Dijkstra's algorithm to find the shortest path from start to goal. To test its robustness, we varied node count and connection distance across three maps of increasing complexity: 20%, 50%, and 73% obstacle coverage. The results were concrete: on the simplest map with 100 nodes and a long connection distance, the algorithm found a valid path in 100% of trials. As map complexity increased and node count dropped, success rates fell sharply — to 0% on the most complex map with only 5 nodes. We also found that increasing node count from 100 to 300 produced diminishing returns on path quality, suggesting an optimal node count exists for any given map beyond which additional nodes only increase computational cost without meaningfully improving the path.</p>
         <p>On the vehicle dynamics side, we implemented our own plant model in Simulink using continuous time integration to solve the bicycle's kinematic equations — the system of differential equations governing its x/y position and heading angle. Compared to the original model's discrete time integration, our version produced a smoother path, which we attributed to continuous integration better capturing the underlying dynamics of a physical bicycle.</p>
       `,
-      tags: ['MATLAB', 'Path Planning', 'Mathematical Modeling'],
+      tags: ['MATLAB', 'Simulink', 'Path Planning', 'Mathematical Modeling'],
       links: [
         { emoji: '📄', label: 'View Project Paper', url: 'assets/pdfs/MATH_pathPlanningProject.pdf' }
       ]
@@ -119,7 +119,7 @@ const data = {
         <p>The final project brought all of it together: an ACC (Adaptive Cruise Control) system with three operating modes and auto-steering active throughout. In Manual mode, the user controls speed and path through a potentiometer and haptic wheel. Velocity mode sets a fixed traveling speed via dip switches on the microcontroller. Position mode activates automatically when a lead car enters a preset distance and is traveling slower, matching its speed. We built the entire system in Simulink using scaffolding provided by the course instructors, then used Simulink's automatic C code generation to deploy it onto the S32K144 microcontroller running on a physical driving simulator.</p>
         <p>The system performed successfully at the demo — all three modes triggered and transitioned correctly, and the position-following behavior worked as intended.</p>
       `,
-      tags: ['C', 'Embedded Systems', 'Control Systems', 'PID Control']
+      tags: ['C', 'Embedded Systems', 'Control Systems', 'PID Control', 'Simulink']
     },
     p6: {
       title: 'Personal Portfolio Website',
@@ -167,7 +167,7 @@ const data = {
 
         <p><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-373/" target="_blank">EECS 373</a> was an embedded systems design course concluding with a month-long team project. Our team of four chose to build a real-life version of Rocket League, the car-soccer video game, where a human-controlled robot competed against an autonomous one on a physical field. My primary ownership was the autonomy algorithm: a reactive system that used a computer vision Python script to detect the ball and field state in real time and feed that directly into the robot's decisions.</p>
         <p>On the embedded side, I led the C implementation for several components: a magnetometer for orientation, gameplay timers, PlayStation 2 controller SPI (Serial Peripheral Interface) communication for the human-controlled robot, and a USB-to-Serial adapter for system communication. The computer vision side was Python — I wrote the script that detected AprilTags (QR-code-style markers used for position tracking) and colors on the field to feed real-time state into the robot's decisions. I also designed and implemented the full autonomous Rocket League algorithm, though the demo circumstances meant it never got validated and tested in time. My documentation contributions included systems engineering diagrams, a milestone report, and the project poster.</p>
-        <p>Two days before the demo, it became clear that a critical piece of a teammate's work wasn't going to be ready. The rest of the team pulled an all-nighter to stabilize what we could, which left no time to validate the full autonomy algorithm. I made the call to scope it down to a goaltending robot that used the CV (computer vision) system to track the ball and move to intercept it. It worked, though latency in the pipeline meant it struggled with fast shots. The lesson I took from it was practical: trust teammates but verify progress early, and test in small integrated chunks throughout a project rather than waiting for full system tests at the end.</p>
+        <p>Two days before the demo, it was clear a critical piece of a teammate's work wasn't going to be ready. The rest of the team pulled an all-nighter to stabilize what we could, which left no time to validate the full autonomy algorithm. I made the call to scope it down to a goaltending robot that used the CV (computer vision) system to track the ball and move to intercept it. It worked, though latency in the pipeline meant it struggled with fast shots. The lesson I took from it was practical: trust teammates but verify progress early, and test in small integrated chunks throughout a project rather than waiting for full system tests at the end.</p>
       `,
       tags: ['C', 'Python', 'Embedded Systems', 'Computer Vision']
     },
@@ -267,7 +267,7 @@ const data = {
           <p>For a 6-hour robotics coding challenge, I designed and implemented a ROS 2 (Robot Operating System 2) stack in C++ where a robot follows pose inputs from multiple sources and reaches each target using a motion controller. I built five packages from scratch, each with a focused responsibility. The clock pose issuer converts clock time into 6D positions on a unit circle. The GUI pose issuer gives the user a manual interface to issue pose commands directly, with a spacebar reset. The motion controller subscribes to both pose sources and converts the target pose into velocity commands. Two transformer packages handle coordinate frame conversion, mapping between the normalized world frame and the robot's local body frame, so each component stays decoupled from the simulation's internal coordinate system.</p>
           <p>I also wrote a full documentation suite covering installation, build and run instructions, and testing and formatting procedures, and included a system diagram showing how all five packages connect through their ROS 2 topics. I kept each package's structure consistent and straightforward to extend — adding a new package or controller means following a clear pattern rather than reverse-engineering existing code. The submission included a test suite and shell scripts for rebuilding and launching the system.</p>
         `,
-      tags: ['C++', 'Robotics', 'Motion Control', 'Systems Design'],
+      tags: ['C++', 'ROS 2', 'Robotics', 'Motion Control', 'Systems Design'],
       links: [
         { emoji: '🔗', label: 'View on GitHub', url: 'https://github.com/EmiliaPsach/ROS2-Infrastructure-Stack' }
       ]
@@ -293,9 +293,9 @@ const data = {
           <img src="/assets/images/nycwsoc_app_league_registration.png" style="width:100%;border:1px solid var(--grid)" alt="League Registration">
         </div>
         <p>I joined a recreational soccer league in NYC, took on the role of team captain, and decided to build an app after noticing how much friction the league's current setup created. Managing attendance meant chasing RSVPs over WhatsApp, game times arrived via email two days before kickoff, and players enrolled in new seasons through a Google Sheet linked on the league's website. Most leagues in the city already have a dedicated app for this, and it seemed like a natural gap to fill.</p>
-        <p>I built a React Native iOS MVP in TypeScript, covering the core player-facing and admin workflows: player accounts and authentication, schedule viewing with a calendar grid, game RSVPs, push notification reminders, league enrollment, team management, and an admin dashboard with CSV export — motivated by a problem I experienced firsthand as team captain. It's currently in alpha; I'm replacing dummy data with real league data and verifying the notification system end-to-end before pitching it to the league and deploying to the App Store.</p>
+        <p>I built a React Native iOS MVP in TypeScript, covering the core player-facing and admin workflows: player accounts and authentication, schedule viewing with a calendar grid, game RSVPs, push notification reminders, league enrollment, team management, and an admin dashboard with CSV export. It's currently in alpha; I'm replacing dummy data with real league data and verifying the notification system end-to-end before pitching it to the league and deploying to the App Store.</p>
         `,
-      tags: ['Mobile Development', 'TypeScript'],
+      tags: ['Mobile Development', 'React Native', 'TypeScript'],
       links: [
         { emoji: '🔗', label: 'View on GitHub', url: 'https://github.com/EmiliaPsach/nycwsoc' }
       ]
@@ -305,8 +305,8 @@ const data = {
     e1: { jobTitle: 'Engineering Intern', company: 'The George Washington University', location: 'Ashburn, VA', dates: 'June 2018 — August 2018', tagline: 'Supported PhD research on hydrophobic aluminum treatment methods and independently designed a phase change materials heat retention experiment using the lab\'s facilities.', website: 'https://www.gwu.edu/' },
     e2: { jobTitle: 'Engineering Technician Intern', company: 'NAVSEA', location: 'Washington Navy Yard, DC (Remote)', dates: 'May 2020 — January 2021', tagline: 'Synthesized hundreds of testing documents into executive summaries for Navy leadership and organized a multi-day leadership conference for Unmanned Undersea Vehicle program managers.', website: 'https://www.navsea.navy.mil/' },
     e3: { jobTitle: 'Robotics Research Engineering Intern', company: 'University of Michigan Robotics Institute', location: 'Ann Arbor, MI', dates: 'May 2021 — December 2021', tagline: 'Proposed and led a full electrical redesign of an open-source research robot — cutting platform costs by over 91% and quadrupling communication and motor control capabilities.', website: 'https://robotics.umich.edu/' },
-    e4: { jobTitle: 'Product/Test Engineering Intern', company: 'Analog Devices, Inc.', location: 'Greensboro, NC', dates: 'May 2022 — August 2022', tagline: 'RF test engineering intern on the Aerospace and Defense team, automating chip characterization and test results analysis for satellite communications technologies.', website: 'https://www.analog.com/en/index.html' },
-    e5: { jobTitle: 'Autonomy Software Engineer', company: 'Aurora Flight Sciences (Boeing)', location: 'Cambridge, MA (and remote)', dates: 'July 2023 — November 2025', tagline: 'Software engineer at a Boeing-subsidiary R&D company, owning full-stack development, systems architecture, and technical delivery across six programs in autonomous systems and sustainable aviation.', website: 'https://www.aurora.aero/' },
+    e4: { jobTitle: 'Product/Test Engineering Intern', company: 'Analog Devices, Inc.', location: 'Greensboro, NC', dates: 'May 2022 — August 2022', tagline: 'Test engineering intern automating hardware performance testing and data analysis.', website: 'https://www.analog.com/en/index.html' },
+    e5: { jobTitle: 'Autonomy Software Engineer', company: 'Aurora Flight Sciences (Boeing)', location: 'Cambridge, MA (and remote)', dates: 'July 2023 — November 2025', tagline: 'Software engineer at a Boeing-subsidiary R&D company, owning full-stack development, optimization modeling, and systems architecture across six programs in autonomous systems and sustainable aviation.', website: 'https://www.aurora.aero/' },
     e7: { jobTitle: 'Product Engineer', company: 'Basis AI', location: 'New York, NY', dates: 'December 2025 — March 2026', tagline: 'Technical owner of full-stack development for key product features from design to production at an early-stage startup.', website: 'https://www.getbasis.ai/' }
   },
   exp: {
@@ -388,7 +388,7 @@ const data = {
             <div class="modal-tl-dot"></div>
             <span class="modal-tl-date">June 2024</span>
             <span class="modal-tl-role">C++ DDS Monitoring Service — Aurora Internal Framework</span>
-            <p>Before moving onto Boeing's Cascade program, I designed and built a backend C++ service to monitor inter-agent communication on Aurora's internal autonomy framework. The service implemented a distributed network of DDS (Data Distribution Service) subscribers that consumed and logged messages at 1Hz into a SQL database, with a REST API exposing the data to a Python frontend. I also containerized the service with Docker to streamline deployment.</p>
+            <p>Before moving onto Boeing's Cascade program, I designed and built a backend C++ service to monitor inter-agent communication on Aurora's internal autonomy framework. The service implemented a distributed network of DDS (Data Distribution Service) subscribers that consumed and logged messages at 1Hz into a SQL database, with a REST API exposing the data to a Python frontend. I also containerized the service with Docker to streamline deployment. The service was deployed and integrated into the framework.</p>
           </div>
 
           <div class="modal-tl-item">
@@ -411,7 +411,7 @@ const data = {
 
         </div>
       `,
-      tags: ['Python', 'React', 'TypeScript', 'FastAPI', 'PostgreSQL', 'C++', 'Optimization', 'Constraint Programming', 'Data Visualization', 'Full-Stack Development', 'Systems Architecture', 'Technical Communication']
+      tags: ['Python', 'React', 'TypeScript', 'FastAPI', 'PostgreSQL', 'C++', 'Optimization Modeling', 'Constraint Programming', 'Data Visualization', 'Full-Stack Development', 'Systems Architecture', 'Technical Communication']
     },
     e4: {
       htmlShort: `
@@ -448,11 +448,11 @@ const data = {
         <ul style="font-size:0.9rem;line-height:1.8;color:var(--muted);padding-left:1.2rem">
           <li>Compiled and synthesized hundreds of testing documents into executive summaries conveying key Lessons Learned to Navy leadership in the Unmanned Maritime Systems Program Office (PMS 406)</li>
           <li>Collaborated with senior engineers to organize a multi-day leadership conference for Unmanned Undersea Vehicle (UUV) Homeport program managers</li>
-          <li>Recognized for exceptional communication and documentation skills by the Strategic Capabilities Office (SCO)</li>
+          <li>Recognized for exceptional communication and documentation skills by the Strategic Capabilities Office (SCO); PMS 406 extended a part-time continuation offer into sophomore year, which I accepted</li>
         </ul>
       `,
       html: `
-        <p>I joined the Navy's Unmanned Maritime Systems Program Office (PMS 406) after my freshman year of college — the internship was originally intended to be in-person at the Navy Yard but moved remote due to COVID. My primary work was independently synthesizing hundreds of testing documents into executive summaries conveying key lessons learned, which went directly to Navy leadership within PMS 406. I also collaborated with senior engineers to organize a multi-day leadership conference for UUV (Unmanned Undersea Vehicle) Homeport program managers. The Strategic Capabilities Office recognized my communication and documentation work informally at the end of the summer, and PMS 406 liked my work enough to offer a part-time continuation into my sophomore year, which I accepted.</p>
+        <p>I joined the Navy's Unmanned Maritime Systems Program Office (PMS 406) after my freshman year of college. My primary work was independently synthesizing hundreds of testing documents into executive summaries conveying key lessons learned, which went directly to Navy leadership within PMS 406. I also collaborated with senior engineers to organize a multi-day leadership conference for UUV (Unmanned Undersea Vehicle) Homeport program managers. The Strategic Capabilities Office recognized my communication and documentation work at the end of the summer, and PMS 406 liked my work enough to offer a part-time continuation into my sophomore year, which I accepted.</p>
       `,
       tags: ['Technical Writing', 'Communication']
     },
@@ -487,7 +487,7 @@ const data = {
         <p>I started tutoring guitar at <a href="https://www.umsevenmile.org/" target="_blank">Seven Mile</a> during my freshman year of college because I resonated with their mission of providing equal access to arts education in underserved communities. A few hours a week watching students grow, as musicians and as people, was one of the most rewarding parts of my time in college.</p>
         <p>In my senior year, I stepped into the Director of Music role to get more involved. That meant coordinating tutor and student attendance across multiple locations, managing financial expenditures, and planning public musical showcases at the end of each term where students could perform for their communities. The showcases were the highlight of each term, bringing together tutors, students, and venues to give students a real performance experience and a chance to celebrate their progress.</p>
       `,
-      tags: ['Leadership', 'Program Management', 'Mentorship', 'Music Education']
+      tags: ['Leadership', 'Program Management', 'Mentorship']
     }
   }
 };

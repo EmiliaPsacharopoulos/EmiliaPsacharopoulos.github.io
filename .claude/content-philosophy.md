@@ -8,9 +8,12 @@ Load this file when making design, layout, or content-structure decisions.
 
 **Identity statement:**
 NYC-based software engineer motivated by building systems that model and solve complex problems
-at scale. Work spans autonomous systems and optimization modeling to full-stack product ownership
-at early-stage startups. Naturally curious — drawn to understanding how and why things work, not
-just making them work. Prioritizes being straightforward, low-friction, and easy to work with.
+at scale. Work spans from full-stack product ownership at early-stage startups to optimization
+modeling and autonomous systems. Naturally curious — drawn to understanding how and why things
+work, not just making them work. Prioritizes being straightforward, low-friction, and easy to
+work with.
+
+**Tagline (site hero):** Software Engineer · Full Stack, Optimization Modeling, and Autonomous Systems
 
 **Aesthetic label:** Computational Minimalism / Analytical Creative Engineer — a hybrid between
 researcher, engineer, and creative technologist.

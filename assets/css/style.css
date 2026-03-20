@@ -445,6 +445,8 @@ h2 {
 /* 3-col × 2-row: no right border on col 3, no bottom border on row 2 */
 .skill-group:nth-child(3n) { border-right: none; }
 .skill-group:nth-child(n+4) { border-bottom: none; }
+/* item 5 spans cols 2–3 in the 3-col layout */
+.skill-group:nth-child(5) { grid-column: span 2; border-right: none; }
 @media (max-width: 800px) {
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
   /* reset 3-col rules */
@@ -453,13 +455,16 @@ h2 {
   /* 2-col × 3-row: no right on col 2, no bottom on row 3 */
   .skill-group:nth-child(2n) { border-right: none; }
   .skill-group:nth-child(n+5) { border-bottom: none; }
+  /* item 5 spans both cols in the 2-col layout */
+  .skill-group:nth-child(5) { grid-column: span 2; border-right: none; }
 }
 @media (max-width: 500px) {
   .skills-grid { grid-template-columns: 1fr; }
   /* reset 2-col rules */
   .skill-group:nth-child(2n) { border-right: 1px solid var(--grid); }
   .skill-group:nth-child(n+5) { border-bottom: 1px solid var(--grid); }
-  /* single col: no right, only last has no bottom */
+  /* single col: reset span, no right, only last has no bottom */
+  .skill-group:nth-child(5) { grid-column: span 1; }
   .skill-group { border-right: none; }
   .skill-group:last-child { border-bottom: none; }
 }
@@ -481,6 +486,8 @@ h2 {
 .skill-group-icon--orange svg { color: #c4884a; stroke: #c4884a; }
 .skill-group-icon--purple { background: #f0eef8; }
 .skill-group-icon--purple svg { color: #7c5cbf; stroke: #7c5cbf; }
+.skill-group-icon--red { background: #fdf0f0; }
+.skill-group-icon--red svg { color: #c45a5a; stroke: #c45a5a; }
 .skill-group-name {
   font-family: 'DM Mono', monospace; font-size: 0.64rem;
   letter-spacing: 0.11em; text-transform: uppercase;
@@ -494,6 +501,18 @@ h2 {
   letter-spacing: 0.01em;
   white-space: nowrap;
 }
+
+/* ── Skills Bands ── */
+.skills-hbands { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; }
+@media (max-width: 800px) { .skills-hbands { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 500px) { .skills-hbands { grid-template-columns: 1fr; } }
+.skills-band {
+  padding: 1rem 1.4rem 1rem 1.2rem;
+  background: var(--ivory);
+  display: flex; flex-direction: column; gap: 0.6rem;
+}
+.skills-band-header { display: flex; align-items: center; gap: 0.55rem; }
+.skills-band .skill-group-name { font-size: 0.78rem; }
 
 /* ── Project card image ── */
 .project-img {
