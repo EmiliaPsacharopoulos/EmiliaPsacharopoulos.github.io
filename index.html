@@ -92,45 +92,15 @@ title: Emilia Psacharopoulos
     </div>
     <div class="skills-hbands">
 
-      <div class="skills-band" style="--band-color:#7c5cbf">
+      {% for band in site.data.skills %}
+      <div class="skills-band" style="--band-color:{{ band.color }}">
         <div class="skills-band-header">
-          <div class="skill-group-icon skill-group-icon--purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
-          <span class="skill-group-name">Modeling &amp; Algorithms</span>
+          <div class="skill-group-icon skill-group-icon--{{ band.icon_class }}">{{ band.icon }}</div>
+          <span class="skill-group-name">{{ band.name }}</span>
         </div>
-        <div class="skill-tags"><span class="skill-tag">Constraint Programming</span><span class="skill-tag">Optimization Modeling</span><span class="skill-tag">Data Analytics</span><span class="skill-tag">Data Visualization</span><span class="skill-tag">Path Planning</span><span class="skill-tag">Computer Vision</span><span class="skill-tag">Digital Signal Processing</span></div>
+        <div class="skill-tags">{% for skill in band.skills %}<span class="skill-tag">{{ skill }}</span>{% endfor %}</div>
       </div>
-
-      <div class="skills-band" style="--band-color:#c45a5a">
-        <div class="skills-band-header">
-          <div class="skill-group-icon skill-group-icon--red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
-          <span class="skill-group-name">Engineering Practices</span>
-        </div>
-        <div class="skill-tags"><span class="skill-tag">Test-Driven Development</span><span class="skill-tag">Root Cause Analysis</span><span class="skill-tag">Technical &amp; Product Scoping</span><span class="skill-tag">QA Test Planning</span><span class="skill-tag">Systems Architecture</span><span class="skill-tag">Agentic Coding</span><span class="skill-tag">AI Workflow Integration</span></div>
-      </div>
-
-      <div class="skills-band" style="--band-color:#4a7fc4">
-        <div class="skills-band-header">
-          <div class="skill-group-icon skill-group-icon--blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
-          <span class="skill-group-name">Languages</span>
-        </div>
-        <div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">C++</span><span class="skill-tag">C</span><span class="skill-tag">TypeScript</span><span class="skill-tag">JavaScript</span><span class="skill-tag">MATLAB</span><span class="skill-tag">HTML/CSS</span></div>
-      </div>
-
-      <div class="skills-band" style="--band-color:#5a9444">
-        <div class="skills-band-header">
-          <div class="skill-group-icon skill-group-icon--green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
-          <span class="skill-group-name">Frameworks</span>
-        </div>
-        <div class="skill-tags"><span class="skill-tag">React</span><span class="skill-tag">React Native</span><span class="skill-tag">FastAPI</span><span class="skill-tag">ROS 2</span><span class="skill-tag">Simulink</span></div>
-      </div>
-
-      <div class="skills-band" style="--band-color:#c4884a">
-        <div class="skills-band-header">
-          <div class="skill-group-icon skill-group-icon--orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
-          <span class="skill-group-name">Data &amp; Infra</span>
-        </div>
-        <div class="skill-tags"><span class="skill-tag">PostgreSQL</span><span class="skill-tag">Docker</span><span class="skill-tag">CI/CD</span></div>
-      </div>
+      {% endfor %}
 
     </div>
   </section>
@@ -187,58 +157,19 @@ title: Emilia Psacharopoulos
       <div class="edu-coursework-block">
         <div class="edu-coursework-subhead">Coursework</div>
 
+        {% for cat in site.data.courses %}
         <details class="course-category">
-          <summary>Programming &amp; Software <span class="course-count">4 courses</span></summary>
+          <summary>{{ cat.category }} <span class="course-count">{{ cat.courses | size }} courses</span></summary>
           <div class="course-table-wrap"><table class="course-table">
-            <tr><td class="course-code"><a href="https://www.eecs.umich.edu/courses/eecs201/fa2021/" target="_blank">EECS 201</a></td><td class="course-name"><a href="https://www.eecs.umich.edu/courses/eecs201/fa2021/" target="_blank">Computer Science Pragmatics</a></td></tr>
-            <tr><td class="course-code"><a href="https://eecs280staff.github.io/eecs280.org/syllabus.html" target="_blank">EECS 280</a></td><td class="course-name"><a href="https://eecs280staff.github.io/eecs280.org/syllabus.html" target="_blank">Programming &amp; Intro Data Structures</a></td></tr>
-            <tr><td class="course-code"><a href="https://www.eecs.umich.edu/courses/eecs281/course" target="_blank">EECS 281</a></td><td class="course-name"><a href="https://www.eecs.umich.edu/courses/eecs281/course" target="_blank">Data Structures &amp; Algorithms</a></td></tr>
-            <tr><td class="course-code"><a href="https://eecs370.github.io/" target="_blank">EECS 370</a></td><td class="course-name"><a href="https://eecs370.github.io/" target="_blank">Introduction to Computer Organization</a></td></tr>
+            {% for course in cat.courses %}
+            <tr>
+              <td class="course-code"><a href="{{ course.url }}" target="_blank">{{ course.code }}</a></td>
+              <td class="course-name"><a href="{{ course.url }}" target="_blank">{{ course.name }}</a></td>
+            </tr>
+            {% endfor %}
           </table></div>
         </details>
-
-        <details class="course-category">
-          <summary>Signals, Systems &amp; Hardware <span class="course-count">6 courses</span></summary>
-          <div class="course-table-wrap"><table class="course-table">
-            <tr><td class="course-code"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-200/" target="_blank">EECS 200</a></td><td class="course-name"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-200/" target="_blank">Electrical Engineering Systems Design I</a></td></tr>
-            <tr><td class="course-code"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-215/" target="_blank">EECS 215</a></td><td class="course-name"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-215/" target="_blank">Introduction to Electronic Circuits</a></td></tr>
-            <tr><td class="course-code"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-216/" target="_blank">EECS 216</a></td><td class="course-name"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-216/" target="_blank">Introduction to Signals &amp; Systems</a></td></tr>
-            <tr><td class="course-code"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-230/" target="_blank">EECS 230</a></td><td class="course-name"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-230/" target="_blank">Electromagnetics I</a></td></tr>
-            <tr><td class="course-code"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-270/" target="_blank">EECS 270</a></td><td class="course-name"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-270/" target="_blank">Introduction to Logic Design</a></td></tr>
-            <tr><td class="course-code"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-351/" target="_blank">EECS 351</a></td><td class="course-name"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-351/" target="_blank">Digital Signal Processing &amp; Analysis</a></td></tr>
-          </table></div>
-        </details>
-
-        <details class="course-category">
-          <summary>Robotics &amp; Autonomous Systems <span class="course-count">4 courses</span></summary>
-          <div class="course-table-wrap"><table class="course-table">
-            <tr><td class="course-code"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-373/" target="_blank">EECS 373</a></td><td class="course-name"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-373/" target="_blank">Introduction to Embedded System Design</a></td></tr>
-            <tr><td class="course-code"><a href="https://web.eecs.umich.edu/~justincj/teaching/eecs442/WI2021/syllabus.html" target="_blank">EECS 442</a></td><td class="course-name"><a href="https://web.eecs.umich.edu/~justincj/teaching/eecs442/WI2021/syllabus.html" target="_blank">Computer Vision</a></td></tr>
-            <tr><td class="course-code"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-461/" target="_blank">EECS 461</a></td><td class="course-name"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-461/" target="_blank">Embedded Control Systems</a></td></tr>
-            <tr><td class="course-code"><a href="https://web.eecs.umich.edu/~kuipers/teaching/eecs467-F19.html" target="_blank">EECS 467</a></td><td class="course-name"><a href="https://web.eecs.umich.edu/~kuipers/teaching/eecs467-F19.html" target="_blank">Autonomous Robotics (Major Design Experience)</a></td></tr>
-          </table></div>
-        </details>
-
-        <details class="course-category">
-          <summary>Probability &amp; Mathematical Modeling <span class="course-count">7 courses</span></summary>
-          <div class="course-table-wrap"><table class="course-table">
-            <tr><td class="course-code"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-203/" target="_blank">EECS 203</a></td><td class="course-name"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-203/" target="_blank">Discrete Mathematics</a></td></tr>
-            <tr><td class="course-code"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-301/" target="_blank">EECS 301</a></td><td class="course-name"><a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-301/" target="_blank">Probabilistic Methods in Engineering</a></td></tr>
-            <tr><td class="course-code"><a href="https://lsa.umich.edu/math/undergraduates/undergraduate-math-courses/200-level-math-courses.html" target="_blank">MATH 214</a></td><td class="course-name"><a href="https://lsa.umich.edu/math/undergraduates/undergraduate-math-courses/200-level-math-courses.html" target="_blank">Applied Linear Algebra</a></td></tr>
-            <tr><td class="course-code"><a href="https://lsa.umich.edu/math/undergraduates/undergraduate-math-courses/200-level-math-courses.html" target="_blank">MATH 215</a></td><td class="course-name"><a href="https://lsa.umich.edu/math/undergraduates/undergraduate-math-courses/200-level-math-courses.html" target="_blank">Multivariable &amp; Vector Calculus</a></td></tr>
-            <tr><td class="course-code"><a href="https://lsa.umich.edu/math/undergraduates/undergraduate-math-courses/200-level-math-courses.html" target="_blank">MATH 216</a></td><td class="course-name"><a href="https://lsa.umich.edu/math/undergraduates/undergraduate-math-courses/200-level-math-courses.html" target="_blank">Differential Equations</a></td></tr>
-            <tr><td class="course-code"><a href="https://lsa.umich.edu/math/undergraduates/undergraduate-math-courses/300-level-math-courses.html" target="_blank">MATH 351</a></td><td class="course-name"><a href="https://lsa.umich.edu/math/undergraduates/undergraduate-math-courses/300-level-math-courses.html" target="_blank">Principles of Analysis</a></td></tr>
-            <tr><td class="course-code"><a href="https://lsa.umich.edu/math/undergraduates/undergraduate-math-courses/400-level-courses.html" target="_blank">MATH 462</a></td><td class="course-name"><a href="https://lsa.umich.edu/math/undergraduates/undergraduate-math-courses/400-level-courses.html" target="_blank">Mathematical Modeling</a></td></tr>
-          </table></div>
-        </details>
-
-        <details class="course-category">
-          <summary>Technical Communication <span class="course-count">2 courses</span></summary>
-          <div class="course-table-wrap"><table class="course-table">
-            <tr><td class="course-code"><a href="https://bulletin.engin.umich.edu/courses/techcomm/" target="_blank">TCHNCLCM 300</a></td><td class="course-name"><a href="https://bulletin.engin.umich.edu/courses/techcomm/" target="_blank">Technical Communication for ECE</a></td></tr>
-            <tr><td class="course-code"><a href="https://bulletin.engin.umich.edu/courses/techcomm/" target="_blank">TCHNCLCM 496</a></td><td class="course-name"><a href="https://bulletin.engin.umich.edu/courses/techcomm/" target="_blank">Advanced Technical Communication for EE &amp; CE</a></td></tr>
-          </table></div>
-        </details>
+        {% endfor %}
 
         <div class="coursework-end"></div>
       </div>

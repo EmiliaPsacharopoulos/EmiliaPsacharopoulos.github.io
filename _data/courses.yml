@@ -1,0 +1,83 @@
+- category: Programming & Software
+  courses:
+    - code: EECS 201
+      name: Computer Science Pragmatics
+      url: https://www.eecs.umich.edu/courses/eecs201/fa2021/
+    - code: EECS 280
+      name: Programming & Intro Data Structures
+      url: https://eecs280staff.github.io/eecs280.org/syllabus.html
+    - code: EECS 281
+      name: Data Structures & Algorithms
+      url: https://www.eecs.umich.edu/courses/eecs281/course
+    - code: EECS 370
+      name: Introduction to Computer Organization
+      url: https://eecs370.github.io/
+
+- category: Signals, Systems & Hardware
+  courses:
+    - code: EECS 200
+      name: Electrical Engineering Systems Design I
+      url: https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-200/
+    - code: EECS 215
+      name: Introduction to Electronic Circuits
+      url: https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-215/
+    - code: EECS 216
+      name: Introduction to Signals & Systems
+      url: https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-216/
+    - code: EECS 230
+      name: Electromagnetics I
+      url: https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-230/
+    - code: EECS 270
+      name: Introduction to Logic Design
+      url: https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-270/
+    - code: EECS 351
+      name: Digital Signal Processing & Analysis
+      url: https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-351/
+
+- category: Robotics & Autonomous Systems
+  courses:
+    - code: EECS 373
+      name: Introduction to Embedded System Design
+      url: https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-373/
+    - code: EECS 442
+      name: Computer Vision
+      url: https://web.eecs.umich.edu/~justincj/teaching/eecs442/WI2021/syllabus.html
+    - code: EECS 461
+      name: Embedded Control Systems
+      url: https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-461/
+    - code: EECS 467
+      name: Autonomous Robotics (Major Design Experience)
+      url: https://web.eecs.umich.edu/~kuipers/teaching/eecs467-F19.html
+
+- category: Probability & Mathematical Modeling
+  courses:
+    - code: EECS 203
+      name: Discrete Mathematics
+      url: https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-203/
+    - code: EECS 301
+      name: Probabilistic Methods in Engineering
+      url: https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-301/
+    - code: MATH 214
+      name: Applied Linear Algebra
+      url: https://lsa.umich.edu/math/undergraduates/undergraduate-math-courses/200-level-math-courses.html
+    - code: MATH 215
+      name: Multivariable & Vector Calculus
+      url: https://lsa.umich.edu/math/undergraduates/undergraduate-math-courses/200-level-math-courses.html
+    - code: MATH 216
+      name: Differential Equations
+      url: https://lsa.umich.edu/math/undergraduates/undergraduate-math-courses/200-level-math-courses.html
+    - code: MATH 351
+      name: Principles of Analysis
+      url: https://lsa.umich.edu/math/undergraduates/undergraduate-math-courses/300-level-math-courses.html
+    - code: MATH 462
+      name: Mathematical Modeling
+      url: https://lsa.umich.edu/math/undergraduates/undergraduate-math-courses/400-level-courses.html
+
+- category: Technical Communication
+  courses:
+    - code: TCHNCLCM 300
+      name: Technical Communication for ECE
+      url: https://bulletin.engin.umich.edu/courses/techcomm/
+    - code: TCHNCLCM 496
+      name: Advanced Technical Communication for EE & CE
+      url: https://bulletin.engin.umich.edu/courses/techcomm/

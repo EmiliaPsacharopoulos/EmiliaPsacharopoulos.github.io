@@ -13,6 +13,8 @@ _data/
   projects.yml        # all project entries (title, description, tags, modal HTML)
   experience.yml      # all work experience entries
   education.yml       # education activity entries
+  skills.yml          # skills section bands and tags
+  courses.yml         # education coursework categories and entries
 assets/
   css/style.css       # all styles
   js/site.js          # modal system, URL routing, cursor, nav
