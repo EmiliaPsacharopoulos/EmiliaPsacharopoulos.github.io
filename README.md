@@ -1,6 +1,6 @@
 # Emilia Psacharopoulos — Personal Website
 
-Source code for [emiliapsacharopoulos.com](https://emiliapsacharopoulos.com).
+Source code for [emiliapsacharopoulos.github.io](https://emiliapsacharopoulos.github.io).
 
 ## Design
 
@@ -50,3 +50,11 @@ The site will be available at `http://localhost:4000`.
 ## Deployment
 
 Hosted on **GitHub Pages**. Pushing to `main` triggers an automatic build and deploy.
+
+## SEO
+
+- **Sitemap**: auto-generated at `/sitemap.xml` by the `jekyll-sitemap` plugin on every push.
+- **Indexing**: submit `https://emiliapsacharopoulos.github.io/sitemap.xml` to [Google Search Console](https://search.google.com/search-console) once to get the site indexed. Google recrawls automatically after that.
+- **Structured data**: a JSON-LD `Person` schema is rendered in `<head>` via `default.html`.
+- **Meta tags**: title, description, Open Graph, and canonical URL are set in `default.html` and pull from `_config.yml` (`site.url`). The homepage description lives in `default.html`; per-page overrides use the `description` frontmatter field.
+- **Google site verification**: if re-verifying Search Console ownership, add the verification `<meta>` tag to `default.html` inside `<head>`.
