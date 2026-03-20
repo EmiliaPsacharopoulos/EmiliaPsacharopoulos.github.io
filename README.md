@@ -15,6 +15,7 @@ _data/
   education.yml       # education activity entries
   skills.yml          # skills section bands and tags
   courses.yml         # education coursework categories and entries
+  about.yml           # about page personal interest entries
 assets/
   css/style.css       # all styles
   js/site.js          # modal system, URL routing, cursor, nav

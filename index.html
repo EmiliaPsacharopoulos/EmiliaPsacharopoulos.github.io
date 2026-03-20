@@ -133,22 +133,24 @@ title: Emilia Psacharopoulos
 
       <div class="edu-highlights">
 
-        <div class="mde-card" onclick="openModal('proj','p10')">
+        {% assign p10 = site.data.projects | where: "id", "p10" | first %}
+        <div class="mde-card" onclick="openModal('proj','{{ p10.id }}')">
           <div class="edu-activity-left">
-            <span class="edu-activity-label">Major Design Experience · EECS 467</span>
-            <div class="edu-activity-title">Multi-Agent Path Planning &amp; Collision Avoidance Algorithm</div>
+            <span class="edu-activity-label">{{ p10.subtitle }}</span>
+            <div class="edu-activity-title">{{ p10.title }}</div>
           </div>
-          <div class="edu-activity-date">Winter 2023</div>
+          <div class="edu-activity-date">{{ p10.date }}</div>
           <div class="mde-arrow">→ view project</div>
         </div>
 
-        <div class="edu-activity-row" onclick="openModal('edu','e0')">
+        {% assign e0 = site.data.education | where: "id", "e0" | first %}
+        <div class="edu-activity-row" onclick="openModal('edu','{{ e0.id }}')">
           <div class="edu-activity-left">
             <span class="edu-activity-label">Extracurricular</span>
-            <div class="edu-activity-title">Director of Music &amp; Guitar Tutor</div>
-            <div class="edu-activity-org">Seven Mile at the University of Michigan</div>
+            <div class="edu-activity-title">{{ e0.jobTitle }}</div>
+            <div class="edu-activity-org">{{ e0.company }}</div>
           </div>
-          <div class="edu-activity-date">Sep 2019 — May 2023</div>
+          <div class="edu-activity-date">{{ e0.dates }}</div>
           <div class="edu-activity-arrow">→ view experience</div>
         </div>
 
