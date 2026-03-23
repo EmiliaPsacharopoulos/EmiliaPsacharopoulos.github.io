@@ -95,7 +95,7 @@
     - label: Paradigm — Business Insights Optimization Tool for Sustainable Aviation
       highlights:
         - Identified that the existing Python/Dash stack couldn't support internal deployment and independently rebuilt the application from scratch as a React TypeScript + Python FastAPI + PostgreSQL full-stack web application, designing the database schema and migrating 2GB of data
-        - Built a geospatial Mapbox route network visualization to communicate the optimizer's output — rendering which combinations of airport upgrades enabled which route networks across a target market for a given technology scenario, making the geographic and connectivity implications of each upgrade sequence legible at a glance
+        - Built a geospatial Mapbox route network visualization to communicate the optimizer's output — rendering which combinations of airport upgrades enabled which route networks across a target market for a given technology scenario, making the geographic and connectivity implications of each upgrade sequence immediately readable
         - Owned all coding changes to extend the CP-SAT decision model with time-dependent logic, co-developing the math with the senior engineer who originally built the framework, allowing optimal technology selections to persist across multi-year planning horizons
         - Drove the case study effort end-to-end — identifying insights to surface, collecting the data, and presenting to 25 Boeing engineers at a sustainability workshop in Seattle
         - "Produced the program's first comprehensive documentation suite for an 8,000+ line CP-SAT optimization codebase — enabling future developer onboarding on a mathematical framework too complex to approach without it; received an Aurora immediate recognition award"
@@ -105,7 +105,7 @@
     - label: DoD Autonomy Architecture
       highlights:
         - 'Selected among five Aurora engineers in a competitive downselect to continue the program, and placed on the highest-priority workstream: delivering the ICD (Interface Control Document) — coordinating across six companies, architecting the documentation format, and driving on-time content merging for a hundreds-of-pages primary deliverable'
-        - Built two automated verification tools to validate the ICD: a Groovy Cameo macro cross-validating thousands of message schema references against the reference architecture, and a Python Word parser flagging prose inconsistencies — recommendations from the latter were adopted into the program's syntax guidelines; received an Aurora immediate recognition award
+        - "Built two automated verification tools to validate the ICD: a Groovy Cameo macro cross-validating thousands of message schema references against the reference architecture, and a Python Word parser flagging prose inconsistencies — recommendations from the latter were adopted into the program's syntax guidelines; received an Aurora immediate recognition award"
         - Designed Level 1 compliance requirements and a C2 (Command and Control) authority model for autonomous distributed systems; both passed Change Review Board across all participating companies
   intro: |-
     Aurora Flight Sciences is structured as an R&D company, meaning engineers rotate across programs rather than owning a single product long-term. In my time there I worked across six programs, and was promoted from Associate to Autonomy Engineer in eight months — a track that typically takes two or more years.
