@@ -64,7 +64,7 @@
   logo: "assets/images/ADI_logo.png"
   location: "Greensboro, NC"
   dates: "May 2022 — August 2022"
-  tagline: "Test engineering intern automating hardware performance testing and data analysis."
+  tagline: "Automated hardware performance testing and test results analysis for ADI's Aerospace and Defense team, saving days of engineering effort per input analyzed."
   website: "https://www.analog.com/en/index.html"
   tags: ["MATLAB", "Signal Processing", "Test Automation"]
   highlights:
