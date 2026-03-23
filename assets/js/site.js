@@ -278,7 +278,7 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDi
   const [urlType, slug, view] = parts;
   const type = urlToType[urlType] || urlType;
 
-  const sectionMap = { experience: 'experience', projects: 'projects', skills: 'skills', education: 'education', about: null };
+  const sectionMap = { experience: 'experience', projects: 'projects', skills: 'skills', education: 'education', about: null, notes: null };
 
   if (urlType && !slug) {
     if (urlType in sectionMap) {
@@ -314,7 +314,7 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDi
       }
     }
     openModal(type, id, view || 'short', true);
-  } else if (urlType) {
+  } else if (urlType && document.getElementById('modal')) {
     history.replaceState(null, '', '/');
   }
 })();

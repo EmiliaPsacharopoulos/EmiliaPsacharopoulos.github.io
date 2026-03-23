@@ -6,6 +6,11 @@ url: "https://emiliapsacharopoulos.github.io"
 # Build settings
 permalink: pretty
 markdown: kramdown
+
+collections:
+  notes:
+    output: true
+    permalink: /notes/:name/
 theme: null
 plugins:
   - jekyll-sitemap

@@ -49,7 +49,7 @@ The site will be available at `http://localhost:4000`.
 
 ## Deployment
 
-Hosted on **GitHub Pages**. Pushing to `main` triggers an automatic build and deploy.
+Hosted on **GitHub Pages**. Pushing to `main` triggers an automatic build and deploy. The Jekyll build can take up to an hour to propagate — until it completes, `view-source:https://emiliapsacharopoulos.github.io/` may show a stale version with empty content elements. Once the build finishes, all content is fully rendered as static HTML and readable by chatbots like ChatGPT.
 
 ## SEO
 

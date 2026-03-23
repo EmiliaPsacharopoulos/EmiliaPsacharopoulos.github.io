@@ -1,0 +1,59 @@
+---
+layout: default
+title: Notes — Emilia Psacharopoulos
+---
+
+<div class="page">
+
+  <section class="notes-index">
+
+    <div class="self-tagline">Writing</div>
+    <h1>Notes</h1>
+    <p class="notes-lead">Occasional writing on things I'm thinking about.</p>
+
+    <div class="notes-filters">
+      <button class="notes-filter active" data-tag="all">all</button>
+      {% assign tags = site.notes | map: "tag" | compact | uniq | sort %}
+      {% for tag in tags %}
+      <button class="notes-filter" data-tag="{{ tag }}">{{ tag }}</button>
+      {% endfor %}
+    </div>
+
+    <div class="notes-list">
+      {% assign sorted_notes = site.notes | sort: "date" | reverse %}
+      {% for post in sorted_notes %}
+      <a href="{{ post.url }}" class="note-row" data-tag="{{ post.tag }}">
+        {% if post.image %}
+        <img src="{{ post.image }}" alt="{{ post.title }}" class="note-thumb">
+        {% else %}
+        <div class="note-thumb note-thumb--empty"></div>
+        {% endif %}
+        <div class="note-row-text">
+          <div class="note-row-title">{{ post.title }}</div>
+          {% if post.description %}
+          <div class="note-row-desc">{{ post.description }}</div>
+          {% endif %}
+        </div>
+        <div class="note-row-date">{{ post.date | date: "%b %Y" }}</div>
+      </a>
+      {% endfor %}
+    </div>
+
+  </section>
+
+</div>
+
+<script>
+  const filters = document.querySelectorAll('.notes-filter');
+  const rows = document.querySelectorAll('.note-row');
+  filters.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filters.forEach(f => f.classList.remove('active'));
+      btn.classList.add('active');
+      const tag = btn.dataset.tag;
+      rows.forEach(row => {
+        row.style.display = (tag === 'all' || row.dataset.tag === tag) ? 'grid' : 'none';
+      });
+    });
+  });
+</script>

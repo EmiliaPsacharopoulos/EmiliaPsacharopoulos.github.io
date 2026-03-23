@@ -371,7 +371,7 @@ h2 {
   letter-spacing: 0.1em; text-transform: uppercase;
   color: var(--muted); margin-bottom: 0.3rem;
 }
-.mde-title {
+.mde-title, .note-row-title {
   font-family: 'DM Serif Display', serif; font-size: 1.05rem;
   color: var(--ink); line-height: 1.25;
 }
@@ -1033,4 +1033,146 @@ a.modal-subtitle-company:hover { color: var(--teal); }
 @media (max-width: 480px) {
   .self { padding-top: 7rem; }
   h1 { font-size: 2.4rem; }
+}
+
+/* ── Notes index ── */
+.notes-index {
+  padding: 5rem 3rem 3rem; /* section element provides max-width:1100px and margin:0 auto */
+}
+.notes-lead {
+  font-size: 0.97rem; line-height: 1.8; color: var(--muted);
+  margin-bottom: 2rem;
+}
+.notes-filters {
+  display: flex; gap: 0.45rem; flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+.notes-filter {
+  font-family: 'DM Mono', monospace; font-size: 0.67rem;
+  padding: 0.25rem 0.7rem;
+  border: 1px solid var(--grid); color: var(--muted);
+  background: transparent;
+  letter-spacing: 0.06em; text-transform: lowercase;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+.notes-filter:hover { border-color: var(--teal); color: var(--teal); }
+.notes-filter.active {
+  background: var(--teal); color: var(--ivory); border-color: var(--teal);
+}
+.notes-list {
+  display: flex; flex-direction: column;
+}
+.note-row {
+  display: grid;
+  grid-template-columns: 72px 1fr 72px;
+  gap: 16px; align-items: center;
+  padding: 0.95rem 0.5rem;
+  text-decoration: none; color: inherit;
+  transition: background 0.15s;
+}
+.note-row:first-child{}
+.note-row:hover { background: var(--teal-light); }
+.note-row:hover .note-row-title { color: var(--teal); }
+.note-thumb {
+  width: 72px; height: 56px;
+  object-fit: cover;
+  border: 1px solid var(--grid);
+  display: block; flex-shrink: 0;
+}
+.note-thumb--empty {
+  background: var(--teal-light);
+  border: 1px solid rgba(13,115,119,0.2);
+}
+/* .note-row-title shares font declarations with .mde-title above */
+.note-row-title {
+  margin-bottom: 0.3rem;
+  transition: color 0.15s;
+}
+.note-row-desc {
+  font-size: 0.83rem; color: var(--muted); line-height: 1.5;
+}
+.note-row-date {
+  font-family: 'DM Mono', monospace; font-size: 0.67rem;
+  color: var(--teal); text-align: right;
+  white-space: nowrap; letter-spacing: 0.04em;
+}
+
+@media (max-width: 680px) {
+  .notes-index { padding: 5rem 1.5rem 2.5rem; }
+  .note-row { grid-template-columns: 56px 1fr; gap: 12px; }
+  .note-row-date { display: none; }
+  .note-thumb { width: 56px; height: 44px; }
+}
+
+/* ── Note post ── */
+.note-post {
+  /* section element provides margin:0 auto and padding:2rem 3rem */
+  max-width: 900px; margin: 0 auto; padding: 5rem 3rem 3rem;
+}
+.note-post-header {
+  margin-bottom: 2rem;
+}
+.note-post-header h1 {
+  /* global h1 provides font-family, color, letter-spacing */
+  font-size: clamp(1.7rem, 3.5vw, 2.2rem);
+  line-height: 1.15; margin-bottom: 0.6rem;
+}
+.note-post-date {
+  font-family: 'DM Mono', monospace; font-size: 0.68rem;
+  color: var(--teal); letter-spacing: 0.1em; text-transform: uppercase;
+}
+.note-post-body {
+  font-size: 0.95rem; line-height: 1.85; color: var(--muted);
+}
+.note-post-body p { margin: 0 0 1.15rem; }
+.note-post-body h2 {
+  /* global h2 provides font-family */
+  font-size: 1.3rem; font-weight: 400;
+  color: var(--ink); margin: 2rem 0 0.75rem; letter-spacing: -0.01em;
+}
+.note-post-body a {
+  color: var(--teal); text-decoration: none;
+  border-bottom: 1px solid rgba(13,115,119,0.3);
+}
+.note-post-body a:hover { border-color: var(--teal); }
+.note-post-body strong { color: var(--ink); font-weight: 500; }
+.note-post-body ul { padding-left: 2.5rem; margin: 0 0 1.15rem; }
+.note-post-body ul li { margin-bottom: 0.5rem; }
+.note-post-body figure { margin: 1.75rem auto; width: 70%; }
+.note-post-body figure img { width: 100%; border: 2px solid var(--grid); border-radius: 4px; display: block; }
+.note-post-body figcaption { font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--muted); text-align: center; margin-top: 0.5rem; }
+.note-figure-split { display: flex; gap: 0.75rem; margin: 1.75rem 0; width: 100%; align-items: stretch; }
+.note-figure-split figure { flex: 1; width: auto; margin: 0; display: flex; flex-direction: column; }
+.note-figure-split figure img { flex: 1; object-fit: cover; min-height: 0; }
+.note-post-body blockquote {
+  border-left: 2px solid var(--teal); border-radius: 0;
+  margin: 1.5rem 0; padding: 0.1rem 0 0.1rem 1.25rem;
+  color: var(--muted); font-style: italic;
+}
+.note-post-body code {
+  font-family: 'DM Mono', monospace; font-size: 0.8rem;
+  background: var(--teal-light); color: var(--teal);
+  border: 1px solid rgba(13,115,119,0.2); padding: 1px 6px;
+}
+.note-post-body pre {
+  background: var(--teal-light);
+  border: 1px solid rgba(13,115,119,0.2);
+  padding: 1.1rem 1.25rem; margin: 1.25rem 0; overflow-x: auto;
+}
+.note-post-body pre code {
+  background: none; border: none; padding: 0;
+  font-size: 0.82rem; line-height: 1.7; color: var(--ink);
+}
+.note-post-footer {
+  margin-top: 2.5rem;
+}
+.note-back {
+  font-family: 'DM Mono', monospace; font-size: 0.72rem;
+  color: var(--muted); text-decoration: none;
+  letter-spacing: 0.04em; transition: color 0.15s;
+}
+.note-back:hover { color: var(--teal); }
+
+@media (max-width: 680px) {
+  .note-post { padding: 5rem 1.5rem 2.5rem; }
 }

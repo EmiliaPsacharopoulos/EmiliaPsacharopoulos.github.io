@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<div class="page">
+
+  <section class="note-post">
+
+    <div class="note-post-header">
+      <h1>{{ page.title }}</h1>
+      <div class="note-post-date">{{ page.date | date: "%B %Y" }}</div>
+    </div>
+
+    <div class="note-post-body">
+      {{ content }}
+    </div>
+
+    <div class="note-post-footer">
+      <a href="/notes" class="note-back">← back to notes</a>
+    </div>
+
+  </section>
+
+</div>
