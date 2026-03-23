@@ -43,17 +43,3 @@ title: Notes — Emilia Psacharopoulos
 
 </div>
 
-<script>
-  const filters = document.querySelectorAll('.notes-filter');
-  const rows = document.querySelectorAll('.note-row');
-  filters.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filters.forEach(f => f.classList.remove('active'));
-      btn.classList.add('active');
-      const tag = btn.dataset.tag;
-      rows.forEach(row => {
-        row.style.display = (tag === 'all' || row.dataset.tag === tag) ? 'grid' : 'none';
-      });
-    });
-  });
-</script>

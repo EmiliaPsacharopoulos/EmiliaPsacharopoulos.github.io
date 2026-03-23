@@ -319,6 +319,18 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDi
   }
 })();
 
+/* ── Notes filters ── */
+document.querySelectorAll('.notes-filter').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.notes-filter').forEach(f => f.classList.remove('active'));
+    btn.classList.add('active');
+    const tag = btn.dataset.tag;
+    document.querySelectorAll('.note-row').forEach(row => {
+      row.style.display = (tag === 'all' || row.dataset.tag === tag) ? 'grid' : 'none';
+    });
+  });
+});
+
 /* ── Nav section links ── */
 document.querySelectorAll('a[data-section]').forEach(a => {
   a.addEventListener('click', e => {
