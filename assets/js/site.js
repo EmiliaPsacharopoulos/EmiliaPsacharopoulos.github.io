@@ -1,3 +1,11 @@
+/* ── Nav height CSS variable ── */
+function setNavHeight() {
+  const nav = document.querySelector('nav');
+  if (nav) document.documentElement.style.setProperty('--nav-h', nav.offsetHeight + 'px');
+}
+setNavHeight();
+window.addEventListener('resize', setNavHeight);
+
 /* ── Cursor ── */
 const curDot = document.getElementById('cur-dot');
 const curTrail = document.getElementById('cur-trail');

@@ -71,7 +71,7 @@ nav {
 /* ── Self ── */
 .self {
   display: flex; align-items: center; justify-content: space-between;
-  padding: 5rem 3rem 2rem;
+  padding: calc(var(--nav-h, 4rem) + 1.5rem) 3rem 2rem;
   max-width: 1100px; margin: 0 auto; gap: 3rem;
 }
 .self-content { flex: 1; }
@@ -951,7 +951,7 @@ a.modal-subtitle-company:hover { color: var(--teal); }
 
 /* ── About page ── */
 .about-page-self {
-  padding: 5rem 3rem 1.5rem;
+  padding: calc(var(--nav-h, 4rem) + 1.5rem) 3rem 1.5rem;
   max-width: 1100px; margin: 0 auto;
 }
 .about-page-self .self-tagline {
@@ -1000,7 +1000,7 @@ a.modal-subtitle-company:hover { color: var(--teal); }
 }
 .about-row-text p a:hover { border-color: var(--teal); }
 @media (max-width: 680px) {
-  .about-page-self { padding: 5rem 1.5rem 1.5rem; }
+  .about-page-self { padding: calc(var(--nav-h, 4rem) + 1.5rem) 1.5rem 1.5rem; }
   .about-page-content { padding: 1.5rem 1.5rem 2.5rem; }
   .about-row { flex-direction: column; gap: 1.5rem; }
   .about-row-img, .about-row-video { width: 100%; }
@@ -1014,7 +1014,7 @@ a.modal-subtitle-company:hover { color: var(--teal); }
   .self {
     flex-direction: column-reverse;
     align-items: flex-start;
-    padding-top: 6rem;
+    padding-top: calc(var(--nav-h, 4rem) + 1.5rem);
     gap: 1.5rem;
   }
   .self-photo {
@@ -1037,7 +1037,7 @@ a.modal-subtitle-company:hover { color: var(--teal); }
 
 /* ── Notes index ── */
 .notes-index {
-  padding: 5rem 3rem 3rem; /* section element provides max-width:1100px and margin:0 auto */
+  padding: calc(var(--nav-h, 4rem) + 1.5rem) 3rem 3rem; /* section element provides max-width:1100px and margin:0 auto */
 }
 .notes-lead {
   font-size: 0.97rem; line-height: 1.8; color: var(--muted);
@@ -1098,7 +1098,7 @@ a.modal-subtitle-company:hover { color: var(--teal); }
 }
 
 @media (max-width: 680px) {
-  .notes-index { padding: 5rem 1.5rem 2.5rem; }
+  .notes-index { padding: calc(var(--nav-h, 4rem) + 1.5rem) 1.5rem 2.5rem; }
   .note-row { grid-template-columns: 56px 1fr; gap: 12px; }
   .note-row-date { display: none; }
   .note-thumb { width: 56px; height: 44px; }
@@ -1107,7 +1107,7 @@ a.modal-subtitle-company:hover { color: var(--teal); }
 /* ── Note post ── */
 .note-post {
   /* section element provides margin:0 auto and padding:2rem 3rem */
-  max-width: 900px; margin: 0 auto; padding: 5rem 3rem 3rem;
+  max-width: 900px; margin: 0 auto; padding: calc(var(--nav-h, 4rem) + 1.5rem) 3rem 3rem;
 }
 .note-post-header {
   margin-bottom: 2rem;
@@ -1174,5 +1174,5 @@ a.modal-subtitle-company:hover { color: var(--teal); }
 .note-back:hover { color: var(--teal); }
 
 @media (max-width: 680px) {
-  .note-post { padding: 5rem 1.5rem 2.5rem; }
+  .note-post { padding: calc(var(--nav-h, 4rem) + 1.5rem) 1.5rem 2.5rem; }
 }
