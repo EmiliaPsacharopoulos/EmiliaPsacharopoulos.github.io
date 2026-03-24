@@ -91,7 +91,7 @@
   highlight_sections:
     - label: Overall
       highlights:
-        - Promoted from Associate to Autonomy Engineer in eight months — a track that typically takes two or more years
+        - Promoted from Associate Autonomy Engineer within eight months, a track that typically takes 2+ years.
     - label: Paradigm — Business Insights Optimization Tool for Sustainable Aviation
       highlights:
         - Identified that the existing Python/Dash stack couldn't support internal deployment and independently rebuilt the application from scratch as a React TypeScript + Python FastAPI + PostgreSQL full-stack web application, designing the database schema and migrating 2GB of data
@@ -165,16 +165,17 @@
   logo: "assets/images/basis_logo.png"
   location: "New York, NY"
   dates: "December 2025 — March 2026"
-  tagline: "Technical owner of full-stack development for key product features from design to production at an early-stage startup."
+  tagline: "Technical owner of full-stack development for key product features from design to production at an early-stage, fully AI-native unicorn startup."
   website: "https://www.getbasis.ai/"
   tags: ["Python", "PostgreSQL", "React", "TypeScript", "Full-Stack Development", "Test-Driven Development"]
   highlights:
-    - Assumed full technical ownership of the reconciliations product area within two months — the previous lead departed mid-project, and I drove it forward as the only engineer on one of the most critical parts of an accounting automation product
-    - Designed and shipped Custom-Month Reconciliations from scratch, owning the full lifecycle from product scoping and stakeholder alignment through QA and production rollout for thousands of customers — reworking backend data structures and calculation logic to support any monthly close cadence in place of hardcoded calendar-month logic
-    - Diagnosed and resolved blocking issues in the Reconciliation Editor (a replacement UX built by a contractor who left before finishing it), designed the QA test plan, and drove it to production
-    - Designed and shipped 12-Month Planning Visibility from scratch, owning the full lifecycle from product scoping and alignment with PM and tech lead through production rollout for thousands of customers — extending the platform's planning horizon for accountants and introducing product controls such as disabling auto-sign-off on tasks in future months
-    - Resolved 30 customer bugs using test-driven debugging practices — writing tests to reproduce failures before fixing, then expanding the test suite to prevent regressions; was frequently the primary escalation contact for on-call incidents
-    - Diagnosed and fixed 4 system-level performance issues including line item matching timeouts, database query bottlenecks in orchestration services, and chronic background job failures
+    - Assumed full technical ownership as the sole engineer on the reconciliations product, the foundation of Basis's core accounting workflow, when the previous lead departed two months after I joined.
+    - text: "Owned end-to-end delivery of two 0→1 features for thousands of customers: defined product requirements by driving alignment across accountants and PMs, led system design with tech lead sign-off, implemented with unit/integration tests, authored QA plans, and shipped to production."
+      sub:
+        - "<strong>Custom-Month Reconciliations:</strong> replaced hardcoded calendar-month logic with support for any close cadence, unblocking Basis from acquiring customers whose books don't close on calendar months; authored a finalized product description for non-technical stakeholders and presented to the customer-facing support team ahead of rollout."
+        - "<strong>Future Periods:</strong> allowed accountants to view and plan up to 12 months ahead, backfilling all existing Tasks and Reconciliations into the future window with permission controls on future-month actions."
+    - Inherited a half-built Reconciliation Editor from a departing contractor, diagnosed and fixed blocking issues across frontend and backend, designed the QA test plan, and drove it to production.
+    - Resolved 30 customer bugs and 4 system-level performance issues using test-driven debugging practices, becoming the on-call production incident escalation contact as the reconciliations subject matter expert.
   description:
     - |-
       I shipped 3 features to production for thousands of customers and owned the entire reconciliations product area — picking up accounting as a new domain from scratch in the process. Within two months of joining, the engineer leading reconciliations departed mid-project, and I assumed full technical ownership as the only engineer actively working on one of the most critical parts of the product.
@@ -183,6 +184,6 @@
     - |-
       In parallel, I took over the Reconciliation Editor — a replacement UX for the live editor, originally built by a contractor who left before finishing it. The code had been sitting dormant: core UI interactions were broken, including file linking that failed to resolve the correct month and category folder, and any change required mirroring updates across both editors simultaneously. I diagnosed and resolved the blocking issues across frontend and backend logic, designed the QA test plan to verify the feature end-to-end before rollout, and drove it to production.
     - |-
-      Beyond reconciliations, I designed, scoped, and shipped a 12-Month Planning Visibility feature from scratch — extending the platform's planning horizon for accountants and including product-level permissions. I authored the product scoping document and got alignment from the program manager, then moved into technical scoping and alignment with the engineering pod's tech lead before owning the full lifecycle through implementation, QA, and production rollout for thousands of customers.
+      Beyond reconciliations, I designed and shipped a feature called Future Periods from scratch, which extended the platform's planning horizon from the current month to 12 months into the future. Accountants interact with the platform by selecting a month and seeing all Tasks and Reconciliations ending on that month — previously, the furthest forward they could look was the current month. Extending the horizon to up to 12 months ahead required backfilling all existing Tasks and Reconciliations in the database to populate the full future window, so they would appear correctly when a user selected any upcoming month within that range. It also introduced a set of permission controls governing what actions users could take on future-month Tasks and Reconciliations. I authored the product scoping document and aligned with the PM, led technical design with the engineering pod's tech lead, and owned the full lifecycle through implementation, QA, and production rollout for thousands of customers.
     - |-
       On the production stability side, I resolved 30 customer bugs (including production hotfixes and database migrations to clean up duplicate records and session context errors) using test-driven debugging practices: writing tests to reproduce each failure before implementing a fix, then expanding the test suite to prevent regressions. I was frequently the engineer that on-call escalations landed on, and wrote detailed root cause analyses after each incident. I also diagnosed and fixed four system-level performance issues: line item matching timeouts, database query bottlenecks in orchestration services, and chronic background job failures, unblocking jobs that had been failing entirely. I worked fully AI-native, using AI agents as the primary tool across every stage of the work: coding, debugging, product scoping, technical architecture, and documentation. After four months I decided to leave — the reconciliations product area was in a stable state and I handed it off completely before my last day.

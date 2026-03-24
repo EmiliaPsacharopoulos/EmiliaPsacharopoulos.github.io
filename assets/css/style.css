@@ -872,6 +872,12 @@ a.modal-subtitle-company:hover { color: var(--teal); }
   color: var(--muted); padding-left: 1.2rem;
   margin-bottom: 1.1rem;
 }
+.modal-ul-sub {
+  list-style-type: circle;
+  padding-left: 1.2rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
 .modal-img {
   width: 100%; border: 1px solid var(--grid);
   display: block; margin-bottom: 1.1rem;
