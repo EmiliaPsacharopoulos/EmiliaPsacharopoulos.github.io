@@ -17,15 +17,39 @@ blog posts, or any other text on the site.
 - **Be specific, not evocative.** Name the actual things: discrete math, PID tuning, Fourier
   transforms — not "the math behind it all" or "the full stack of that domain."
 - **Conversational but never loose.** Smart person talking through their work. Cut filler
-  transitions: "from there," "and I ended up," "naturally I." Warmth and specificity can coexist
-  with precision — the goal is no wasted words, not maximum brevity. Do not over-clip.
+  transitions: "from there," "and I ended up," "naturally I." Warmth and specificity
+  can coexist with precision — the goal is no wasted words, not maximum brevity. Do not over-clip.
 - **Avoid performing authenticity.** Flag and rewrite: "genuinely enjoyed," "took it seriously,"
-  "which meant I got to," "clicked for me," "the same rigor that made X click."
-- **Em dashes sparingly.** At most one per paragraph, only when a comma or restructured sentence
-  won't do. Single-sentence bodies: restructure instead of using an em dash.
+  "which meant I got to," "clicked for me," "the same rigor that made X click," "incredible,"
+  "amazing." Let the description carry the weight.
+- **No em dashes.** Never use — in prose. Restructure the sentence, use a colon, semicolon, or
+  comma instead. This is a hard rule with no exceptions.
 - **Precision over completeness.** A shorter, cleaner sentence beats a longer accurate one that
   reads awkwardly.
 - **Chronological order within sections.** Use clear structural dividers (dates, category titles).
+- **No editorializing conclusions.** Avoid phrases like "that actually matter," "truly impactful,"
+  or any ending that tells the reader how to feel about the work. Let the description carry it.
+- **Confident verb choices.** Default to active, specific verbs. Avoid overusing "is" — vary verb
+  choices within a paragraph so sentences don't all follow the same structure. "A milestone
+  represents an entire workflow goal" beats "A milestone is an entire workflow goal."
+
+---
+
+## Repetition Rules (apply to all content)
+
+Repetition flattens prose and signals lazy editing. Check for all of the following before
+finalizing any piece:
+
+- **No repeated phrases within a paragraph.** If the same construction appears twice in
+  four sentences, rewrite one instance.
+- **No repeated sentence openers.** Avoid starting consecutive sentences with the same word or
+  structure (e.g. "This... This... These... These..."). Vary the entry point.
+- **No repeated transitions.** "It is worth," "make sure," "before moving forward," "on the other
+  hand" — each should appear at most once per section. Flag and replace the duplicate.
+- **No repeated verbs across a paragraph.** If "is" appears in every sentence, rewrite at least
+  half of them with stronger, more specific verbs.
+- **Watch for near-repetition.** "Before execution begins" and "before execution starts" in the
+  same paragraph count as repetition. Synonyms don't exempt you.
 
 ---
 
@@ -38,7 +62,7 @@ blog posts, or any other text on the site.
   Example: *"Technical owner of full-stack development for key product features
   from design to production at an early-stage startup."*
 - **Short-form bullets:** Action-first, specific, standalone. Each bullet describes a concrete
-  outcome or responsibility. Bold sparingly — only for a genuinely standout metric or result.
+  outcome or responsibility. Bold sparingly — only for a genuinely standout insight or result.
   If everything is bolded, nothing is.
 
 ### Long-form experience descriptions
@@ -56,6 +80,14 @@ blog posts, or any other text on the site.
   description carry the weight.
 - Don't qualify frequency unless it's genuinely relevant — just describe what you do and why.
 - **Paragraphs:** 3–5 sentences. Readable as prose, not bullets written as sentences.
+- **Sentence structure must vary within each paragraph.** Sentences should differ in length,
+  opening word, and construction. A paragraph where every sentence follows Subject + "is" + rest
+  reads flat — rewrite until the verbs and structures are distinct.
+- **Bold key insights sparingly.** In longer posts, bold the one or two sentences per section
+  that a skimming reader most needs to land on. Do not bold more than that — it dilutes the
+  signal. Bold full thoughts, not mid-sentence fragments.
+- **Filler reassurances should be cut.** Sentences like "This is completely normal" or "It is
+  important to note" add no information. Remove them.
 - **Reference example (north star for this content type):**
   > "Video editing is one of my favorite creative outlets. I love capturing footage and editing
   > it into a cohesive story to share with friends and family. The video to the left is one of
