@@ -215,7 +215,7 @@ h2 {
 }
 .project-card:hover .project-arrow { opacity: 1; transform: translateX(0); }
 
-/* ── Experience — timeline with spine + dots ── */
+/* ── Experience: timeline with spine + dots ── */
 .exp-timeline {
   position: relative;
   display: flex; flex-direction: column;

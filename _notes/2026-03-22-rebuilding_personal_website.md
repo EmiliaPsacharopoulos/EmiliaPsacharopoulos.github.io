@@ -20,7 +20,7 @@ With that identified, I turned my attention to rebuilding my online portfolio to
 
 ## Step 1: Define the audience
 
-I started by thinking carefully about who this site is actually for, and landed on two distinct audiences. The primary one is myself — the site exists first as an up-to-date, shareable record of my professional and academic work. The secondary audience is anyone who stumbles across it: a recruiter, a future collaborator, a friend, or a family member. Most of them won't need the granular detail, so the site also needs to support a reader who just wants to skim my experiences.
+I started by thinking carefully about who this site is actually for, and landed on two distinct audiences. The primary one is myself: the site exists first as an up-to-date, shareable record of my professional and academic work. The secondary audience is anyone who stumbles across it: a recruiter, a future collaborator, a friend, or a family member. Most of them won't need the granular detail, so the site also needs to support a reader who just wants to skim my experiences.
 
 ---
 
@@ -76,7 +76,7 @@ Those principles translated into concrete decisions:
 
 **Content in YAML.** All meaningful content (names, taglines, descriptions, project entries) lives in YAML data files. Updating anything means changing one file, not hunting through HTML.
 
-**Formatting in CSS, structure in HTML.** Styling lives in a single CSS file. HTML files define page structure and loop over YAML to render components — no hardcoded content, no inline styles.
+**Formatting in CSS, structure in HTML.** Styling lives in a single CSS file. HTML files define page structure and loop over YAML to render components, with no hardcoded content or inline styles.
 
 **Dynamic behavior in JavaScript.** A single JS file handles everything interactive: modals, URL routing, navigation, and cursor behavior. The static content is fully readable without it.
 

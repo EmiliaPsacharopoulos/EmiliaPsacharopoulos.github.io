@@ -1,4 +1,4 @@
-# Emilia Psacharopoulos — Personal Website
+# Emilia Psacharopoulos, Personal Website
 
 Source code for [emiliapsacharopoulos.github.io](https://emiliapsacharopoulos.github.io).
 
@@ -29,7 +29,7 @@ index.html            # homepage; loops over _data/ at build time to render card
 about.html            # about page
 ```
 
-Edit content in `_data/` only — never directly in site pages.
+Edit content in `_data/` only; never directly in site pages.
 
 ## Running Locally
 
@@ -49,7 +49,7 @@ The site will be available at `http://localhost:4000`.
 
 ## Deployment
 
-Hosted on **GitHub Pages**. Pushing to `main` triggers an automatic build and deploy. The Jekyll build can take up to an hour to propagate — until it completes, `view-source:https://emiliapsacharopoulos.github.io/` may show a stale version with empty content elements. Once the build finishes, all content is fully rendered as static HTML and readable by chatbots like ChatGPT.
+Hosted on **GitHub Pages**. Pushing to `main` triggers an automatic build and deploy. The Jekyll build can take up to an hour to propagate; until it completes, `view-source:https://emiliapsacharopoulos.github.io/` may show a stale version with empty content elements. Once the build finishes, all content is fully rendered as static HTML and readable by chatbots like ChatGPT.
 
 ## SEO
 
