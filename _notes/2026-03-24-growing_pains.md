@@ -3,7 +3,7 @@ layout: note
 title: "Growing pains"
 date: 2026-03-24
 tag: engineering-process
-image: /assets/images/notes/product_development_process.png
+image: /assets/images/notes/growing_pains_thumbnail.png
 description: "How enough repetitions of building the wrong thing changed how I approach software development, and why that foundation matters more than ever with the mainstream adoption of coding agents."
 ---
 
