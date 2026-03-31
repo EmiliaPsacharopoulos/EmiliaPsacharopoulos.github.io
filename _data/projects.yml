@@ -14,7 +14,7 @@
   highlights:
     - As team captain for a NYC recreational soccer league, identified that managing attendance over WhatsApp, schedules over email, and enrollment through a Google Sheet was unnecessary friction, and built an app to address it
     - Built a React Native iOS MVP in TypeScript covering player accounts, schedule viewing, game RSVPs, push notifications, league enrollment, team management, and an admin dashboard
-    - Currently in alpha: replacing dummy data with real league data and validating the push notification system before pitching to the league and submitting to the App Store
+    - "Currently in alpha: replacing dummy data with real league data and validating the push notification system before pitching to the league and submitting to the App Store"
   description:
     - |-
       I joined a recreational soccer league in NYC, took on the role of team captain, and decided to build an app after noticing how much friction the league's current setup created. Managing attendance meant chasing RSVPs over WhatsApp, game times arrived via email two days before kickoff, and players enrolled in new seasons through a Google Sheet linked on the league's website. Most leagues in the city already have a dedicated app for this, and it seemed like a natural gap to fill.
@@ -72,7 +72,7 @@
   highlights:
     - Designed and demonstrated a multi-agent path planning and collision avoidance system on Michigan's physical M-Bot robots, built on the CBS (Conflict-Based Search) algorithm for completeness and optimality guarantees
     - Led path-following logic implementation, TCP (Transmission Control Protocol) server-client architecture, and PID (Proportional-Integral-Derivative) controller configuration for robot operation
-    - Owned the testing effort: designed the QA test plan, test scenarios, simulation field, and testing matrix; ran six successful trials across varying levels of map complexity; produced a video walkthrough of the system
+    - "Owned the testing effort: designed the QA test plan, test scenarios, simulation field, and testing matrix; ran six successful trials across varying levels of map complexity; produced a video walkthrough of the system"
   description:
     - |-
       I chose <a href="https://web.eecs.umich.edu/~kuipers/teaching/eecs467-F19.html" target="_blank">EECS 467: Autonomous Robotics</a> as my capstone (Michigan's Major Design Experience, or MDE) because I had a strong interest and academic background in robotics by senior year. Our team of four designed and demonstrated a multi-agent path planning and collision avoidance system on Michigan's physical M-Bot robots. We built on the CBS (Conflict-Based Search) algorithm for its completeness and optimality guarantees, implementing path-following logic that translated a 2D path array into linear and angular velocities over a TCP (Transmission Control Protocol) server-client architecture, and configured a PID (Proportional-Integral-Derivative) controller for each robot to ensure smooth operation.
