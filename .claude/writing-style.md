@@ -14,6 +14,10 @@ blog posts, or any other text on the site.
   processing." Don't assume the reader knows acronyms or field-specific vocabulary.
 - **Active construction is the default.** "I built," "I chose," "I added." Not "the curriculum
   pushed me" or "Michigan gave me."
+- **No passive voice in any non-blog content.** Every sentence must have a clear human subject
+  performing the action. "Implementation ran," "the feature was built," "this was done" are all
+  passive and must be rewritten. If you catch yourself writing a noun as the subject of an action
+  a person took, rewrite it with "I" as the subject.
 - **Be specific, not evocative.** Name the actual things: discrete math, PID tuning, Fourier
   transforms. Not "the math behind it all" or "the full stack of that domain."
 - **Conversational but never loose.** Smart person talking through their work. Cut filler

@@ -6,7 +6,7 @@
       <div class="modal-tl-dot"></div>
       <span class="modal-tl-date">{{ item.date }}</span>
       <span class="modal-tl-role">{{ item.role }}</span>
-      {% for p in item.description %}<p>{{ p }}</p>{% endfor %}
+      {% for p in item.description %}{% if p.indent %}<p class="description-indent">{{ p.text }}</p>{% else %}<p>{{ p.text | default: p }}</p>{% endif %}{% endfor %}
     </div>
     {% endfor %}
   </div>
@@ -18,5 +18,5 @@
     <img src="{{ m.src }}" alt="{{ m.alt }}">
     {% endif %}
   {% endfor %}
-  {% for p in include.entry.description %}<p>{{ p }}</p>{% endfor %}
+  {% for p in include.entry.description %}{% if p.indent %}<p class="description-indent">{{ p.text }}</p>{% else %}<p>{{ p.text | default: p }}</p>{% endif %}{% endfor %}
 {% endif %}
