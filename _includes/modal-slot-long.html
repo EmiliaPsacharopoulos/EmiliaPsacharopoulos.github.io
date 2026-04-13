@@ -6,7 +6,23 @@
       <div class="modal-tl-dot"></div>
       <span class="modal-tl-date">{{ item.date }}</span>
       <span class="modal-tl-role">{{ item.role }}</span>
-      {% for p in item.description %}{% if p.indent %}<p class="description-indent">{{ p.text }}</p>{% else %}<p>{{ p.text | default: p }}</p>{% endif %}{% endfor %}
+      {% for p in item.description %}
+        {% if p.sections %}
+          <p class="description-setup-intro">{{ p.intro }}</p>
+          {% for section in p.sections %}
+            <p class="description-section-title">{{ section.title }}</p>
+            <ul class="description-list">
+              {% for bullet in section.items %}
+                <li><strong>{{ bullet.label }}:</strong> {{ bullet.text }}</li>
+              {% endfor %}
+            </ul>
+          {% endfor %}
+        {% elsif p.indent %}
+          <p class="description-indent">{{ p.text }}</p>
+        {% else %}
+          <p>{{ p.text | default: p }}</p>
+        {% endif %}
+      {% endfor %}
     </div>
     {% endfor %}
   </div>
@@ -18,5 +34,21 @@
     <img src="{{ m.src }}" alt="{{ m.alt }}">
     {% endif %}
   {% endfor %}
-  {% for p in include.entry.description %}{% if p.indent %}<p class="description-indent">{{ p.text }}</p>{% else %}<p>{{ p.text | default: p }}</p>{% endif %}{% endfor %}
+  {% for p in include.entry.description %}
+    {% if p.sections %}
+      <p class="description-setup-intro">{{ p.intro }}</p>
+      {% for section in p.sections %}
+        <p class="description-section-title">{{ section.title }}</p>
+        <ul class="description-list">
+          {% for bullet in section.items %}
+            <li><strong>{{ bullet.label }}:</strong> {{ bullet.text }}</li>
+          {% endfor %}
+        </ul>
+      {% endfor %}
+    {% elsif p.indent %}
+      <p class="description-indent">{{ p.text }}</p>
+    {% else %}
+      <p>{{ p.text | default: p }}</p>
+    {% endif %}
+  {% endfor %}
 {% endif %}
