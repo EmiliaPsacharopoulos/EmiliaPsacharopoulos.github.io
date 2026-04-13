@@ -156,10 +156,8 @@
                   text: "A geographic region, year range, airline(s), and aircraft types (e.g. all United Airlines flights departing from the US on Boeing aircraft in 2030)."
                 - label: "Fuel technology selection"
                   text: "An alternative sustainable fuel to replace Jet-A (e.g. electric aircraft)."
-                - label: "Aircraft fuel burn models"
-                  text: "Per-aircraft consumption models that evaluate two things for each flight: how much of the alternative energy carrier that flight demands, and how much CO2 it saves relative to Jet-A."
                 - label: "Supporting data"
-                  text: "Flight traffic forecasts through 2100, global infrastructure data (e.g. electricity transmission lines), and airline, aircraft, and airport datasets."
+                  text: "Flight traffic forecasts through 2100, aircraft fuel burn models, global infrastructure data (e.g. electricity transmission lines), and airline, aircraft, and airport datasets."
             - title: "2. Optimization model components"
               items:
                 - label: "Variables"
