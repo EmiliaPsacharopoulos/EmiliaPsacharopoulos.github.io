@@ -155,7 +155,7 @@
                 - label: "Target market"
                   text: "A geographic region, year range, airline(s), and aircraft types (e.g. all United Airlines flights departing from the US on Boeing aircraft in 2030)."
                 - label: "Fuel technology selection"
-                  text: "An alternative sustainable fuel to replace Jet-A (e.g. electric aircraft), which determines the infrastructure costs (capex and opex) required to deliver that energy carrier to each airport."
+                  text: "An alternative sustainable fuel to replace Jet-A (e.g. electric aircraft)."
                 - label: "Aircraft fuel burn models"
                   text: "Per-aircraft consumption models that evaluate two things for each flight: how much of the alternative energy carrier that flight demands, and how much CO2 it saves relative to Jet-A."
                 - label: "Supporting data"
