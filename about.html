@@ -23,7 +23,13 @@ title: About | Emilia Psacharopoulos
       </div>
       {% if item.video_src %}
       <div class="about-row-video">
-        <iframe src="{{ item.video_src }}" title="{{ item.video_title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe
+          src="{{ item.video_src }}"
+          title="{{ item.video_title }}"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
       </div>
       {% else %}
       <img src="{{ item.image }}" alt="{{ item.image_alt }}" class="about-row-img">

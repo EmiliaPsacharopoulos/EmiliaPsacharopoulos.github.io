@@ -79,7 +79,7 @@
     - |-
       My primary contributions were leading the path-following logic implementation, TCP communications, and PID controller configuration, as well as owning the testing effort. I designed the QA test plan to verify the system worked end-to-end in the real world: creating test scenarios, designing the simulation field, and building the testing matrix. We ran six trials across varying levels of map complexity, and the system performed successfully. I also led the team's technical documentation, including producing a video walkthrough of the system.
   media:
-    - src: https://www.youtube.com/embed/qFqYIITFqd0?si=hdwI-rVQdYdWpBuQ
+    - src: https://www.youtube.com/embed/qFqYIITFqd0
       type: iframe
       title: "Multi-Agent Path Planning Demo"
     - src: /assets/images/eecs467.jpg
