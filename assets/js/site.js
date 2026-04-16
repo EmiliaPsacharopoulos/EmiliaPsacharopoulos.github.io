@@ -30,7 +30,7 @@ document.querySelectorAll('a,button,.project-card,.exp-row,.mde-card,.edu-activi
 
 
 /* ── URL deep-linking ── */
-const sectionBase = { exp: '/experience', proj: '/projects', edu: '/education' };
+const sectionBase = { exp: '#experience', proj: '#projects', edu: '#education' };
 const typeToUrl = { exp: 'experience', proj: 'project', edu: 'education' };
 const urlToType = { experience: 'exp', project: 'proj', education: 'edu' };
 
@@ -63,13 +63,11 @@ function idToSlug(type, id) {
 function setModalPath(type, id, view, replace) {
   const slug = idToSlug(type, id);
   const urlType = typeToUrl[type] || type;
-  const path = (view && view !== 'short') ? `/${urlType}/${slug}/${view}` : `/${urlType}/${slug}`;
+  const hash = (view && view !== 'short') ? `#${urlType}/${slug}/${view}` : `#${urlType}/${slug}`;
   if (replace) {
-    history.replaceState({ modal: { type, id, view } }, '', path);
+    history.replaceState({ modal: { type, id, view } }, '', hash);
   } else {
-    const base = sectionBase[type];
-    if (base) history.replaceState(null, '', base);
-    history.pushState({ modal: { type, id, view } }, '', path);
+    history.pushState({ modal: { type, id, view } }, '', hash);
   }
 }
 
@@ -268,16 +266,21 @@ function closeModalDirect() {
 
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDirect(); });
 
-// Open modal from URL path on load (also handles 404 redirect via ?path= query param)
+// Open modal from URL on load.
+// Supports: hash routing (#experience/basis-ai/long), legacy ?path= redirect from 404.html,
+// and legacy path-based URLs (/experience/basis-ai) for backward compatibility.
 (function openModalFromPath() {
   const params = new URLSearchParams(window.location.search);
   const redirectPath = params.get('path');
   let path;
+  let isHashLoad = false;
 
   if (redirectPath) {
     history.replaceState(null, '', '/');
-    history.pushState(null, '', redirectPath);
     path = redirectPath;
+  } else if (window.location.hash && window.location.hash.length > 1) {
+    path = window.location.hash.slice(1); // e.g. 'experience/basis-ai/long'
+    isHashLoad = true;
   } else {
     path = window.location.pathname;
   }
@@ -292,6 +295,7 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDi
     if (urlType in sectionMap) {
       const sectionId = sectionMap[urlType];
       if (sectionId) {
+        if (!isHashLoad) history.replaceState(null, '', '/#' + sectionId);
         const el = document.getElementById(sectionId);
         if (el) {
           document.fonts.ready.then(() => {
@@ -302,7 +306,7 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDi
         }
       }
     } else {
-      history.replaceState(null, '', '/');
+      if (!isHashLoad) history.replaceState(null, '', '/');
     }
     return;
   }
@@ -321,11 +325,30 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDi
         document.fonts.ready.then(scrollToSection);
       }
     }
-    openModal(type, id, view || 'short', true);
-  } else if (urlType && document.getElementById('modal')) {
+    // isHashLoad=true: URL already correct, avoid duplicate history entry.
+    // isHashLoad=false: let openModal call setModalPath to push the hash URL.
+    openModal(type, id, view || 'short', isHashLoad);
+  } else if (urlType && !isHashLoad && document.getElementById('modal')) {
     history.replaceState(null, '', '/');
   }
 })();
+
+/* ── YouTube facade (click-to-load) ── */
+document.querySelectorAll('.yt-facade').forEach(facade => {
+  function loadVideo() {
+    const src = facade.dataset.src;
+    const iframe = document.createElement('iframe');
+    iframe.src = src + (src.includes('?') ? '&' : '?') + 'autoplay=1';
+    iframe.title = facade.getAttribute('aria-label') || 'YouTube video';
+    iframe.frameBorder = '0';
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    iframe.allowFullscreen = true;
+    iframe.className = 'yt-facade-iframe';
+    facade.replaceWith(iframe);
+  }
+  facade.addEventListener('click', loadVideo);
+  facade.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); loadVideo(); } });
+});
 
 /* ── Notes filters ── */
 document.querySelectorAll('.notes-filter').forEach(btn => {

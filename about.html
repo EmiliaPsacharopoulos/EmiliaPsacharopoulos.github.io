@@ -22,14 +22,16 @@ title: About | Emilia Psacharopoulos
         <p>{{ item.text }}</p>
       </div>
       {% if item.video_src %}
+      {% assign vid_id = item.video_src | split: '/embed/' | last %}
       <div class="about-row-video">
-        <iframe
-          src="{{ item.video_src }}"
-          title="{{ item.video_title }}"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
+        <div class="yt-facade"
+          data-src="{{ item.video_src }}"
+          style="background-image: url('https://img.youtube.com/vi/{{ vid_id }}/hqdefault.jpg')"
+          role="button"
+          aria-label="Play {{ item.video_title }}"
+          tabindex="0">
+          <button class="yt-play-btn" aria-hidden="true" tabindex="-1">&#9654;</button>
+        </div>
       </div>
       {% else %}
       <img src="{{ item.image }}" alt="{{ item.image_alt }}" class="about-row-img">

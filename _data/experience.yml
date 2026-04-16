@@ -1,7 +1,7 @@
 - id: e1
   jobTitle: "Engineering Intern"
   company: "The George Washington University"
-  logo: "assets/images/george_washington_university_logo.png"
+  logo: "/assets/images/george_washington_university_logo.png"
   location: "Ashburn, VA"
   dates: "June 2018 – August 2018"
   tagline: "Supported PhD research on hydrophobic aluminum treatment methods and independently designed a phase change materials heat retention experiment using the lab's facilities."
@@ -22,7 +22,7 @@
 - id: e2
   jobTitle: "Engineering Technician Intern"
   company: "NAVSEA"
-  logo: "assets/images/navsea_logo.jpg"
+  logo: "/assets/images/navsea_logo.jpg"
   location: "Washington Navy Yard, DC (Remote)"
   dates: "May 2020 – January 2021"
   tagline: "Synthesized hundreds of testing documents into executive summaries for Navy leadership and organized a multi-day leadership conference for Unmanned Undersea Vehicle program managers."
@@ -39,7 +39,7 @@
 - id: e3
   jobTitle: "Robotics Research Engineering Intern"
   company: "University of Michigan Robotics Institute"
-  logo: "assets/images/michigan_logo.png"
+  logo: "/assets/images/michigan_logo.png"
   location: "Ann Arbor, MI"
   dates: "May 2021 – December 2021"
   tagline: "Proposed and led a full electrical redesign of an open-source research robot, cutting platform costs by over 91% and quadrupling communication and motor control capabilities."
@@ -61,7 +61,7 @@
 - id: e4
   jobTitle: "Product/Test Engineering Intern"
   company: "Analog Devices, Inc."
-  logo: "assets/images/ADI_logo.png"
+  logo: "/assets/images/ADI_logo.png"
   location: "Greensboro, NC"
   dates: "May 2022 – August 2022"
   tagline: "Automated hardware performance testing and test results analysis for ADI's Aerospace and Defense team, saving days of engineering effort per input analyzed."
@@ -82,7 +82,7 @@
 - id: e5
   jobTitle: "Autonomy Software Engineer"
   company: "Aurora Flight Sciences (Boeing)"
-  logo: "assets/images/aurora_logo.png"
+  logo: "/assets/images/aurora_logo.png"
   location: "Cambridge, MA (and remote)"
   dates: "July 2023 – November 2025"
   tagline: "Software engineer at a Boeing-subsidiary R&D company, owning full-stack development, optimization modeling, and systems architecture across six programs in autonomous systems and sustainable aviation."
@@ -185,7 +185,7 @@
 - id: e7
   jobTitle: "Product Engineer"
   company: "Basis AI"
-  logo: "assets/images/basis_logo.png"
+  logo: "/assets/images/basis_logo.png"
   location: "New York, NY"
   dates: "December 2025 – March 2026"
   tagline: "Technical owner of full-stack development for key product features from design to production at an early-stage, fully AI-native unicorn startup."

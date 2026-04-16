@@ -1018,7 +1018,21 @@ a.modal-subtitle-company:hover { color: var(--teal); }
   aspect-ratio: 16/9; border: 1px solid var(--grid);
   overflow: hidden;
 }
-.about-row-video iframe { width: 100%; height: 100%; border: none; display: block; }
+.about-row-video iframe, .yt-facade-iframe { width: 100%; height: 100%; border: none; display: block; }
+.yt-facade {
+  width: 100%; height: 100%;
+  background-size: cover; background-position: center;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; position: relative;
+}
+.yt-play-btn {
+  width: 56px; height: 40px;
+  background: rgba(0,0,0,0.72); border: none; border-radius: 8px;
+  color: #fff; font-size: 1.1rem;
+  cursor: pointer; pointer-events: none;
+  transition: background 0.15s;
+}
+.yt-facade:hover .yt-play-btn { background: #c00; }
 .about-row-text { flex: 1; padding-top: 0.3rem; }
 .about-row-text h3 {
   font-family: 'DM Serif Display', serif; font-size: 1.55rem;
