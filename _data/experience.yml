@@ -216,3 +216,23 @@
       On the production stability side, I resolved 30 customer bugs (including production hotfixes and database migrations to clean up duplicate records and session context errors) using test-driven debugging practices: writing tests to reproduce each failure before implementing a fix, then expanding the test suite to prevent regressions. I became the default escalation contact for on-call production incidents, and wrote detailed root cause analyses after each one. I also diagnosed and fixed four system-level performance issues: line item matching timeouts, database query bottlenecks in orchestration services, and chronic background job failures, unblocking jobs that had been failing entirely.
     - |-
       I left once the reconciliations area reached a stable state and I had fully handed it off. The experience of being the sole engineer on a high-priority product area accelerated my growth significantly, and it clarified what I was looking for next: a role where I could bring that same ownership mentality while also getting to collaborate with other engineers.
+
+- id: e8
+  jobTitle: "Software Engineer"
+  company: "Coral Care"
+  logo: "/assets/images/coral_care_logo.png"
+  location: "New York, NY"
+  dates: "May 2026 – Present"
+  tagline: "Early engineering hire rebuilding a full-stack pediatric care marketplace platform from scratch at a Series A startup."
+  website: "https://www.joincoralcare.com/"
+  tags: ["TypeScript", "Full-Stack Development", "Test-Driven Development"]
+  highlights:
+    - text: "Authored three developer guides covering Coral Care's existing no-code platform by tracing the full system layer by layer: mobile frontend, mobile backend, and a combined web app and database layer; surfaced undocumented behavior that now directly informs bug triage and maintenance across the team."
+    - Building the new full-stack TypeScript platform alongside a team of senior engineers, collaborating on architecture decisions and implementation as we replace the live no-code system.
+  description:
+    - |-
+      Coral Care operates an in-home pediatric therapy marketplace connecting families to licensed speech, occupational, and physical therapists, serving thousands of daily active users across parents and providers. They have built a defensible position in an exceptionally hard niche: at-home pediatric care with insurance coverage, at a scale no competitor has matched. The engineering team, founded three months ago, is rebuilding the platform as a unified full-stack TypeScript application, replacing a no-code solution across three separate tools that has become slow and unintuitive at the product's current scale. I joined as the fourth engineering hire.
+    - |-
+      My first project was documenting the existing no-code platform, which had no documentation and an unusual architecture: three tools covering a fragmented split of mobile frontend, mobile backend, and a shared web app and database layer. I worked through it one layer at a time, tracing data flows and mapping how the pieces connected. The guides now serve as the team's reference for diagnosing bugs and making maintenance decisions, and the investigation surfaced concrete details about system behavior that shortened debugging time on issues that previously had no clear starting point.
+    - |-
+      In parallel, I have been building out the new TypeScript codebase alongside the rest of the engineering team. We work through architecture decisions together and shape how the product's software is structured collaboratively. Working closely with senior engineers with deep experience building scalable systems has accelerated both my TypeScript expertise and my broader understanding of how to reason through architectural tradeoffs at scale.
