@@ -7,13 +7,12 @@ Load this file when making design, layout, or content-structure decisions.
 ## Personal Brand
 
 **Identity statement:**
-NYC-based software engineer motivated by building systems that model and solve complex problems
-at scale. Work spans from full-stack product ownership at early-stage startups to optimization
-modeling and autonomous systems. Naturally curious, drawn to understanding how and why things
+A NYC-based full stack software engineer motivated by building great products and solving
+challenging problems at scale. Wrk spans from full-stack product development at early-stage startups to building autonomous systems and optimization models at a Boeing subsidiary. Naturally curious, drawn to understanding how and why things
 work, not just making them work. Prioritizes being straightforward, low-friction, and easy to
 work with.
 
-**Tagline (site hero):** Software Engineer · Full Stack, Optimization Modeling, and Autonomous Systems
+**Tagline (site hero):** Full Stack Software Engineer
 
 **Aesthetic label:** Computational Minimalism / Analytical Creative Engineer, a hybrid between
 researcher, engineer, and creative technologist.
